@@ -1,0 +1,2 @@
+Satvik:
+- Artist and Music Schema | STATUS: created the table need to test inserting
