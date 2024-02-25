@@ -1,2 +1,6 @@
 Satvik:
 - Artist and Music Schema | STATUS: created the table need to test inserting
+
+
+Jacob:
+- Created outline for user and playlist relationship
