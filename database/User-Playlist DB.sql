@@ -1,25 +1,25 @@
 use boombox;
 
 CREATE TABLE Acct(
-	ACCOUNT_ID VARCHAR(20) PRIMARY KEY ,
+	ACCOUNT_ID INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     USER_EMAIL VARCHAR(20) unique NOT NULL,
     USERNAME VARCHAR(50) unique NOT NULL,
     PasswordHash VARCHAR(255) NOT NULL,
-    FOLLOWER_COUNT INT unsigned auto_increment,
-    FOLLOWING_COUNT INT unsigned auto_increment,
+    FOLLOWER_COUNT INT unsigned,
+    FOLLOWING_COUNT INT unsigned,
     CREATION_DATE DATE
 );
 
 CREATE TABLE Playlist(
-	PLAYLIST_ID VARCHAR(20) PRIMARY KEY,
+	PLAYLIST_ID INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 	CREATION_DATE date,
-    ACCOUNT_ID VARCHAR(20),
+    ACCOUNT_ID INT UNSIGNED,
     foreign key(ACCOUNT_ID) references Acct(ACCOUNT_ID)
 );
 
 CREATE TABLE MusicIdArray(
-    PLAYLIST_ID VARCHAR(20),
+    PLAYLIST_ID INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     music_id INT UNSIGNED,
     foreign key(PLAYLIST_ID) references Playlist(PLAYLIST_ID),
     foreign key(music_id) references music(music_id)
-)
+);
