@@ -18,8 +18,8 @@ CREATE TABLE Playlist(
 );
 
 CREATE TABLE MusicIdArray(
-    PLAYLIST_ID INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    music_id INT UNSIGNED,
+    PLAYLIST_ID INT UNSIGNED,
+    MUSIC_ID INT UNSIGNED,
     foreign key(PLAYLIST_ID) references Playlist(PLAYLIST_ID),
     foreign key(music_id) references music(music_id)
 );
