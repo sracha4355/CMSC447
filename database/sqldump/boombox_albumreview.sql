@@ -16,23 +16,20 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `album`
+-- Table structure for table `albumreview`
 --
 
-DROP TABLE IF EXISTS `album`;
+DROP TABLE IF EXISTS `albumreview`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `album` (
-  `album_id` int unsigned NOT NULL AUTO_INCREMENT,
-  `album_length` varchar(8) DEFAULT NULL,
-  `album_cover` varchar(255) DEFAULT NULL,
-  `artist_id` int unsigned DEFAULT NULL,
-  `album_name` varchar(255) NOT NULL,
-  PRIMARY KEY (`album_id`),
-  UNIQUE KEY `album_cover` (`album_cover`),
-  KEY `artist_id` (`artist_id`),
-  CONSTRAINT `artist_id` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `albumreview` (
+  `REVIEW_ID` int unsigned NOT NULL,
+  `ALBUM_ID` int unsigned NOT NULL,
+  PRIMARY KEY (`REVIEW_ID`),
+  KEY `ALBUM_ID` (`ALBUM_ID`),
+  CONSTRAINT `albumreview_ibfk_1` FOREIGN KEY (`REVIEW_ID`) REFERENCES `review` (`REVIEW_ID`),
+  CONSTRAINT `albumreview_ibfk_2` FOREIGN KEY (`ALBUM_ID`) REFERENCES `album` (`album_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
