@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS `musicidarray`;
 CREATE TABLE `musicidarray` (
   `PLAYLIST_ID` int unsigned DEFAULT NULL,
   `MUSIC_ID` int unsigned DEFAULT NULL,
+  `MUSIC_ID_ARRAY ` int unsigned DEFAULT NULL,
   KEY `PLAYLIST_ID` (`PLAYLIST_ID`),
   KEY `MUSIC_ID` (`MUSIC_ID`),
   CONSTRAINT `musicidarray_ibfk_1` FOREIGN KEY (`PLAYLIST_ID`) REFERENCES `playlist` (`PLAYLIST_ID`),
