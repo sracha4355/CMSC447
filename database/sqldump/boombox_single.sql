@@ -28,6 +28,7 @@ CREATE TABLE `single` (
   `single_length` varchar(8) DEFAULT NULL,
   `single_cover` varchar(255) DEFAULT NULL,
   `artist_id` int unsigned DEFAULT NULL,
+  `boomscore` int NOT NULL,
   PRIMARY KEY (`single_id`),
   UNIQUE KEY `single_cover` (`single_cover`),
   KEY `artist_it` (`artist_id`),

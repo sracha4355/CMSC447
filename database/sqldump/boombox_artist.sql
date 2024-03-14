@@ -26,6 +26,7 @@ CREATE TABLE `artist` (
   `artist_id` int unsigned NOT NULL AUTO_INCREMENT,
   `artist_name` varchar(255) NOT NULL,
   `artist_picture` varchar(255) DEFAULT NULL,
+  `boomscore` int NOT NULL,
   PRIMARY KEY (`artist_id`),
   UNIQUE KEY `artist_picture` (`artist_picture`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

@@ -28,6 +28,7 @@ CREATE TABLE `album` (
   `album_cover` varchar(255) DEFAULT NULL,
   `artist_id` int unsigned DEFAULT NULL,
   `album_name` varchar(255) NOT NULL,
+  `boomscore` int NOT NULL,
   PRIMARY KEY (`album_id`),
   UNIQUE KEY `album_cover` (`album_cover`),
   KEY `artist_id` (`artist_id`),
