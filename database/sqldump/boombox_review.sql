@@ -35,9 +35,18 @@ CREATE TABLE `review` (
   KEY `ACCOUNT_ID` (`ACCOUNT_ID`),
   KEY `MUSIC_ID` (`MUSIC_ID`),
   CONSTRAINT `review_ibfk_1` FOREIGN KEY (`ACCOUNT_ID`) REFERENCES `acct` (`ACCOUNT_ID`),
-  CONSTRAINT `review_ibfk_2` FOREIGN KEY (`MUSIC_ID`) REFERENCES `music` (`MUSIC_ID`)
+  CONSTRAINT `review_ibfk_2` FOREIGN KEY (`MUSIC_ID`) REFERENCES `music` (`music_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `review`
+--
+
+LOCK TABLES `review` WRITE;
+/*!40000 ALTER TABLE `review` DISABLE KEYS */;
+/*!40000 ALTER TABLE `review` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -48,4 +57,4 @@ CREATE TABLE `review` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-28 22:30:58
+-- Dump completed on 2024-03-14 14:04:33
