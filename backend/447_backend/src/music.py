@@ -33,6 +33,22 @@ class Music_Table:
         return get_from_table(self.cursor, "`music`", "*", "`album_id`", album_id)
     
 
+    def exists(self, music_id):
+        return self.get_by_music_id(music_id) != []
+    
+
+    def any_exists_by_artist_id(self, artist_id):
+        return self.get_by_artist_id(artist_id) != []
+    
+
+    def any_exists_by_single_id(self, single_id):
+        return self.get_by_single_id(single_id) != []
+    
+
+    def any_exists_by_album_id(self, album_id):
+        return self.get_by_album_id(album_id) != []
+    
+
     def is_album(self, music_id):
         self.cursor.execute(f"SELECT `is_album` FROM `music` WHERE `music_id`={music_id}")
         is_album = self.cursor.fetchall()

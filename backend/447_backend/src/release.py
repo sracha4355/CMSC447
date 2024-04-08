@@ -39,6 +39,14 @@ class Release_Table:
         
         (boomscore,) = boomscore[0]
         return boomscore
+    
+
+    def exists(self, release_id):
+        return self.get_by_release_id(release_id) != []
+    
+
+    def any_exists_by_artist_id(self, artist_id):
+        return self.get_by_artist_id(artist_id) != []
 
 
     def update_release_name(self, release_id, name):

@@ -6,6 +6,7 @@ class Album_Entry_Table:
         self.database = database
         self.cursor = cursor
 
+
     def create(self, entry_name, entry_length, album_id):
         self.cursor.execute(f"INSERT INTO `album_entry` (`entry_name`, `entry_length`, `album_id`) 
                             VALUES (\'{entry_name}\', \'{entry_length}\', {album_id})")
@@ -18,6 +19,14 @@ class Album_Entry_Table:
 
     def get_by_album_id(self, album_id):
         return get_from_table(self.cursor, "`album_entry`", "*", "`album_id`", album_id)
+    
+
+    def exists(self, entry_id):
+        return self.get_by_entry_id(entry_id) != []
+    
+
+    def any_exists_by_album_id(self, album_id):
+        return self.get_by_album_id(album_id) != []
 
 
     def update_entry_name(self, entry_name, entry_id):
