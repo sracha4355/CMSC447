@@ -8,8 +8,7 @@ class Album_Entry_Table:
 
 
     def create(self, entry_name, entry_length, album_id):
-        self.cursor.execute(f"INSERT INTO `album_entry` (`entry_name`, `entry_length`, `album_id`) 
-                            VALUES (\'{entry_name}\', \'{entry_length}\', {album_id})")
+        self.cursor.execute(f"INSERT INTO `album_entry` (`entry_name`, `entry_length`, `album_id`) VALUES (\'{entry_name}\', \'{entry_length}\', {album_id})")
         self.database.commit()
 
 

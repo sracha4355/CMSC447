@@ -18,8 +18,7 @@ class Release_Table:
 
 
     def create(self, single_name, single_length, artist_id, single_boomscore):
-        self.cursor.execute(f"INSERT INTO {self.table} ({self.table_name}, {self.table_length} `artist_id`, {self.table_boomscore}) 
-                            VALUES (\'{single_name}\', \'{single_length}\', {artist_id}, {single_boomscore});")
+        self.cursor.execute(f"INSERT INTO {self.table} ({self.table_name}, {self.table_length}, `artist_id`, {self.table_boomscore}) VALUES (\'{single_name}\', \'{single_length}\', {artist_id}, {single_boomscore});")
         self.database.commit()
 
 
