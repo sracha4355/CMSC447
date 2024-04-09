@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&display=swap');
+
+
+
+#logo{
+    text-align: center;
+    padding: 1% 0;
+    width: 100vw;
+    background-color: rgb(44, 44, 48);
+    font-family: "Bungee Shade", sans-serif;
+    color: black; /* Set the interior color to black */
+    text-shadow: 0 0 0.6em purple; /* Add a purple outline */
+    font-size: x-large;
+}
+
+
+
+.nav-link{
+    border-radius: 20%;
+    margin-right: 49%;
+    font-family: "Bungee", sans-serif;
+    transition: border-radius 0.3s ease;
+    width: 100%;
+  }
+
+.nav-link:hover{
+    border-radius: 20%;
+    background-color: #e900dd;
+    color: #ffffff; /* Set the text color for better visibility */
+    animation: pulse 1s infinite alternate, glow 1s infinite alternate; /* Apply pulse and glow animations */
+}
+
+@keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px 5px #e900dd;
+    }
+    to {
+      box-shadow: 0 0 20px 10px #e900dd; /* Increase the glow effect */
+    }
+  }
+
+  #btn-ctr{
+    text-align: center;
+  }
+  #topArtists{
+    text-align: center;
+  }
+  #topSongs{
+    text-align: center;
+  }
+
