@@ -4,7 +4,7 @@ from album_entry import Album_Entry_Table
 from music import Music_Table
 
 def demo(app, database, cursor):
-    artists = Artist_Table(app, database, cursor=cursor)
+    artists = Artist_Table(app, database, cursor)
     singles = Release_Table(app, database, cursor, "single")
     albums = Release_Table(app, database, cursor, "album")
     album_entries = Album_Entry_Table(app, database, cursor)
