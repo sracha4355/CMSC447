@@ -3,10 +3,7 @@ import os
 from flask import Flask, render_template, request, jsonify
 import mysql.connector
 from files import read_file
-from artist import Artist_Table
-from release import Release_Table
-from album_entry import Album_Entry_Table
-from music import Music_Table
+from demo_4_9_24 import demo
 
 # init log file
 # print() will not work, so if you want to "print" anything...
@@ -50,49 +47,9 @@ cursor.execute(read_file(MYSQL_SOURCE_DIRECTORY, "music.sql"))
 
 database.commit()
 
-"""artists = Artist_Table(
-    app=app, 
-    database=database, 
-    cursor=cursor
-)
+# for midterm presentation (4/9/24)
+demo(app, database, cursor)
 
-singles = Release_Table(
-    app=app,
-    database=database,
-    cursor=cursor,
-    table="single"
-)
-
-albums = Release_Table(
-    app=app,
-    database=database,
-    cursor=cursor,
-    table="album"
-)
-
-album_entries = Album_Entry_Table(
-    app=app,
-    database=database,
-    cursor=cursor
-)
-
-music = Music_Table(
-    app=app,
-    database=database,
-    cursor=cursor
-)
-
-artists.create("Kanye", 50)
-artists.create("Dude", 100)
-#app.logger.warning(artists.get_artists("Dude"))
-artists.update_boomscore(1, 125)
-artists.delete(2)
-
-singles.create("idk", "3:04", 1, 100)
-albums.create("test", "15:11", 1, 25)
-album_entries.create("???", "2:55", 1)
-music.create_single(1, 1)
-music.create_album(1, 1)"""
 
 # driver
 if __name__ == "__main__":
