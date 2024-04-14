@@ -1,36 +1,37 @@
-from tables import get_from_table, delete_from_table
-
 class Music_Table:
-    def __init__(self, app, database, cursor):
-        self.app = app
-        self.database = database
-        self.cursor = cursor
+    def __init__(self, database):
+        self.table = database.get_table("music")
+
+        if self.table == None:
+            raise ValueError("Music table does not exist in given database")
 
     
     def create_single(self, artist_id, single_id):
-        self.cursor.execute(f"INSERT INTO `music` (`artist_id`, `single_id`, `is_album`) VALUES ({artist_id}, {single_id}, 0);")
-        self.database.commit()
+        columns = ["`artist_id`", "`single_id`", "`is_album`"]
+        values = [artist_id, single_id, 0]
+        self.table.insert(columns, values)
 
 
     def create_album(self, artist_id, album_id):
-        self.cursor.execute(f"INSERT INTO `music` (`artist_id`, `album_id`, `is_album`) VALUES ({artist_id}, {album_id}, 1);")
-        self.database.commit()
+        columns = ["`artist_id`", "`album_id`", "`is_album`"]
+        values = [artist_id, album_id, 1]
+        self.table.insert(columns, values)
 
 
     def get_by_music_id(self, music_id):
-        return get_from_table(self.cursor, "`music`", "*", "`music_id`", music_id)
+        return self.table.get_all("`music_id`", music_id)
 
     
     def get_by_artist_id(self, artist_id):
-        return get_from_table(self.cursor, "`music`", "*", "`artist_id`", artist_id)
+        return self.table.get_all("`artist_id`", artist_id)
     
 
     def get_by_single_id(self, single_id):
-        return get_from_table(self.cursor, "`music`", "*", "`single_id`", single_id)
+        return self.table.get_all("`single_id`", single_id)
     
 
     def get_by_album_id(self, album_id):
-        return get_from_table(self.cursor, "`music`", "*", "`album_id`", album_id)
+        return self.table.get_all("`album_id`", album_id)
     
 
     def exists(self, music_id):
@@ -50,8 +51,7 @@ class Music_Table:
     
 
     def is_album(self, music_id):
-        self.cursor.execute(f"SELECT `is_album` FROM `music` WHERE `music_id`={music_id}")
-        is_album = self.cursor.fetchall()
+        is_album = self.table.get("`is_album`", "`music_id`", music_id)
 
         if is_album == []:
             return None
@@ -61,35 +61,30 @@ class Music_Table:
 
 
     def update_artist_id(self, music_id, artist_id):
-        self.cursor.execute(f"UPDATE `music` SET `artist_id`={artist_id} WHERE `music_id`={music_id};")
-        self.database.commit()
+        self.table.update("`artist_id`", artist_id, "`music_id`", music_id)
 
 
     def update_single_id(self, music_id, single_id):
-        self.cursor.execute(f"UPDATE `music` SET `single_id`={single_id} WHERE `music_id`={music_id};")
-        self.cursor.execute(f"UPDATE `music` SET `album_id`=NULL WHERE `music_id`={music_id};")
-        self.cursor.execute(f"UPDATE `music` SET `is_album`=0 WHERE `music_id`={music_id};")
-        self.database.commit()
+        self.table.update("`single_id`", single_id, "`music_id`", music_id)
+        self.table.update("`is_album`", 0, "`music_id`", music_id)
 
 
     def update_album_id(self, music_id, album_id):
-        self.cursor.execute(f"UPDATE `music` SET `album_id`={album_id} WHERE `music_id`={music_id};")
-        self.cursor.execute(f"UPDATE `music` SET `single_id`=NULL WHERE `music_id`={music_id};")
-        self.cursor.execute(f"UPDATE `music` SET `is_album`=1 WHERE `music_id`={music_id};")
-        self.database.commit()
+        self.table.update("`album_id`", album_id, "`music_id`", music_id)
+        self.table.update("`is_album`", 1, "`music_id`", music_id)
 
 
     def delete_music_id(self, music_id):
-        delete_from_table(self.database, self.cursor, "`music`", "`music_id`", music_id)
+        self.table.delete("`music_id`", music_id)
 
 
     def delete_artist_id(self, artist_id):
-        delete_from_table(self.database, self.cursor, "`music`", "`artist_id`", artist_id)
+        self.table.delete("`artist_id`", artist_id)
 
 
     def delete_single_id(self, single_id):
-        delete_from_table(self.database, self.cursor, "`music`", "`single_id`", single_id)
+        self.table.delete("`single_id`", single_id)
 
 
     def delete_album_id(self, album_id):
-        delete_from_table(self.database, self.cursor, "`music`", "`album_id`", album_id)
+        self.table.delete("`album_id`", album_id)

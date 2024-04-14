@@ -1,9 +1,9 @@
 import logging
 import os
 from flask import Flask, render_template, request, jsonify
-import mysql.connector
-from files import read_file
-from demo_4_9_24 import demo
+from database import MySQL_Database
+from files import read_file_in
+from demo_4_14_24 import demo
 
 # init log file
 # print() will not work, so if you want to "print" anything...
@@ -26,29 +26,29 @@ os.chdir(CWD)
 app = Flask(__name__)
 
 # init database
-database = mysql.connector.connect(
-    host=MYSQL_HOST,
-    user=MYSQL_USER,
-    passwd=MYSQL_PASSWORD
+database = MySQL_Database(
+    host = MYSQL_HOST,
+    user = MYSQL_USER,
+    password = MYSQL_PASSWORD
 )
 
-# init cursor
-# this is how we make mysql queries
-cursor = database.cursor()
-
 # these have to be executed in this order, DO NOT CHANGE
-cursor.execute(f"CREATE DATABASE IF NOT EXISTS {MYSQL_DATABASE};")
-cursor.execute(f"USE {MYSQL_DATABASE};")
-cursor.execute(read_file(MYSQL_SOURCE_DIRECTORY, "artist.sql"))
-cursor.execute(read_file(MYSQL_SOURCE_DIRECTORY, "single.sql"))
-cursor.execute(read_file(MYSQL_SOURCE_DIRECTORY, "album.sql"))
-cursor.execute(read_file(MYSQL_SOURCE_DIRECTORY, "album_entry.sql"))
-cursor.execute(read_file(MYSQL_SOURCE_DIRECTORY, "music.sql"))
+database.create(MYSQL_DATABASE)
+
+if not database.use(MYSQL_DATABASE):
+    raise RuntimeError(f"Could not find database {MYSQL_DATABASE}")
+
+database.execute(f"USE {MYSQL_DATABASE};")
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "artist.sql"))
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "single.sql"))
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "album.sql"))
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "album_entry.sql"))
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "music.sql"))
 
 database.commit()
 
-# for midterm presentation (4/9/24)
-demo(app, database, cursor)
+# update 4/14/2024
+demo(app, database)
 
 
 # driver
