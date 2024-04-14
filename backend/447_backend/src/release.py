@@ -1,37 +1,41 @@
-from tables import get_from_table, update_table, delete_from_table
-
+# Single and Album tables have same formats, but with different names. Thus this class represents both tables
+# Indicate Single or album via the is_single bool in __init__
 class Release_Table:
-    def __init__(self, app, database, cursor, table):
-        self.app = app
-        self.database = database
-        self.cursor = cursor
-        self.table = table
-        self.table_id = f"`{table}_id`"
-        self.table_length = f"`{table}_length`"
-        self.table_boomscore = f"`{table}_boomscore`"
-        self.table_name = f"`{table}_name`"
+    def __init__(self, database, is_single=True):
+        table_string = "single" if is_single else "album"
+        self.table = database.get_table(table_string)
+
+        if self.table == None:
+            raise ValueError(f"{table_string} table does not exist in given database")
+
+        self.table_id = f"`{table_string}_id`"
+        self.table_length = f"`{table_string}_length`"
+        self.table_boomscore = f"`{table_string}_boomscore`"
+        self.table_name = f"`{table_string}_name`"
 
 
-    def create(self, single_name, single_length):
-        self.cursor.execute(f"INSERT INTO {self.table} ({self.table_name}, {self.table_length}) VALUES (\'{single_name}\', \'{single_length}\');")
-        self.database.commit()
+    def create(self, release_name, release_length): 
+        columns = [self.table_name, self.table_length]
+        values = [f"\'{release_name}\'", f"\'{release_length}\'"]
+        self.table.insert(columns, values)
 
 
-    def create(self, single_name, single_length, artist_id, single_boomscore):
-        self.cursor.execute(f"INSERT INTO {self.table} ({self.table_name}, {self.table_length}, `artist_id`, {self.table_boomscore}) VALUES (\'{single_name}\', \'{single_length}\', {artist_id}, {single_boomscore});")
-        self.database.commit()
+    def create(self, release_name, release_length, artist_id, release_boomscore):
+        columns = [self.table_name, self.table_length, "`artist_id`", self.table_boomscore]
+        values = [f"\'{release_name}\'", f"\'{release_length}\'", artist_id, release_boomscore]
+        self.table.insert(columns, values)
 
 
     def get_by_release_id(self, release_id):
-        return get_from_table(self.cursor, self.table, "*", self.table_id, release_id)
+        return self.table.get_all(self.table_id, release_id)
     
 
     def get_by_artist_id(self, artist_id):
-        return get_from_table(self.cursor, self.table, "*", "`artist_id`", artist_id)
+        return self.table.get_all("`artist_id`", artist_id)
     
 
     def get_boomscore(self, release_id):
-        boomscore = get_from_table(self.cursor, self.table, self.table_boomscore, self.table_id, release_id)
+        boomscore = self.table.get(self.table_boomscore, self.table_id, release_id)
 
         if boomscore == []:
             return None
@@ -49,24 +53,24 @@ class Release_Table:
 
 
     def update_release_name(self, release_id, name):
-        update_table(self.database, self.cursor, self.table, self.table_name, name, self.table_id, release_id)
+        self.table.update(self.table_name, name, self.table_id, release_id)
 
     
     def update_release_length(self, release_id, length):
-        update_table(self.database, self.cursor, self.table, self.table_length, length, self.table_id, release_id)
+        self.table.update(self.table_length, length, self.table_id, release_id)
 
 
     def update_artist_id(self, release_id, artist_id):
-        update_table(self.database, self.cursor, self.table, "`artist_id`", artist_id, self.table_id, release_id)
+        self.table.update("`artist_id`", artist_id, self.table_id, release_id)
 
 
     def update_boomscore(self, release_id, boomscore):
-        update_table(self.database, self.cursor, self.table, self.table_boomscore, boomscore, self.table_id, release_id)
+        self.table.update(self.table_boomscore, boomscore, self.table_id, release_id)
         
 
     def delete_release_id(self, id):
-        delete_from_table(self.database, self.cursor, self.table, self.table_id, id)
+        self.table.delete(self.table_id, id)
 
     
     def delete_artist_id(self, artist_id):
-        delete_from_table(self.database, self.cursor, self.table, "`artist_id`", artist_id)
+        self.table.delete("`artist_id`", artist_id)
