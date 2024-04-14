@@ -45,10 +45,17 @@ database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "album.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "album_entry.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "music.sql"))
 
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "acct.sql"))
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "acct_follower.sql"))
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "playlist.sql"))
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "acct_playlist_music.sql"))
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "review.sql"))
+database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "review_comment.sql"))
+
 database.commit()
 
 # update 4/14/2024
-demo(app, database)
+# demo(app, database)
 
 
 # driver
