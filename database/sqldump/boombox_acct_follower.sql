@@ -16,18 +16,19 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `artist`
+-- Table structure for table `acct_follower`
 --
 
-DROP TABLE IF EXISTS `artist`;
+DROP TABLE IF EXISTS `acct_follower`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `artist` (
-  `artist_id` int unsigned NOT NULL AUTO_INCREMENT,
-  `artist_name` varchar(255) NOT NULL,
-  `artist_picture` varchar(255) DEFAULT NULL,
-  `artist_boomscore` int NOT NULL,
-  PRIMARY KEY (`artist_id`,`artist_name`)
+CREATE TABLE `acct_follower` (
+  `follower_account_id` int unsigned NOT NULL,
+  `following_account_id` int unsigned NOT NULL,
+  PRIMARY KEY (`follower_account_id`,`following_account_id`),
+  KEY `acct_follower_ibfk_2` (`following_account_id`),
+  CONSTRAINT `acct_follower_ibfk_1` FOREIGN KEY (`follower_account_id`) REFERENCES `acct` (`account_id`),
+  CONSTRAINT `acct_follower_ibfk_2` FOREIGN KEY (`following_account_id`) REFERENCES `acct` (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -32,19 +32,19 @@ database = MySQL_Database(
     password = MYSQL_PASSWORD
 )
 
-# these have to be executed in this order, DO NOT CHANGE
+# Create database and use database
 database.create(MYSQL_DATABASE)
 
 if not database.use(MYSQL_DATABASE):
     raise RuntimeError(f"Could not find database {MYSQL_DATABASE}")
 
+# Create tables - they MUST be created in this order
 database.execute(f"USE {MYSQL_DATABASE};")
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "artist.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "single.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "album.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "album_entry.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "music.sql"))
-
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "acct.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "acct_follower.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "playlist.sql"))

@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: boombox
 -- ------------------------------------------------------
--- Server version	8.0.36
+-- Server version	8.3.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -23,30 +23,20 @@ DROP TABLE IF EXISTS `review`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review` (
-  `REVIEW_ID` int unsigned NOT NULL AUTO_INCREMENT,
-  `ACCOUNT_ID` int unsigned NOT NULL,
-  `MUSIC_ID` int unsigned NOT NULL,
-  `LIKE_COUNT` int NOT NULL,
-  `DISLIKE_COUNT` int NOT NULL,
-  `CREATION_DATE` date NOT NULL,
-  `REVIEW` text NOT NULL,
-  `COMMENTS` json NOT NULL,
-  PRIMARY KEY (`REVIEW_ID`),
-  KEY `ACCOUNT_ID` (`ACCOUNT_ID`),
-  KEY `MUSIC_ID` (`MUSIC_ID`),
-  CONSTRAINT `review_ibfk_1` FOREIGN KEY (`ACCOUNT_ID`) REFERENCES `acct` (`ACCOUNT_ID`),
-  CONSTRAINT `review_ibfk_2` FOREIGN KEY (`MUSIC_ID`) REFERENCES `music` (`music_id`)
+  `review_id` int unsigned NOT NULL AUTO_INCREMENT,
+  `account_id` int unsigned NOT NULL,
+  `music_id` int unsigned NOT NULL,
+  `like_count` int NOT NULL,
+  `dislike_count` int NOT NULL,
+  `creation_date` date NOT NULL,
+  `review` text NOT NULL,
+  PRIMARY KEY (`review_id`),
+  KEY `account_id` (`account_id`),
+  KEY `music_id` (`music_id`),
+  CONSTRAINT `review_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `acct` (`account_id`),
+  CONSTRAINT `review_ibfk_2` FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `review`
---
-
-LOCK TABLES `review` WRITE;
-/*!40000 ALTER TABLE `review` DISABLE KEYS */;
-/*!40000 ALTER TABLE `review` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -57,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-14 14:12:49
+-- Dump completed on 2024-04-15 14:35:52
