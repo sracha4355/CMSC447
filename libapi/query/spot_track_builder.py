@@ -6,7 +6,7 @@ from libapi.query.spot_endpoint_builder import SpotifyEndpoint
 class SpotifyTrackEndpoint(SpotifyEndpoint):
     def __init__(self, access_token=None):
         self.url = 'https://api.spotify.com/v1/tracks'
-        super.__init__(access_token=access_token)
+        super().__init__(access_token=access_token)
         self.builder.add_to_url(self.url)
 
     def get_track(self, uid:str=""):
@@ -25,7 +25,7 @@ class SpotifyTrackEndpoint(SpotifyEndpoint):
     def get_multiple_tracks(self, uids:list[str]=[]):
         if not self._checks():
             return None
-        if len(uids):
+        if len(uids) == 0:
             self.error = "uids list is empty"
             return None
         for uid in uids:
