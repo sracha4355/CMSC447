@@ -7,7 +7,11 @@ import requests
 ###
 class QueryBuilder:
     def __init__(self,url="",params={}, headers={}, data={}):
-        self.url = [url]
+        if url != "":
+            self.url = [url]
+        else:
+            self.url = []
+            
         self.params=params
         self.headers=headers
         self.data=data
