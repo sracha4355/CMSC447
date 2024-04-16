@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request, jsonify
 from database import MySQL_Database
 from files import read_file_in
-from demo_4_14_24 import demo
+from demo_4_16_24 import demo
 
 # init log file
 # print() will not work, so if you want to "print" anything...
@@ -39,7 +39,6 @@ if not database.use(MYSQL_DATABASE):
     raise RuntimeError(f"Could not find database {MYSQL_DATABASE}")
 
 # Create tables - they MUST be created in this order
-database.execute(f"USE {MYSQL_DATABASE};")
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "artist.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "single.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "album.sql"))
@@ -54,8 +53,8 @@ database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "review_comment.sql"))
 
 database.commit()
 
-# update 4/14/2024
-# demo(app, database)
+# update 4/16/2024
+demo(app, database)
 
 
 # driver

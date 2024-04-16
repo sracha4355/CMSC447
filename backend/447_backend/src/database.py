@@ -1,5 +1,4 @@
 import mysql.connector
-from files import read_file
 from table import MySQL_Table
 
 class MySQL_Database:

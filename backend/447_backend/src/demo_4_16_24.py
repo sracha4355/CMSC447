@@ -13,13 +13,13 @@ def demo(app, database):
     input("Create?")
 
     artists.create("Imagine Dragons", 150)
-    (artist_id,_,_,_) = artists.get_artists("Imagine Dragons")[0]
+    (artist_id,_,_,_,_) = artists.get_artists("Imagine Dragons")[0]
 
     singles.create("Radioactive", "3:07", artist_id, 500)
-    (single_id,_,_,_,_,_) = singles.get_by_artist_id(artist_id)[0]
+    (single_id,_,_,_,_,_,_) = singles.get_by_artist_id(artist_id)[0]
 
     albums.create("Evolve", "39:12", artist_id, 1672)
-    (album_id,_,_,_,_,_) = albums.get_by_artist_id(artist_id)[0]
+    (album_id,_,_,_,_,_,_) = albums.get_by_artist_id(artist_id)[0]
 
     album_entries.create("Believer", "3:24", album_id)
 

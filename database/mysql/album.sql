@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS `album` (
     `artist_id` INT UNSIGNED DEFAULT NULL,
     `album_name` VARCHAR(255) NOT NULL,
     `album_boomscore` INT NOT NULL,
+    `spotify_uid` VARCHAR(22) DEFAULT NULL,
     PRIMARY KEY (`album_id`),
     UNIQUE KEY `album_cover` (`album_cover`),
     KEY `artist_it` (`artist_id`),
