@@ -12,7 +12,12 @@ ACCESS_TOKEN_URL="https://accounts.spotify.com/api/token"
 CLIENT_ID='a7353c7122b24f96934f9594512e57fe'
 CLENT_SECRET='361a0aeed4164b26afcdc690e890d8eb'
 
-### pass path to folder with access_token.json
+'''
+Use the current access token to query an endpoint to check if our token is expired
+return True on token expiration else False
+You can use to check you need to call load_access_token() to generate a new token
+Note: path is the folder path
+'''
 def check_expiration(path='.\\') -> bool:
     ACCESS_TOKEN = extract_access_token(path)
     ### if token file does not exist, return true to indicate expiration
@@ -46,6 +51,13 @@ def generate_access_token():
     response = requests.post(ACCESS_TOKEN_URL, data=DATA, headers=HEADERS)
     return response.json() if response else None
 
+
+### 
+### function calls generate_access_token to create a json object 
+### with the access_token and other information and then stores
+### the token in the path specified by param @path
+### note path is the folder path
+###
 def load_access_token(path='.\\'):
     print(f'path: {path}access_token.json')
     with open(f'{path}access_token.json', 'w') as json_file:
@@ -55,6 +67,10 @@ def load_access_token(path='.\\'):
         token = generate_access_token()
         json_file.write(json.dumps(token, indent=4))
 
+'''
+simply extracts the token out of the file specififed by path
+note: path is the folder path
+'''
 def extract_access_token(path='\\') -> str|None:
     if not Path(f'{path}access_token.json').is_file():
         return None
