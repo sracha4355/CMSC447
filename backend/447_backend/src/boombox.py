@@ -1,6 +1,6 @@
 import logging
 import os
-from flask import Flask, render_template, request, jsonify
+from flask import Flask
 from database import MySQL_Database
 from files import read_file_in
 from demo_4_16_24 import demo
@@ -54,7 +54,7 @@ database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "review_comment.sql"))
 database.commit()
 
 # update 4/16/2024
-demo(app, database)
+# demo(app, database)
 
 
 # driver
