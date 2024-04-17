@@ -8,15 +8,15 @@ import 'hover.css/css/hover-min.css';
 const Header = () => {
   return (
     <>
-    <div id = 'logo'>Boombox</div>
+    <div id = 'logo'><a href="http://localhost:3000" style={{textDecoration:'none', color:'inherit'}}>Boombox</a></div>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Nav className="me-auto">
-            <Nav.Link href="Artists" >Artists</Nav.Link>
-            <Nav.Link href="Songs" >Songs</Nav.Link>
-            <Nav.Link href="Albums" >Albums</Nav.Link>
-            <Nav.Link href="Playlists" >Playlists</Nav.Link>
-            <Nav.Link href="Reviews" >Reviews</Nav.Link>
+            <Nav.Link href="/Artists" >Artists</Nav.Link>
+            <Nav.Link href="/Songs" >Songs</Nav.Link>
+            <Nav.Link href="/Albums" >Albums</Nav.Link>
+            <Nav.Link href="/Playlists" >Playlists</Nav.Link>
+            <Nav.Link href="/Reviews" >Reviews</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

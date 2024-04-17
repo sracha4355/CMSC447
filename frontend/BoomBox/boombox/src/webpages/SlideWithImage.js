@@ -1,10 +1,10 @@
 import React from "react";
 
-const SlideWithImage = ({ genre }) => {
+const SlideWithImage = ({ genre , imageURL}) => {
     return (
         <div className="slide-with-image">
             <div className="image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg" alt="Graduation-Kanye-West" />
+                <img src= {imageURL} alt="genre_image" style={{width : '200px', height: '200px', borderRadius:'20%'}} />
             </div>
             <div className="genre-name">{genre}</div>
         </div>
