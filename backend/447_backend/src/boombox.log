@@ -721,6 +721,7 @@ INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:13] "POST /get_popular_albums HTT
 INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:13] "POST /get_recent HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:13] "POST /get_recent HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:13] "POST /get_popular_albums HTTP/1.1" 200 -
+<<<<<<< HEAD
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
@@ -1828,3 +1829,5 @@ INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 12:56:13] "POST /get_popular_albums HTT
 INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 12:56:13] "POST /get_recent HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 12:56:13] "POST /get_recent HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 12:56:13] "POST /get_popular_albums HTTP/1.1" 200 -
+=======
+>>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6

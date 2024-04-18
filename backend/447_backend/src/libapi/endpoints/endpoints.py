@@ -46,6 +46,7 @@ def search_for_albums(album_name, limit=10):
     res = requests.get(URL, headers=headers, params=params)
     return res.json() if res else None
 
+<<<<<<< HEAD
 def search_for_tracks(track_name, limit=1):
     URL = f'https://api.spotify.com/v1/search?q={track_name}&type=track&limit={limit}'
     access_token = extract_access_token()
@@ -58,6 +59,8 @@ def search_for_tracks(track_name, limit=1):
     res = requests.get(URL, headers=headers, params=params).json()
     return res if res else None
 
+=======
+>>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
 
 def serach_for_artist_by_genre(genre, limit  =  50):
     URL = f'https://api.spotify.com/v1/search'
@@ -77,6 +80,7 @@ def serach_for_artist_by_genre(genre, limit  =  50):
         artists.append(artist['name'])
     return artists
 
+<<<<<<< HEAD
 def get_most_popular_song(artist_id):
     URL =  f'https://api.spotify.com/v1/artists/{artist_id}/top-tracks?country=US'
     access_token = extract_access_token()
@@ -100,6 +104,8 @@ def get_most_popular_song(artist_id):
 
     return song_data
 
+=======
+>>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
 
 def get_most_popular_album(artist_id):
     URL =  f'https://api.spotify.com/v1/artists/{artist_id}/albums'
@@ -178,6 +184,7 @@ def get_most_recent_albums():
 
 
 
+<<<<<<< HEAD
 def get_most_recent_tracks():
     # Define the URL for the new releases endpoint, specifying that you want tracks
     url = url = f"https://api.spotify.com/v1/browse/new-releases?type=track&limit={2}"
@@ -204,6 +211,8 @@ def get_most_recent_tracks():
 
 
 
+=======
+>>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
 
     
 

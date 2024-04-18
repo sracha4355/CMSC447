@@ -59,6 +59,7 @@ def loadRecentAlbums():
         json.dump(recent_albums, f)
         
     
+<<<<<<< HEAD
 def loadSongsbyGenre():
     genres = ["Rock", "Pop", "Rap", "Jazz", "Classical", "Electronic", "Country", "R&B", "Latino", "Blues"]
     
@@ -119,4 +120,14 @@ def loadRecentTracks():
 
 if __name__ =='__main__':
     loadRecentTracks()
+=======
+
+    
+
+    
+
+if __name__ =='__main__':
+    loadRecentAlbums()
+
+>>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
             
