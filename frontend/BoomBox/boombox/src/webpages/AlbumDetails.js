@@ -29,7 +29,7 @@ const AlbumDetails = () => {
   useEffect(() => {
       const checkFunc = async () => {
         try {
-          const response = await axios.post('/get_album', {
+          const response = await axios.post('/get_album_info', {
               albumName
           });
           setImg(response.data.image)
@@ -77,7 +77,7 @@ const AlbumDetails = () => {
           </button>
         </div>
         <div style={{ position: 'absolute', left: '-35vw', bottom: '150px', textAlign: 'center' }}> 
-            <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>Artist: {artist} </p>
+            <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>Artist(s): {artist} </p>
             <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>Release Date: {release_date} </p>
         </div>
         </Row>

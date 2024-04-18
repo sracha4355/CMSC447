@@ -20,10 +20,26 @@ import Classical from "./webpages/albumGenre/Classical"
 import Electronic from "./webpages/albumGenre/Electronic"
 import Country from "./webpages/albumGenre/Country"
 import RandB from "./webpages/albumGenre/RandB"
-import Reggae from "./webpages/albumGenre/Reggae"
+import Latino from "./webpages/albumGenre/Latino"
 import Blues from "./webpages/albumGenre/Blues"
 
+
+import SongsRap from "./webpages/songGenre/Rap"
+import SongsRock from "./webpages/songGenre/Rock"
+import SongsRandB from "./webpages/songGenre/RandB"
+import SongsPop from "./webpages/songGenre/Pop"
+import SongsLatino from "./webpages/songGenre/Latino"
+import SongsJazz from "./webpages/songGenre/Jazz"
+import SongsElectronic from "./webpages/songGenre/Electronic"
+import SongsCountry from "./webpages/songGenre/Country"
+import SongsClassical from "./webpages/songGenre/Classical"
+import SongsBlues from "./webpages/songGenre/Blues"
+
+
+import Songs from './webpages/Songs'
+
 import AlbumDetails from './webpages/AlbumDetails';
+import SongDetails from './webpages/songDetails';
 
 function App() {
   return (
@@ -40,7 +56,62 @@ function App() {
                   path="/Albums"
                   element={<Albums/>}
               />
-               <Route
+              <Route
+                  exact
+                  path="/Songs"
+                  element={<Songs/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/Rap"
+                  element={<SongsRap/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/Rock"
+                  element={<SongsRock/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/RandB"
+                  element={<SongsRandB/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/Pop"
+                  element={<SongsPop/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/Latino"
+                  element={<SongsLatino/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/Jazz"
+                  element={<SongsJazz/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/Electronic"
+                  element={<SongsElectronic/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/Country"
+                  element={<SongsCountry/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/Classical"
+                  element={<SongsClassical/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/Blues"
+                  element={<SongsBlues/>}
+              />
+              <Route
                   exact
                   path="/Rap"
                   element={<Rap/>}
@@ -82,8 +153,8 @@ function App() {
               />
                <Route
                   exact
-                  path="/Reggae"
-                  element={<Reggae/>}
+                  path="/Latino"
+                  element={<Latino/>}
               />
                <Route
                   exact
@@ -94,6 +165,11 @@ function App() {
                   exact
                   path="/Albums/:albumName"
                   element={<AlbumDetails/>}
+              />
+              <Route
+                  exact
+                  path="/Songs/:songName"
+                  element={<SongDetails/>}
               />
           </Routes>
       </Router>

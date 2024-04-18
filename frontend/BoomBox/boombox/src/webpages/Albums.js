@@ -10,7 +10,8 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 const Albums = () => {
-    const musicGenres = ["Rock", "Pop", "Rap", "Jazz", "Classical", "Electronic", "Country", "RandB", "Reggae", "Blues"];
+    const musicGenres = ["Rock", "Pop", "Rap", "Jazz", "Classical", "Electronic", "Country", "RandB", "Latino", "Blues"];
+    const musicGenresAllChars = ["Rock", "Pop", "Rap", "Jazz", "Classical", "Electronic", "Country", "R&B", "Latino", "Blues"];
     const genreImages = [
         "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ7aMB5trwPgJa82IAUX6uF5w7Cw3JbJE8x0COhOMu9yujU58Z1",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdT7Hx73xEUUnyzR3xQz0Mvwh0LQ6y4WVeptjHc_sluA&s",
@@ -35,11 +36,11 @@ const Albums = () => {
     useEffect(() => {
         const fetchPopularAlbums = async () => {
             try {
-                const response = await axios.post('/get_popular_albums_current', {});
+                const response = await axios.post('/get_popular_albums', {});
                 const data = response.data;
                 
-                const albumNames = data.map(album => album.album);
-                const albumImages = data.map(album => album.image);
+                const albumNames = data.map(album => album.album_name);
+                const albumImages = data.map(album => album.album_cover);
 
                 setPopularAlbums(albumNames);
                 setImgPopular(albumImages);
@@ -57,8 +58,8 @@ const Albums = () => {
                 const response = await axios.post('/get_recent', {});
                 const data = response.data;
                 
-                const albumNames = data.map(album => album.album);
-                const albumImages = data.map(album => album.image);
+                const albumNames = data.map(album => album.album_name);
+                const albumImages = data.map(album => album.album_cover);
 
                 setRecentAlbums(albumNames);
                 setImgRecent(albumImages);
@@ -87,7 +88,7 @@ const Albums = () => {
                 >
                     {musicGenres.map((genre, index) => (
                         <SwiperSlide key={index} onClick={() => nav(`/${genre}`)}>
-                            <SlideWithImage genre={genre} imageURL={genreImages[index]} />
+                            <SlideWithImage genre={musicGenresAllChars[index]} imageURL={genreImages[index]} />
                         </SwiperSlide>
                     ))}
                 </Swiper>

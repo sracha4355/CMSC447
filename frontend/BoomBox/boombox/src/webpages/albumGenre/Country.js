@@ -8,19 +8,19 @@ import axios from 'axios';
 
 
 const Country = () => {
-  const [genre] = useState('country');
+  const [genre] = useState('Country');
   const [Albums, setAlbumName] = useState([]); // Use useState for albumName
   const [img, setImg] = useState([]); // Use useState for img
 
   useEffect(() => {
     const checkFunc = async () => {
       try {
-        const response = await axios.post('/get_popular_albums', { genre });
+        const response = await axios.post('/get_albums_by_genre', { genre });
         const data = response.data;
       
         // Extract album names and images from the API response
-        const albumNames = data.map(album => album.album);
-        const albumImages = data.map(album => album.image);
+        const albumNames = data.map(album => album.album_name);
+        const albumImages = data.map(album => album.album_cover);
 
         // Update the state with the extracted data
         setAlbumName(albumNames);
