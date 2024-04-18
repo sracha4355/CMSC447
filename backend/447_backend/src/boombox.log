@@ -1,0 +1,723 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 18:12:23] "GET /gen_token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 18:12:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 18:14:19] "GET /gen_token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 18:14:58] "GET /gen_token HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:04:48] "GET /gen_token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:04:54] "[35m[1mGET /get_artists_by_genre HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:04:54] "GET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:04:54] "GET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:04:54] "GET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:04:55] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:07:14] "GET /get_artists_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:08:54] "GET /get_artists_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:10:45] "GET /get_artists_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:12:04] "GET /get_artists_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:12:45] "[35m[1mGET /get_artists_by_genre HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:12:45] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:12:45] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:12:45] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:12:46] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:07] "[35m[1mGET /get_artists_by_genre HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:08] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:08] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:08] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:08] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:20] "GET /get_artists_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:31] "[35m[1mGET /get_artists_by_genre HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:31] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:31] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:31] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:13:31] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:16:28] "[35m[1mGET /get_artists_by_genre HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:16:28] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:16:28] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:16:28] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:16:28] "[36mGET /get_artists_by_genre?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:17:00] "GET /get_artists_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:17:47] "GET /get_artists_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:23:42] "GET /gen_token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:23:53] "GET /get_artists HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:25:11] "GET /get_artists HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:26:09] "GET /get_artist_id HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:30:43] "[35m[1mGET /get_artist_album HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:30:43] "GET /get_artist_album?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:30:43] "GET /get_artist_album?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:30:43] "GET /get_artist_album?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:30:43] "[36mGET /get_artist_album?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:31:38] "GET /get_artist_album HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:32:46] "GET /gen_token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:32:52] "GET /get_artist_album HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:34:29] "GET /get_artist_album HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:34:44] "GET /get_artist_album HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 19:35:09] "GET /get_artist_album HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:16:28] "GET /gen_token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:16:38] "[33mGET /geT_albums_by_genre HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:16:45] "GET /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:19:44] "GET /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:21:49] "GET /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:35:15] "GET /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:38:06] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:38:06] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:38:06] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:38:07] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:38:08] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:38:08] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:38:19] "[33mPOST /get_album HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:38:19] "[33mPOST /get_album HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:38:22] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:38:22] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:33] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:33] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:34] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:34] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:35] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:35] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:43] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:43] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:43] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:43] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:49] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:49] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:49] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:43:50] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:44:32] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:44:32] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:10] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:10] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:10] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:10] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:11] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:11] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:12] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:12] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:12] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:12] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:15] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:15] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:20] "[33mPOST /get_album HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:20] "[33mPOST /get_album HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:27] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:45:27] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:52:22] "GET /get_album_id HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:52:38] "GET /get_album_id HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:54:33] "[35m[1mGET /get_album_info HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:54:34] "GET /get_album_info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:54:34] "GET /get_album_info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:54:34] "GET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:54:34] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:54:56] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:55:09] "GET /gen_token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:55:14] "[33mGET /get_popularity HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:55:21] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:55:30] "[35m[1mGET /get_album_info HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:55:30] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:55:30] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:55:30] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:55:30] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:55:44] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:56:45] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:58:03] "[35m[1mGET /get_album_info HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:58:04] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:58:04] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:58:04] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:58:04] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 20:58:23] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:01:36] "[35m[1mGET /get_album_info HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:01:36] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:01:36] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:01:37] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:01:37] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:02:27] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:02:48] "[35m[1mGET /get_album_info HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:02:48] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:02:48] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:02:48] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:02:48] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:03:04] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:03:39] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:04:09] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:09] "[35m[1mGET /get_album_info HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:09] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:09] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:09] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:09] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:30] "[35m[1mGET /get_album_info HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:30] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:30] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:30] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:30] "[36mGET /get_album_info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:05:53] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:06:23] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:08:04] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:12:38] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:13:05] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:16:35] "GET /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:17:36] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:17:36] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:17:36] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:17:36] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:17:37] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:17:37] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:17:39] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:17:39] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:17:59] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:18:00] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:18:03] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:18:03] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:18:10] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:18:10] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:18:13] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:18:13] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:22] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:22] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:25] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:25] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:32] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:32] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:34] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:34] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:36] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:36] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:39] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:39] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:42] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:19:42] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:23:00] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:23:00] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:23:18] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:23:18] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:23:57] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:23:57] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:23:57] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:23:57] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:23:58] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:23:58] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:00] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:00] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:11] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:12] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:14] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:15] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:16] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:16] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:18] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:19] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:31] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:31] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:33] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:33] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:36] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:36] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:42] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:42] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:45] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:46] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:48] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:48] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:58] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:58] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:58] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:24:58] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:00] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:00] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:00] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:00] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:04] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:05] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:06] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:06] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:06] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:06] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:07] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:08] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:11] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:12] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:14] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:15] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:18] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:18] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:26] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:26] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:30] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:31] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:32] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:32] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:40] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:40] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:47] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:47] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:50] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:50] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:52] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:53] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:57] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:57] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:59] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:25:59] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:05] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:05] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:10] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:10] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:17] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:17] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:18] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:18] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:21] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:21] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:41] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:41] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:48] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:48] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:53] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:53] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:54] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:54] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:54] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:26:54] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:18] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:18] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:18] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:18] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:19] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:20] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:20] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:20] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:25] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:25] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:25] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:25] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:25] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:25] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:26] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:26] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:26] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:26] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:30] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:30] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:30] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:27:30] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:28:55] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:28:55] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:28:58] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:28:59] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:00] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:00] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:00] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:00] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:02] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:03] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:08] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:08] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:12] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:13] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:23] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:23] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:23] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:23] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:26] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:26] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:27] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:27] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:27] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:27] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:32] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:33] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:34] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:34] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:34] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:34] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:39] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:29:39] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:30:01] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:30:01] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:30:01] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:30:01] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:08] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:10] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:10] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:12] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:12] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:29] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:29] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:34] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:34] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:55] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:55] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:58] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:58] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:58] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:31:58] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:32:01] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:32:01] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:32:01] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:32:01] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:32:04] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:32:04] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:32:05] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:32:05] "[33mPOST /get_popular_albums_current HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:32:05] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:32:05] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:40:43] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:40:43] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:40:43] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:40:43] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:40:46] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:40:46] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:40:47] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:40:47] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:40:47] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:40:47] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:12] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:12] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:18] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:18] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:18] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:18] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:21] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:21] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:22] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:22] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:22] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:22] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:24] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:24] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:24] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:24] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:24] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:41:24] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:29] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:29] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:29] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:29] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:35] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:35] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:37] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:37] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:37] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:37] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:40] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:40] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:42] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:42] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:42] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:49:42] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:50:43] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:50:43] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:50:43] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:50:44] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:03] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:03] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:09] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:09] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:09] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:09] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:14] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:15] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:17] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:17] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:17] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:17] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:23] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:23] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:24] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:24] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:24] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:24] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:43] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:43] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:46] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:46] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:50] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:50] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:50] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:50] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:50] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:51:50] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:52:58] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:52:58] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:52:58] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:52:59] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:57:12] "[35m[1mGET /get_recent HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:57:12] "GET /get_recent?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:57:12] "GET /get_recent?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:57:12] "GET /get_recent?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:57:13] "[36mGET /get_recent?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:57:26] "GET /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:57:36] "GET /gen_token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 21:57:39] "GET /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:00:03] "[35m[1mGET /get_recent HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:00:03] "[36mGET /get_recent?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:00:03] "[36mGET /get_recent?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:00:03] "[36mGET /get_recent?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:00:04] "[36mGET /get_recent?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:00:27] "GET /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:00:47] "GET /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:01:23] "[35m[1mGET /get_recent HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:01:23] "[36mGET /get_recent?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:01:23] "[36mGET /get_recent?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:01:24] "[36mGET /get_recent?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:01:24] "[36mGET /get_recent?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:01:37] "GET /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:03:24] "GET /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:05:52] "[31m[1mPOST /get_recent HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:05:52] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:05:52] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:05:52] "[31m[1mPOST /get_recent HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:05:57] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:05:57] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:05:58] "[31m[1mPOST /get_recent HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:05:58] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:05:58] "[31m[1mPOST /get_recent HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:05:58] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:00] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:00] "[31m[1mPOST /get_recent HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:01] "[31m[1mPOST /get_recent HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:01] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:05] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:05] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:07] "[31m[1mPOST /get_recent HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:07] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:07] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:07] "[31m[1mPOST /get_recent HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:41] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:41] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:41] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:42] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:46] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:46] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:47] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:47] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:47] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:06:47] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:07:12] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:07:12] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:07:20] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:07:20] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:07:20] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:07:20] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:08:36] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:08:36] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:08:36] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:08:36] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:08:49] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:08:49] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:08:52] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:08:53] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:08:53] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:08:53] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:04] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:04] "POST /get_album_info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:06] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:07] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:07] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:07] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:11] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:11] "POST /get_albums_by_genre HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:13] "POST /get_popular_albums HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:13] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:13] "POST /get_recent HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2024 22:09:13] "POST /get_popular_albums HTTP/1.1" 200 -
