@@ -46,7 +46,7 @@ def search_for_albums(album_name, limit=10):
     res = requests.get(URL, headers=headers, params=params)
     return res.json() if res else None
 
-<<<<<<< HEAD
+
 def search_for_tracks(track_name, limit=1):
     URL = f'https://api.spotify.com/v1/search?q={track_name}&type=track&limit={limit}'
     access_token = extract_access_token()
@@ -59,8 +59,7 @@ def search_for_tracks(track_name, limit=1):
     res = requests.get(URL, headers=headers, params=params).json()
     return res if res else None
 
-=======
->>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
+
 
 def serach_for_artist_by_genre(genre, limit  =  50):
     URL = f'https://api.spotify.com/v1/search'
@@ -80,7 +79,25 @@ def serach_for_artist_by_genre(genre, limit  =  50):
         artists.append(artist['name'])
     return artists
 
-<<<<<<< HEAD
+
+def serach_for_artist_by_genre_with_image(genre, limit  =  50):
+    URL = f'https://api.spotify.com/v1/search'
+    access_token = extract_access_token()
+    if not access_token:
+        raise Exception("Access token not found")
+    headers = {
+        "Authorization": f"Bearer {access_token}"
+    }
+    params = {'q': f'genre:"{genre}"', 'type': 'artist', 'limit': limit}
+    res = requests.get(URL, headers=headers, params=params).json()
+    
+    artists = []
+
+    
+    for artist in res['artists']['items']:
+        artists.append({'artist_name':artist['name'] , 'artist_cover':artist['images'][0]['url']})
+    return artists
+
 def get_most_popular_song(artist_id):
     URL =  f'https://api.spotify.com/v1/artists/{artist_id}/top-tracks?country=US'
     access_token = extract_access_token()
@@ -104,8 +121,7 @@ def get_most_popular_song(artist_id):
 
     return song_data
 
-=======
->>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
+
 
 def get_most_popular_album(artist_id):
     URL =  f'https://api.spotify.com/v1/artists/{artist_id}/albums'
@@ -184,10 +200,10 @@ def get_most_recent_albums():
 
 
 
-<<<<<<< HEAD
+
 def get_most_recent_tracks():
     # Define the URL for the new releases endpoint, specifying that you want tracks
-    url = url = f"https://api.spotify.com/v1/browse/new-releases?type=track&limit={2}"
+    url  = f"https://api.spotify.com/v1/browse/new-releases"
     access_token = extract_access_token()
     if not access_token:
         raise Exception("Access token not found")
@@ -196,30 +212,72 @@ def get_most_recent_tracks():
     }
     response = requests.get(url, headers=headers)
     data = response.json()
-    tracks = []
-    '''
-    for item in data['tracks']['items']:
-        track_info = {
-            'track_name': item['name'],
-            'track_cover': item['album']['images'][0]['url']  
+  
+    albums = []
+   
+    for album in data['albums']['items']:
+        albums.append(album['name'])
+    
+    album_ids = [get_album_id(album) for album in albums ]
+
+    songs  = [get_most_popular_song(album_id) for album_id in album_ids]
+    
+    
+
+    return songs
+
+
+
+def get_most_recent_artists():
+    # Define the URL for the new releases endpoint, specifying that you want tracks
+    url  = f"https://api.spotify.com/v1/browse/new-releases"
+    access_token = extract_access_token()
+    if not access_token:
+        raise Exception("Access token not found")
+    headers = {
+        "Authorization": f"Bearer {access_token}"
+    }
+    response = requests.get(url, headers=headers).json()
+    artist_names = [name['artists'][0]['name'] for name in response['albums']['items']]
+
+    recent_artists = []
+
+    for name in artist_names:
+        artist_info  = search_for_artist(name)
+        artist_image =  artist_info['artists']['items'][0]['images'][0]['url']
+        artist_name = artist_info['artists']['items'][0]['name']
+
+        artist_data ={
+            'artist_image': artist_image,
+            'artist_name': artist_name
         }
+
+        recent_artists.append(artist_data)
     
-        tracks.append(track_info)
-    '''
-    
-    return data['albums']
-
-
-
-=======
->>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
-
-    
+    return recent_artists
 
 
 
 
+def get_albums_from_artist(artist_id):
+    url  =  f"https://api.spotify.com/v1/artists/{artist_id}/albums"
+    access_token = extract_access_token()
+    if not access_token:
+        raise Exception("Access token not found")
+    headers = {
+        "Authorization": f"Bearer {access_token}"
+    }
+    response = requests.get(url, headers=headers).json()
+
+    return response
+   
 
 
 
 
+
+
+
+
+if __name__ == '__main__':
+    get_most_recent_artists()

@@ -1,6 +1,7 @@
 import libapi.endpoints.endpoints as endpoints
 import json
 from pathlib import Path
+import pprint
 
 
 
@@ -58,8 +59,7 @@ def loadRecentAlbums():
     with open(f'{DIR}\\recentAlbums.json', 'w') as f:
         json.dump(recent_albums, f)
         
-    
-<<<<<<< HEAD
+
 def loadSongsbyGenre():
     genres = ["Rock", "Pop", "Rap", "Jazz", "Classical", "Electronic", "Country", "R&B", "Latino", "Blues"]
     
@@ -113,21 +113,66 @@ def loadRecentTracks():
    
     recent_tracks = endpoints.get_most_recent_tracks()
 
+   
+
     
     with open(f'{DIR}\\recentTracks.json', 'w') as f:
         json.dump(recent_tracks, f)
     
 
+
+def loadArtistsbyGenre():
+    genres = ["Rock", "Pop", "Rap", "Jazz", "Classical", "Electronic", "Country", "R&B", "Latino", "Blues"]
+    
+    DIR = f'{str(Path(__file__).parent)}\\artistsCategory'
+
+   
+    for genre in genres:
+        print(f'Now loading {genre}...')
+        popular_artists = endpoints.serach_for_artist_by_genre_with_image(genre)
+       
+        
+        with open(f'{DIR}\\{genre}.json', 'w') as f:
+            json.dump(popular_artists, f)
+            print(f'{genre} done loading.')
+
+
+def loadPopularArtistsByGenre():
+
+    DIR = f'{str(Path(__file__).parent)}\\artistsCategory'
+
+    genres  = ["Rock", "Pop", "Rap", "Jazz", "korean", "Dancehall", "Country", "R&B", "Latino", "Afrobeat"]
+    popular_artists  = []
+
+    for genre in genres:
+        print(f'Now loading {genre}...')
+        popular_artist = endpoints.serach_for_artist_by_genre_with_image(genre, limit= 1)
+        popular_artists.append(popular_artist[0])
+
+    with open(f'{DIR}\\popularArtists.json', 'w') as f:
+            json.dump(popular_artists, f)
+
+
+def loadRecentArtists():
+    DIR = f'{str(Path(__file__).parent)}\\artistsCategory'
+
+    recent_artists = endpoints.get_most_recent_artists()
+
+    with open(f'{DIR}\\recentArtists.json', 'w') as f:
+            json.dump(recent_artists, f)
+    
+
+
+    
+
 if __name__ =='__main__':
-    loadRecentTracks()
-=======
+    loadRecentArtists()
+   
+
 
     
 
     
 
-if __name__ =='__main__':
-    loadRecentAlbums()
 
->>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
             

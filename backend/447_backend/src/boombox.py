@@ -21,21 +21,11 @@ MYSQL_DATABASE = "boombox"
 # grab directory for mysql source files
 # have to do this before running flask, or flask will break!
 CWD = os.getcwd()
-<<<<<<< HEAD
-
-os.chdir("../../../database/mysql")
-
-
-MYSQL_SOURCE_DIRECTORY = os.getcwd()
-os.chdir(CWD)
-
-
-=======
 os.chdir("../../../database/mysql")
 MYSQL_SOURCE_DIRECTORY = os.getcwd()
 os.chdir(CWD)
 
->>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
+
 # init flask
 app = Flask(__name__)
 
@@ -94,7 +84,7 @@ def get_albums_by_genre():
 
     return data
 
-<<<<<<< HEAD
+
 
 @app.route('/get_songs_by_genre',methods = ['POST'])
 def get_songs_by_genre():
@@ -113,8 +103,6 @@ def get_songs_by_genre():
 
     return data
 
-=======
->>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
     
 @app.route('/get_album_info', methods = ['POST'])
 def get_album_info():
@@ -149,7 +137,6 @@ def get_album_info():
     return album_info
 
 
-<<<<<<< HEAD
 @app.route('/get_track_info', methods = ['POST'])
 def get_track_info():
 
@@ -183,12 +170,11 @@ def get_track_info():
     
 
 
-=======
->>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
+
+
 @app.route('/get_popular_albums',methods = ['POST'])
 def get_popular_albums():
 
-    
 
     DIR = f'{str(Path(__file__).parent)}\\albumsCategory\\popularAlbums.json'
 
@@ -213,7 +199,7 @@ def get_recent():
 
 
 
-<<<<<<< HEAD
+
 @app.route('/get_popular_songs', methods = ['POST'])
 def get_popular_songs():
 
@@ -222,21 +208,98 @@ def get_popular_songs():
     data = None
     with open(DIR, 'r') as f:
         data = json.load(f)
-   
+ 
   
 
     return data
 
 
+@app.route('/get_popular_artists', methods = ['POST'])
+def get_popular_artists():
+    DIR = f'{str(Path(__file__).parent)}\\artistsCategory\\popularArtists.json'
 
-=======
->>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6
+    data = None
+    with open(DIR, 'r') as f:
+        data = json.load(f)
+ 
+  
 
+    return data
+
+
+@app.route('/get_recent_artists', methods = ['POST'])
+def get_recent_artists():
+    DIR = f'{str(Path(__file__).parent)}\\artistsCategory\\recentArtists.json'
+
+    data = None
+    with open(DIR, 'r') as f:
+        data = json.load(f)
+ 
+  
+    return data
+
+
+
+
+@app.route('/get_recent_songs', methods = ['POST'])
+def get_recent_songs():
+
+    DIR = f'{str(Path(__file__).parent)}\\songsCategory\\recentTracks.json'
+
+    data = None
+    with open(DIR, 'r') as f:
+        data = json.load(f)
+    return data
+
+@app.route('/get_artist', methods = ['POST'])
+def get_artist():
+
+    data = request.json
+
+    artist_name  = data['artistName']
+
+    artist = endpoints.search_for_artist(artist_name)
+    artist_id = endpoints.get_artist_id(artist_name)
+    response = endpoints.get_albums_from_artist(artist_id)
+
+   
+    image = artist['artists']['items'][0]['images'][0]['url']
+    popularity  = artist['artists']['items'][0]['popularity']
+    name = artist['artists']['items'][0]['name']
+  
+    albums = []
+    album_images = []
+    for item in response['items']:      
+        albums.append(item['name'])
+        album_images.append(item['images'][0]['url'])
+
+
+    metadata = {'image': image,
+                'popularity' : popularity,
+                'albumList': albums,
+                'name': name,
+                'imageList':album_images
+    }
+
+    return metadata
+
+@app.route('/get_artist_by_genre', methods = ['POST'])
+def get_artist_by_genre():
+
+    data = request.json
+
+    genre = data['genre']
+
+    DIR = f'{str(Path(__file__).parent)}\\artistsCategory\\{genre}.json'
+
+
+    data = None
+    with open(DIR, 'r') as f:
+        data = json.load(f)
+    return data
+    
 
 # driver
 if __name__ == "__main__":
-<<<<<<< HEAD
+
     app.run(debug=True, use_reloader=False)
-=======
-    app.run(debug=True, use_reloader=False)
->>>>>>> 1d24ef0567f1c9f6b8bdffb94bb4fbd3f20f9ab6

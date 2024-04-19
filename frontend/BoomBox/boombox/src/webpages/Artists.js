@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './Songs.css';
+import './Artists.css';
 import Header from "./Header.js";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
@@ -9,66 +9,66 @@ import SlideWithImage from "./SlideWithImage";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-const Songs = () => {
+const Artists = () => {
     const musicGenres = ["Rock", "Pop", "Rap", "Jazz", "Classical", "Electronic", "Country", "RandB", "Latino", "Blues"];
     const musicGenresAllChars = ["Rock", "Pop", "Rap", "Jazz", "Classical", "Electronic", "Country", "R&B", "Latino", "Blues"];
-    const genreImages = ['https://upload.wikimedia.org/wikipedia/en/e/e5/In_Utero_%28Nirvana%29_album_cover.jpg',
-    'https://upload.wikimedia.org/wikipedia/en/b/b2/Olivia_Rodrigo_-_SOUR.png',
-    'https://upload.wikimedia.org/wikipedia/en/9/97/Yeat_-_2093.png',
-    'https://media.pitchfork.com/photos/62850f69a57fda486c44c8ad/1:1/w_450%2Ch_450%2Cc_limit/Shabaka.jpg',
-    'https://lastfm.freetls.fastly.net/i/u/ar0/2f8d42c16ef24f00cfc7381796c1aa39.jpg',
-    'https://www.virginmusic.jp/files/2024/02/Last-Of-Us.jpg',
-    'https://i.scdn.co/image/ab67616d0000b273ca650d3a95022e0490434ba1',
-    'https://bridgesetsound.com/cdn/shop/files/sza.jpg?v=1688160992&width=480',
-    'https://upload.wikimedia.org/wikipedia/en/6/60/Bad_Bunny_-_Un_Verano_Sin_Ti.png',
-    'https://i.scdn.co/image/a45eb513634337dcdf715bdb80bc5820ce9c3207',
-
+    const genreImages = [
+        "https://media.npr.org/assets/img/2024/01/29/green_day_hires-13_alice-baxley-applemusic-52f7fabf9f5d0149159e467aafc4919d2eb65a40-s1100-c50.jpg",
+        "https://upload.wikimedia.org/wikipedia/en/7/7e/Ariana_Grande_-_Eternal_Sunshine.png",
+        "https://charts-static.billboard.com/img/1988/03/future-f8b-344x344.jpg",
+        "https://cdn.shopify.com/s/files/1/1691/2535/collections/Louis_Armstrong.jpg?v=1495806225",
+        "https://hips.hearstapps.com/hmg-prod/images/beethoven-600x600.jpg?crop=1xw:1.0xh;center,top&resize=640:*",
+        "https://resources.tidal.com/images/2f02f896/916a/4fc8/9041/870702657180/750x750.jpg",
+        "https://yt3.googleusercontent.com/m5LpRVgSuI_KOny27BMnYcINjmYmSgvGdkd-I8QNtvUnsTWxmHIkrDHBd2w9U_-BkSw8WzlXXOc=s900-c-k-c0x00ffffff-no-rj",
+        "https://www.madametussauds.com/berlin/media/xt4po5zr/_dsc7449-rihanna-mtb-2023-ff.jpg?center=0.35020046971120222,0.50250498708598845&mode=crop&format=webp&quality=80&width=700&height=700",
+        "https://i.scdn.co/image/ab6761610000e5eb00bfcedce3845ae969c8277a",
+        "https://img.apmcdn.org/ec1092fd4c13e971a166eb2fbafb1c7da637b0d6/uncropped/c9f9f5-20190528-b-b-king-performing-in-2006.jpg",
     ];
 
-    const [popularSongs, setPopularSongs] = useState([]);
+    const [popularArtists, setPopularArtists] = useState([]);
     const [imgPopular, setImgPopular] = useState([]);
 
-    const [recentSongs, setRecentSongs] = useState([]);
+    const [recentArtists, setRecentArtists] = useState([]);
     const [imgRecent, setImgRecent] = useState([]);
 
     const nav = useNavigate();
 
     useEffect(() => {
-        const fetchPopularSongs = async () => {
+        const fetchPopularArtists = async () => {
             try {
-                const response = await axios.post('/get_popular_songs', {});
+                const response = await axios.post('/get_popular_artists', {});
                 const data = response.data;
                 
-                const SongNames = data.map(Song => Song.song_name);
-                const SongImages = data.map(Song => Song.song_cover);
+                const artistNames = data.map(artist => artist.artist_name);
+                const artistImages = data.map(artist => artist.artist_cover);
 
-                setPopularSongs(SongNames);
-                setImgPopular(SongImages);
+                setPopularArtists(artistNames);
+                setImgPopular(artistImages);
             } catch (error) {
                 console.error(error);
             }
         };
 
-        fetchPopularSongs();
+        fetchPopularArtists();
     }, []);
 
     useEffect(() => {
-        const fetchRecentSongs = async () => {
+        const fetchRecentArtists = async () => {
             try {
-                const response = await axios.post('/get_recent_songs', {});
+                const response = await axios.post('/get_recent_artists', {});
                 const data = response.data;
                 
-                const SongNames = data.map(Song => Song.track_name);
-                const SongImages = data.map(Song => Song.track_cover);
+                const artistNames = data.map(artist => artist.artist_name);
+                const artistImages = data.map(artist => artist.artist_image);
 
-                setRecentSongs(SongNames);
-                setImgRecent(SongImages);
+                setRecentArtists(artistNames);
+                setImgRecent(artistImages);
             } catch (error) {
                 console.error(error);
             }
         };
 
-        fetchRecentSongs();
+        fetchRecentArtists();
     }, []);
 
     return (
@@ -76,7 +76,7 @@ const Songs = () => {
             <Header />
             
             <div className="swiper-container" style={{height:'300px'}}>
-                <h3>Songs By Genre</h3>
+                <h3>Artists By Genre</h3>
                 <Swiper
                     slidesPerView={3}
                     spaceBetween={30}
@@ -87,7 +87,7 @@ const Songs = () => {
                     style={{height:'300px'}}
                 >
                     {musicGenres.map((genre, index) => (
-                        <SwiperSlide key={index} onClick={() => nav(`Songs/${genre}`)}>
+                        <SwiperSlide key={index} onClick={() => nav(`Artists/${genre}`)}>
                             <SlideWithImage genre={musicGenresAllChars[index]} imageURL={genreImages[index]} />
                         </SwiperSlide>
                     ))}
@@ -95,7 +95,7 @@ const Songs = () => {
             </div>
 
             <div className="swiper-container" style={{height:'300px'}}>
-                <h3>Popular Songs</h3>
+                <h3>Popular Artists</h3>
                 <Swiper
                     slidesPerView={3}
                     spaceBetween={30}
@@ -105,16 +105,16 @@ const Songs = () => {
                     pagination={{ clickable: true }}
                     style={{height:'300px'}}
                 >
-                    {popularSongs.map((Song, index) => (
-                        <SwiperSlide key={index} onClick={() => nav(`/Songs/${encodeURIComponent(Song)}`)}>
-                            <SlideWithImage genre={Song} imageURL={imgPopular[index]} />
+                    {popularArtists.map((artist, index) => (
+                        <SwiperSlide key={index} onClick={() => nav(`/Artists/${encodeURIComponent(artist)}`)}>
+                            <SlideWithImage genre={artist} imageURL={imgPopular[index]} />
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
 
             <div className="swiper-container" style={{height:'300px'}}>
-                <h3>Recent Songs</h3>
+                <h3>Recent Artists</h3>
                 <Swiper
                     slidesPerView={3}
                     spaceBetween={30}
@@ -124,9 +124,9 @@ const Songs = () => {
                     pagination={{ clickable: true }}
                     style={{height:'300px'}}
                 >
-                    {recentSongs.map((Song, index) => (
-                        <SwiperSlide key={index} onClick={() => nav(`/Songs/${encodeURIComponent(Song)}`)}>
-                            <SlideWithImage genre={Song} imageURL={imgRecent[index]} />
+                    {recentArtists.map((artist, index) => (
+                        <SwiperSlide key={index} onClick={() => nav(`/Artists/${encodeURIComponent(artist)}`)}>
+                            <SlideWithImage genre={artist} imageURL={imgRecent[index]} />
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -135,4 +135,4 @@ const Songs = () => {
     );
 };
 
-export default Songs;
+export default Artists;
