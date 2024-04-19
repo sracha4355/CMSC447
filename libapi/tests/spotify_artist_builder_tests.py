@@ -55,6 +55,7 @@ class ArtistsEndPointClassTests(unittest.TestCase):
         artist_id, artist_name = test_uids[0]
         builder = SpotifyArtistEndpoint(ACCESS_TOKEN)
         response = builder.get_artist(artist_id)
+        pretty_print(response.json())
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["name"], artist_name)
 

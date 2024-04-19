@@ -74,3 +74,18 @@ class Release_Table:
     
     def delete_artist_id(self, artist_id):
         self.table.delete("`artist_id`", artist_id)
+
+
+    def get_by_uid(self, uid):
+        return self.table.get_all("`spotify_uid`", uid)
+    
+    def exists_by_uid(self, uid):
+        return self.get_by_uid(uid)
+    
+    def create_by_uid(self, release_name, release_length, artist_id, release_boomscore, spotify_uid, album_cover_filepath):
+        columns = [self.table_name, self.table_length, "`artist_id`", self.table_boomscore, "spotify_uid", "album_cover"]
+        values = [
+            f"\'{release_name}\'", f"\'{release_length}\'", f'\'{artist_id}\'', 
+            f'\'{release_boomscore}\'', f'\'{spotify_uid}\'', f'\'{album_cover_filepath}\''
+        ]
+        self.table.insert(columns, values)
