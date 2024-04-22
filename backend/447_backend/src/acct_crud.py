@@ -150,7 +150,7 @@ def app_create_acct():
 @blueprint.route("/get_acct", methods=["POST"])
 def app_get_acct():
     if request.method == "POST":
-        return get_acct(request.get_json())
+        return get_accts(request.get_json())
     
     response = make_response(
         jsonify({"error":"only post method is allowed"}),
