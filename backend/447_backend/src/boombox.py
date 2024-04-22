@@ -1,9 +1,12 @@
-import logging
 import os
-from flask import Flask
+import logging
+from flask import Flask, jsonify, make_response
 from database import MySQL_Database
 from files import read_file_in
 from demo_4_16_24 import demo
+#from route_tests import test_routes
+from artist_route import create_artist
+
 
 # init log file
 # print() will not work, so if you want to "print" anything...
@@ -24,6 +27,9 @@ os.chdir(CWD)
 
 # init flask
 app = Flask(__name__)
+
+app_context = app.app_context()
+app_context.push()
 
 # init database
 database = MySQL_Database(
