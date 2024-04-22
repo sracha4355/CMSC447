@@ -7,12 +7,9 @@ sys.path.append(LIBAPI_FP)
 from flask import Blueprint, request, Response, make_response, jsonify
 from libapi.query.query_builder import QueryBuilder
 from spotify_token import SPOTIFY_ACCESS_TOKEN
-#from responses import build_json_response, response_only_post_allowed, response_table_not_found, response_spotify_error, response_success
-#from responses import build_json_response, RESPONSE_ONLY_POST_ALLOWED, RESPONSE_TABLE_NOT_FOUND, RESPONSE_SPOTIFY_ERROR, RESPONSE_SUCCESS
-#from boombox import database
 
 
-single_blueprint = Blueprint("single", __name__)
+blueprint = Blueprint("single", __name__)
 
 
 def create_single(json) -> Response:
@@ -149,7 +146,7 @@ def get_tracks_spotify(json) -> Response:
     return response
 
 
-@single_blueprint.route("/create_single", methods=["POST"])
+@blueprint.route("/create_single", methods=["POST"])
 def app_create_single() -> Response:
     if request.method == "POST":
         return create_single(request.get_json)
@@ -163,7 +160,7 @@ def app_create_single() -> Response:
     return response
     
 
-@single_blueprint.route("/get_singles_db", methods=["POST"])
+@blueprint.route("/get_singles_db", methods=["POST"])
 def app_get_singles_db() -> Response:
     if request.method == "POST":
         return get_singles(request.get_json)
@@ -177,7 +174,7 @@ def app_get_singles_db() -> Response:
     return response
 
 
-@single_blueprint.route("/get_tracks_spotify", methods=["POST"])
+@blueprint.route("/get_tracks_spotify", methods=["POST"])
 def app_get_tracks_spotify() -> Response:
     if request.method == "POST":
         return get_tracks_spotify(request.get_json)
@@ -191,7 +188,7 @@ def app_get_tracks_spotify() -> Response:
     return response
     
 
-@single_blueprint.route("/delete_single", methods=["POST"])
+@blueprint.route("/delete_single", methods=["POST"])
 def app_delete_single() -> Response:
     if request.method == "POST":
         return delete_single(request.get_json)

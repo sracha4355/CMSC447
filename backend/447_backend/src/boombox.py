@@ -5,7 +5,7 @@ from database import MySQL_Database
 from files import read_file_in
 from demo_4_16_24 import demo
 #from route_tests import test_routes
-from artist_route import create_artist
+from artist_crud import create_artist
 
 
 # init log file

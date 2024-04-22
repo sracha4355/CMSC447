@@ -8,11 +8,8 @@ sys.path.append(LIBAPI_FP)
 from flask import Blueprint, request, Response, make_response, jsonify
 from libapi.query.query_builder import QueryBuilder
 from spotify_token import SPOTIFY_ACCESS_TOKEN
-#from responses import build_json_response, response_only_post_allowed, response_table_not_found, response_spotify_error, response_success
-#from responses import build_json_response, RESPONSE_ONLY_POST_ALLOWED, RESPONSE_TABLE_NOT_FOUND, RESPONSE_SPOTIFY_ERROR, RESPONSE_SUCCESS
-#from boombox import database
 
-artist_blueprint = Blueprint("artist", __name__)
+blueprint = Blueprint("artist", __name__)
 
 
 def create_artist(json) -> Response:
@@ -126,7 +123,6 @@ def delete_artist(json) -> Response:
     return response
 
 
-
 def get_artists_spotify(json) -> Response:
     artist_name = json["artist_name"]
     limit = json["limit"]
@@ -171,7 +167,7 @@ def get_artists_spotify(json) -> Response:
     return response
 
 
-@artist_blueprint.route("/create_artist", methods=["POST"])
+@blueprint.route("/create_artist", methods=["POST"])
 def app_create_artist() -> Response:
     if request.method == "POST":
         return create_artist(request.get_json)
@@ -185,7 +181,7 @@ def app_create_artist() -> Response:
     return response
     
 
-@artist_blueprint.route("/get_artists_db", methods=["POST"])
+@blueprint.route("/get_artists_db", methods=["POST"])
 def app_get_artists_db() -> Response:
     if request.method == "POST":
         return get_artists(request.get_json())
@@ -199,7 +195,7 @@ def app_get_artists_db() -> Response:
     return response
     
 
-@artist_blueprint.route("/get_artists_spotify", methods=["POST"])
+@blueprint.route("/get_artists_spotify", methods=["POST"])
 def app_get_artists_spotify() -> Response:
     if request.method == "POST":
         return get_artists_spotify(request.get_json)
@@ -213,7 +209,7 @@ def app_get_artists_spotify() -> Response:
     return response
 
 
-@artist_blueprint.route("/delete_artist", methods=["POST"])
+@blueprint.route("/delete_artist", methods=["POST"])
 def app_delete_artist() -> Response:
     if request.method == "POST":
         return delete_artist(request.get_json)
