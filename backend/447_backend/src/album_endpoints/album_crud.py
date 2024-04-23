@@ -79,7 +79,6 @@ def _create_album(data):
 
 ### 30zwjSQEodaUXCn11nmiVF testing with this uid
 def _get_album_from_spotify(uid):
-    print(album_table.exists_by_uid(f'\'{uid}\''))
     if len(album_table.exists_by_uid(f'\'{uid}\'')) != 0:
         return make_api_response({"error:": f'album with uid: {uid} already exists in database or you passed an invalid uid'}, 409)
     
@@ -88,11 +87,10 @@ def _get_album_from_spotify(uid):
     album_info, artist_info = {}, {}
 
     response = album_builder.get_album(uid) 
-    #pretty_print(response.json())
     #return make_api_response({"breaking here for testing"}, 200)
 
     if response.status_code != 200:
-        return make_api_response({"error": "error in retrieving album uid: {uid} from the spotify api"}, 502)
+        return make_api_response({"error": f"error in retrieving album uid: {uid} from the spotify api"}, 404)
     
     # take the first artist
     artist = response.json()["artists"][0]
@@ -107,8 +105,8 @@ def _get_album_from_spotify(uid):
         #return make_api_response({"s": "s"}, 200)
         if artist_response != None and artist_response.status_code == 200:
             artist_info["artist_boomscore"] = 0
-            artist_info["artist_picture"] = artist_response.json()["images"][0]["url"]
-            artist_info["artist_name"] = artist["name"]
+            artist_info["artist_picture"] = escape_single_quotes(artist_response.json()["images"][0]["url"])
+            artist_info["artist_name"] = escape_single_quotes(artist["name"])
             artist_response = artist_response.json()
             artist_table.create_with_uid(
                 f'\'{artist_info["spotify_uid"]}\'', 
@@ -121,12 +119,14 @@ def _get_album_from_spotify(uid):
             artist_returned = None
 
     album_info["artist_id"] = artist_returned[0] if artist_returned != None else None ### insert the artist_id
-    album_info["album_name"] = response.json()["name"]
+    album_info["album_name"] = escape_single_quotes(response.json()["name"])
     album_info["spotify_uid"] = response.json()["id"]
-    album_info["album_length"] = response.json()["total_tracks"]
+    album_info["album_length"] = escape_single_quotes(response.json()["total_tracks"])
     album_info["album_boomscore"] = "0"
-    album_info["album_cover"] = response.json()["images"][0]["url"]
+    album_info["album_cover"] = escape_single_quotes(response.json()["images"][0]["url"])
 
+
+    print('album name', album_info["album_name"])
     album_table.create_by_uid(
         album_info["album_name"], album_info["album_length"], album_info["artist_id"], album_info["album_boomscore"], 
         album_info["spotify_uid"], album_info["album_cover"]
@@ -159,7 +159,7 @@ def create_album_entrys(tracks, album_id) -> True|False:
         album_entry_info = {
             "entry_length": None,
             "album_id": album_id,
-            "entry_name": track["name"], 
+            "entry_name": escape_single_quotes(track["name"]), 
             "spotify_uid": track["id"]
         }
         try:
@@ -212,5 +212,10 @@ def get_album():
         return make_api_response(response, 200)
         
 
+
+def escape_single_quotes(data):
+  if type(data) != str:
+    return data
+  return data.replace("'", r"\'")
 
 
