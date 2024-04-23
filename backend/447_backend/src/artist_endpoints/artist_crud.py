@@ -1,32 +1,41 @@
 import sys
 from pathlib import Path
 
-LIBAPI_FP = str(Path(__file__).parent.parent.parent.parent)
+LIBAPI_FP = str(Path(__file__).parent.parent.parent.parent.parent)
 sys.path.append(LIBAPI_FP)
+sys.path.append(Path(__file__).parent)
 
 from flask import Blueprint, request, Response, make_response, jsonify
 from libapi.query.query_builder import QueryBuilder
 from spotify_token import SPOTIFY_ACCESS_TOKEN
+from database import MySQL_Database
 
 blueprint = Blueprint("artist", __name__)
+database = None
+artist_table = None
 
+def artist_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
+    global database, artist_table
+
+    database = MySQL_Database(
+        host = mysql_host,
+        user = mysql_user,
+        password = mysql_password
+    )
+
+    if not database.use(mysql_database):
+        raise RuntimeError(f"Could not find database {mysql_database}")
+    
+    artist_table = database.get_table("acct")
+
+    if artist_table == None:
+        raise RuntimeError(f"Could not find artist table in database")
+    
 
 def create_artist(json) -> Response:
     artist_name = json["artist_name"]
     artist_picture = json["artist_picture"]
     spotify_uid = json["spotify_uid"]
-
-    from boombox import database
-
-    artist_table = database.get_table("artist")
-
-    if artist_table == None:
-        response = make_response(
-            jsonify({"error":"table not found in database"}),
-            500
-        )
-        response.headers["Content-Type"] = "application/json"
-        return response
     
     columns = ["`artist_name`", "`artist_picture`", "`artist_boomscore`", "`spotify_uid`"]
     values = [f"\'{artist_name}\'", f"\'{artist_picture}\'", 0, f"\'{spotify_uid}\'"]
@@ -40,18 +49,6 @@ def create_artist(json) -> Response:
 
 def get_artists(json) -> Response:
     artist_name = json["artist_name"]
-
-    from boombox import database
-
-    artist_table = database.get_table("artist")
-
-    if artist_table == None:
-        response = make_response(
-            jsonify({"error":"table not found in database"}),
-            500
-        )
-        response.headers["Content-Type"] = "application/json"
-        return response
     
     artists = artist_table.get_all("`artist_name`", artist_name)
     results = []
@@ -77,10 +74,7 @@ def get_artists(json) -> Response:
 def delete_artist(json) -> Response:
     artist_id = json[artist_id]
 
-    from boombox import database
-
     music_table = database.get_table("music")
-    artist_table = database.get_table("artist")
     single_table = database.get_table("single")
     album_table = database.get_table("album")
     playlist_table = database.get_table("playlist")
@@ -88,7 +82,6 @@ def delete_artist(json) -> Response:
     review_table = database.get_table("review")
 
     if music_table == None\
-        or artist_table == None\
         or single_table == None\
         or album_table == None\
         or playlist_table == None\

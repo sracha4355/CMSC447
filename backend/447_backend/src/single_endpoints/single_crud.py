@@ -1,15 +1,35 @@
 import sys
 from pathlib import Path
 
-LIBAPI_FP = str(Path(__file__).parent.parent.parent.parent)
+LIBAPI_FP = str(Path(__file__).parent.parent.parent.parent.parent)
 sys.path.append(LIBAPI_FP)
+sys.path.append(Path(__file__).parent)
 
 from flask import Blueprint, request, Response, make_response, jsonify
 from libapi.query.query_builder import QueryBuilder
 from spotify_token import SPOTIFY_ACCESS_TOKEN
-
+from database import MySQL_Database
 
 blueprint = Blueprint("single", __name__)
+database = None
+single_table = None
+
+def single_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
+    global database, single_table
+
+    database = MySQL_Database(
+        host = mysql_host,
+        user = mysql_user,
+        password = mysql_password
+    )
+
+    if not database.use(mysql_database):
+        raise RuntimeError(f"Could not find database {mysql_database}")
+    
+    single_table = database.get_table("acct")
+
+    if single_table == None:
+        raise RuntimeError(f"Could not find single table in database")
 
 
 def create_single(json) -> Response:
@@ -18,18 +38,6 @@ def create_single(json) -> Response:
     single_cover = json["single_cover"]
     artist_id = json["artist_id"]
     spotify_uid = json["spotify_uid"]
-
-    from boombox import database
-
-    single_table = database.get_table("single")
-
-    if single_table == None:
-        response = make_response(
-            jsonify({"error":"table not found in database"}),
-            500
-        )
-        response.headers["Content-Type"] = "application/json"
-        return response
     
     columns = ["`single_name`", "`single_length`", "`single_cover`", "`artist_id`", "`single_boomscore`","`spotify_uid`"]
     values = [f"\'{single_name}\'", f"\'{single_length}\'", f"\'{single_cover}\'", artist_id, 0, f"\'{spotify_uid}\'"]
@@ -43,18 +51,6 @@ def create_single(json) -> Response:
 
 def get_singles(json) -> Response:
     single_name = json["single_name"]
-
-    from boombox import database
-
-    single_table = database.get_table("single")
-
-    if single_table == None:
-        response = make_response(
-            jsonify({"error":"table not found in database"}),
-            500
-        )
-        response.headers["Content-Type"] = "application/json"
-        return response
     
     singles = single_table.get_all("`single_name`", single_name)
     results = []
@@ -82,18 +78,6 @@ def get_singles(json) -> Response:
 
 def delete_single(json) -> Response:
     single_id = json["single_id"]
-
-    from boombox import database
-
-    single_table = database.get_table("single")
-
-    if single_table == None:
-        response = make_response(
-            jsonify({"error":"table not found in database"}),
-            500
-        )
-        response.headers["Content-Type"] = "application/json"
-        return response
     
     single_table.delete("`single_id`", single_id)
 

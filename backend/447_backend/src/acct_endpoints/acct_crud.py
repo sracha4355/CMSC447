@@ -1,32 +1,39 @@
 import sys
 from pathlib import Path
 
-LIBAPI_FP = str(Path(__file__).parent.parent.parent.parent)
+LIBAPI_FP = str(Path(__file__).parent.parent.parent.parent.parent)
 sys.path.append(LIBAPI_FP)
+sys.path.append(Path(__file__).parent)
 
 from flask import Blueprint, request, Response, make_response, jsonify
-from libapi.query.query_builder import QueryBuilder
-from spotify_token import SPOTIFY_ACCESS_TOKEN
+from database import MySQL_Database
 
 blueprint = Blueprint("acct", __name__)
+database = None
+acct_table = None
+
+def acct_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
+    global database, acct_table
+
+    database = MySQL_Database(
+        host = mysql_host,
+        user = mysql_user,
+        password = mysql_password
+    )
+
+    if not database.use(mysql_database):
+        raise RuntimeError(f"Could not find database {mysql_database}")
+    
+    acct_table = database.get_table("acct")
+
+    if acct_table == None:
+        raise RuntimeError(f"Could not find acct table in database")
 
 
 def create_acct(json) -> Response:
     acct_email = json["user_email"]
     acct_username = json["username"]
     acct_password = json["user_password"]
-
-    from boombox import database
-
-    acct_table = database.get_table("acct")
-
-    if acct_table == None:
-        response = make_response(
-            jsonify({"error":"table not found in database"}),
-            500
-        )
-        response.headers["Content-Type"] = "application/json"
-        return response
     
     columns = ["`user_email`", "`username`", "`password_hash`"]
     values = [f"\'{acct_email}\'", f"\'{acct_username}\'", f"\'{acct_password}\'"]
@@ -40,18 +47,6 @@ def create_acct(json) -> Response:
 
 def get_accts(json) -> Response:
     acct_username = json["acct_username"]
-
-    from boombox import database
-
-    acct_table = database.get_table("acct")
-
-    if acct_table == None:
-        response = make_response(
-            jsonify({"error":"table not found in database"}),
-            500
-        )
-        response.headers["Content-Type"] = "application/json"
-        return response
     
     results = []
 
@@ -85,18 +80,6 @@ def update_acct(json) -> Response:
     password_hash = json["password_hash"]
     follower_count = json["follower_count"]
     following_count = json["following_count"]
-
-    from boombox import database
-
-    acct_table = database.get_table("acct")
-
-    if acct_table == None:
-        response = make_response(
-            jsonify({"error":"table not found in database"}),
-            500
-        )
-        response.headers["Content-Type"] = "application/json"
-        return response
     
     acct_table.update("`user_email`", f"\'{user_email}\'", "`account_id`", account_id)
     acct_table.update("`username`", f"\'{username}\'", "`account_id`", account_id)
@@ -112,18 +95,6 @@ def update_acct(json) -> Response:
 
 def delete_acct(json) -> Response:
     account_id = json["account_id"]
-
-    from boombox import database
-
-    acct_table = database.get_table("acct")
-
-    if acct_table == None:
-        response = make_response(
-            jsonify({"error":"table not found in database"}),
-            500
-        )
-        response.headers["Content-Type"] = "application/json"
-        return response
     
     acct_table.delete("`account_id`", account_id)
 
