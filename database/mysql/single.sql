@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS `single` (
     PRIMARY KEY (`single_id`),
     UNIQUE KEY `single_cover` (`single_cover`),
     KEY `artist_id` (`artist_id`),
-    CONSTRAINT `artist_id` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE SET NULL
+    CONSTRAINT `artist_id` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE CASCADE
 )

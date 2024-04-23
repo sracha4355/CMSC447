@@ -6,5 +6,5 @@ CREATE TABLE IF NOT EXISTS `album_entry` (
     `spotify_uid` VARCHAR(22) DEFAULT NULL,
     PRIMARY KEY (`entry_id`),
     KEY `album_id` (`album_id`),
-    CONSTRAINT `album_entry_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`)
+    CONSTRAINT `album_entry_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`) ON DELETE CASCADE
 )
