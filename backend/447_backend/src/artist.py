@@ -49,3 +49,14 @@ class Artist_Table:
 
     def delete(self, artist_id):
         self.table.delete("`artist_id`", artist_id)
+
+    def exists_by_uid(self, uid):
+        artist = self.table.get_all("`spotify_uid`", uid)
+        if artist == []:
+            return None
+        return artist[0]
+    
+    def create_with_uid(self, spotify_uid, artist_name, artist_boomscore, artist_picture_path):
+        columns = ["`artist_name`", "`artist_boomscore`", "`spotify_uid`", "`artist_picture`"]
+        values = [str(artist_name), artist_boomscore, spotify_uid, artist_picture_path]
+        self.table.insert(columns, values)
