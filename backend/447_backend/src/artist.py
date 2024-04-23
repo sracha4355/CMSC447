@@ -13,7 +13,8 @@ class Artist_Table:
 
 
     def get_artists(self, artist_name):
-        return self.table.get_all("`artist_name`", f"\'{artist_name}\'")
+        #return self.table.get_all("`artist_name`", f"\'{artist_name}\'")
+        return self.table.get_all(f"\'{artist_name}\'", "`artist_name`")
 
 
     def get(self, artist_id):

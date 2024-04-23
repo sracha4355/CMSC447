@@ -1,9 +1,13 @@
-import logging
 import os
-from flask import Flask, render_template, request, jsonify
+import logging
+from flask import Flask, jsonify, make_response
 from database import MySQL_Database
 from files import read_file_in
 from demo_4_16_24 import demo
+from artist_endpoints.artist_crud import blueprint as artist_blueprint, artist_init_db
+from single_endpoints.single_crud import blueprint as single_blueprint, single_init_db
+from acct_endpoints.acct_crud import blueprint as acct_blueprint, acct_init_db
+
 
 # init log file
 # print() will not work, so if you want to "print" anything...
@@ -24,6 +28,12 @@ os.chdir(CWD)
 
 # init flask
 app = Flask(__name__)
+app.register_blueprint(artist_blueprint)
+app.register_blueprint(single_blueprint)
+app.register_blueprint(acct_blueprint)
+
+app_context = app.app_context()
+app_context.push()
 
 # init database
 database = MySQL_Database(
@@ -53,8 +63,13 @@ database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "review_comment.sql"))
 
 database.commit()
 
+# Init databases for crud files
+artist_init_db(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
+single_init_db(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
+acct_init_db(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
+
 # update 4/16/2024
-demo(app, database)
+# demo(app, database)
 
 
 # driver

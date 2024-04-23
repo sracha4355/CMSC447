@@ -41,7 +41,7 @@ def split_with_commas(list):
     list_len = len(list)
 
     if list_len == 0: 
-        return
+        return ""
 
     string = list[0]
     
