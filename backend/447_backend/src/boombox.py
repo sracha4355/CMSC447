@@ -7,6 +7,8 @@ from demo_4_16_24 import demo
 from artist_endpoints.artist_crud import blueprint as artist_blueprint, artist_init_db
 from single_endpoints.single_crud import blueprint as single_blueprint, single_init_db
 from acct_endpoints.acct_crud import blueprint as acct_blueprint, acct_init_db
+from album_endpoints.album_crud import blueprint as album_blueprint
+from search_endpoint.search_endpoint import search_blueprint
 from review_endpoints.review_crud import blueprint as review_blueprint, review_init_db
 from review_endpoints.review_comment_crud import blueprint as review_comment_blueprint, review_comment_init_db
 
@@ -33,6 +35,8 @@ app = Flask(__name__)
 app.register_blueprint(artist_blueprint)
 app.register_blueprint(single_blueprint)
 app.register_blueprint(acct_blueprint)
+app.register_blueprint(album_blueprint)
+app.register_blueprint(search_blueprint)
 app.register_blueprint(review_blueprint)
 app.register_blueprint(review_comment_blueprint)
 
