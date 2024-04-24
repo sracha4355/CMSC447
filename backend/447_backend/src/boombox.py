@@ -7,6 +7,8 @@ from demo_4_16_24 import demo
 from artist_endpoints.artist_crud import blueprint as artist_blueprint, artist_init_db
 from single_endpoints.single_crud import blueprint as single_blueprint, single_init_db
 from acct_endpoints.acct_crud import blueprint as acct_blueprint, acct_init_db
+from review_endpoints.review_crud import blueprint as review_blueprint, review_init_db
+from review_endpoints.review_comment_crud import blueprint as review_comment_blueprint, review_comment_init_db
 
 
 # init log file
@@ -31,6 +33,8 @@ app = Flask(__name__)
 app.register_blueprint(artist_blueprint)
 app.register_blueprint(single_blueprint)
 app.register_blueprint(acct_blueprint)
+app.register_blueprint(review_blueprint)
+app.register_blueprint(review_comment_blueprint)
 
 app_context = app.app_context()
 app_context.push()
@@ -43,12 +47,14 @@ database = MySQL_Database(
 )
 
 # Create database and use database
+# Note: Will only create database if it does not already exist
 database.create(MYSQL_DATABASE)
 
 if not database.use(MYSQL_DATABASE):
     raise RuntimeError(f"Could not find database {MYSQL_DATABASE}")
 
 # Create tables - they MUST be created in this order
+# Note: This will only create tables if they do not already exist
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "artist.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "single.sql"))
 database.execute(read_file_in(MYSQL_SOURCE_DIRECTORY, "album.sql"))

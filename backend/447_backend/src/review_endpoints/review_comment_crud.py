@@ -6,8 +6,6 @@ sys.path.append(LIBAPI_FP)
 sys.path.append(Path(__file__).parent)
 
 from flask import Blueprint, request, Response, make_response, jsonify
-from libapi.query.query_builder import QueryBuilder
-from spotify_token import SPOTIFY_ACCESS_TOKEN
 from database import MySQL_Database
 from utils import escape_single_quotes
 
