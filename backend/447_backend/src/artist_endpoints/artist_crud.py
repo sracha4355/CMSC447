@@ -9,6 +9,7 @@ from flask import Blueprint, request, Response, make_response, jsonify
 from libapi.query.query_builder import QueryBuilder
 from spotify_token import SPOTIFY_ACCESS_TOKEN
 from database import MySQL_Database
+from utils import escape_single_quotes
 
 blueprint = Blueprint("artist", __name__)
 database = None
@@ -33,8 +34,8 @@ def artist_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
     
 
 def create_artist(json) -> Response:
-    artist_name = json["artist_name"]
-    artist_picture = json["artist_picture"]
+    artist_name = escape_single_quotes(json["artist_name"])
+    artist_picture = escape_single_quotes(json["artist_picture"])
     spotify_uid = json["spotify_uid"]
     
     columns = ["`artist_name`", "`artist_picture`", "`artist_boomscore`", "`spotify_uid`"]
@@ -48,7 +49,7 @@ def create_artist(json) -> Response:
 
 
 def get_artists(json) -> Response:
-    artist_name = json["artist_name"]
+    artist_name = escape_single_quotes(json["artist_name"])
     
     artists = artist_table.get_all("`artist_name`", artist_name)
     results = []
