@@ -29,10 +29,11 @@ CREATE TABLE `single` (
   `single_cover` varchar(255) DEFAULT NULL,
   `artist_id` int unsigned DEFAULT NULL,
   `single_boomscore` int NOT NULL,
+  `spotify_uid` varchar(22) DEFAULT NULL,
   PRIMARY KEY (`single_id`),
   UNIQUE KEY `single_cover` (`single_cover`),
   KEY `artist_id` (`artist_id`),
-  CONSTRAINT `artist_id` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE SET NULL
+  CONSTRAINT `artist_id` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -45,4 +46,4 @@ CREATE TABLE `single` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-15 14:35:53
+-- Dump completed on 2024-04-24 14:29:29

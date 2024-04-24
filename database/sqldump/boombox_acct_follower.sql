@@ -27,8 +27,8 @@ CREATE TABLE `acct_follower` (
   `following_account_id` int unsigned NOT NULL,
   PRIMARY KEY (`follower_account_id`,`following_account_id`),
   KEY `acct_follower_ibfk_2` (`following_account_id`),
-  CONSTRAINT `acct_follower_ibfk_1` FOREIGN KEY (`follower_account_id`) REFERENCES `acct` (`account_id`),
-  CONSTRAINT `acct_follower_ibfk_2` FOREIGN KEY (`following_account_id`) REFERENCES `acct` (`account_id`)
+  CONSTRAINT `acct_follower_ibfk_1` FOREIGN KEY (`follower_account_id`) REFERENCES `acct` (`account_id`) ON DELETE CASCADE,
+  CONSTRAINT `acct_follower_ibfk_2` FOREIGN KEY (`following_account_id`) REFERENCES `acct` (`account_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -41,4 +41,4 @@ CREATE TABLE `acct_follower` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-15 14:35:52
+-- Dump completed on 2024-04-24 14:29:30

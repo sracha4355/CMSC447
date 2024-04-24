@@ -29,10 +29,11 @@ CREATE TABLE `album` (
   `artist_id` int unsigned DEFAULT NULL,
   `album_name` varchar(255) NOT NULL,
   `album_boomscore` int NOT NULL,
+  `spotify_uid` varchar(22) DEFAULT NULL,
   PRIMARY KEY (`album_id`),
   UNIQUE KEY `album_cover` (`album_cover`),
   KEY `artist_it` (`artist_id`),
-  CONSTRAINT `artist_it` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE SET NULL ON UPDATE CASCADE
+  CONSTRAINT `artist_it` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -45,4 +46,4 @@ CREATE TABLE `album` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-15 14:35:52
+-- Dump completed on 2024-04-24 14:29:29

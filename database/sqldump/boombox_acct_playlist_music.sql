@@ -29,9 +29,9 @@ CREATE TABLE `acct_playlist_music` (
   PRIMARY KEY (`account_id`,`playlist_id`,`music_id`),
   KEY `acct_playlist_music_ibfk_2` (`playlist_id`),
   KEY `acct_playlist_music_ibfk_3` (`music_id`),
-  CONSTRAINT `acct_playlist_music_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `acct` (`account_id`),
-  CONSTRAINT `acct_playlist_music_ibfk_2` FOREIGN KEY (`playlist_id`) REFERENCES `playlist` (`playlist_id`),
-  CONSTRAINT `acct_playlist_music_ibfk_3` FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`)
+  CONSTRAINT `acct_playlist_music_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `acct` (`account_id`) ON DELETE CASCADE,
+  CONSTRAINT `acct_playlist_music_ibfk_2` FOREIGN KEY (`playlist_id`) REFERENCES `playlist` (`playlist_id`) ON DELETE CASCADE,
+  CONSTRAINT `acct_playlist_music_ibfk_3` FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -44,4 +44,4 @@ CREATE TABLE `acct_playlist_music` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-15 14:35:53
+-- Dump completed on 2024-04-24 14:29:30

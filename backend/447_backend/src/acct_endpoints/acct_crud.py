@@ -7,6 +7,7 @@ sys.path.append(Path(__file__).parent)
 
 from flask import Blueprint, request, Response, make_response, jsonify
 from database import MySQL_Database
+from utils import escape_single_quotes
 
 blueprint = Blueprint("acct", __name__)
 database = None
@@ -31,9 +32,9 @@ def acct_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
 
 
 def create_acct(json) -> Response:
-    acct_email = json["user_email"]
-    acct_username = json["username"]
-    acct_password = json["user_password"]
+    acct_email = escape_single_quotes(json["user_email"])
+    acct_username = escape_single_quotes(json["username"])
+    acct_password = escape_single_quotes(json["user_password"])
     
     columns = ["`user_email`", "`username`", "`password_hash`"]
     values = [f"\'{acct_email}\'", f"\'{acct_username}\'", f"\'{acct_password}\'"]
@@ -46,7 +47,7 @@ def create_acct(json) -> Response:
 
 
 def get_accts(json) -> Response:
-    acct_username = json["acct_username"]
+    acct_username = escape_single_quotes(json["acct_username"])
     
     results = []
 
@@ -75,9 +76,9 @@ def get_accts(json) -> Response:
 
 def update_acct(json) -> Response:
     account_id = json["account_id"]
-    user_email = json["user_email"]
-    username = json["username"]
-    password_hash = json["password_hash"]
+    user_email = escape_single_quotes(json["user_email"])
+    username = escape_single_quotes(json["username"])
+    password_hash = escape_single_quotes(json["password_hash"])
     follower_count = json["follower_count"]
     following_count = json["following_count"]
     

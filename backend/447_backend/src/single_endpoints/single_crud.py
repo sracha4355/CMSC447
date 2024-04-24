@@ -9,6 +9,7 @@ from flask import Blueprint, request, Response, make_response, jsonify
 from libapi.query.query_builder import QueryBuilder
 from spotify_token import SPOTIFY_ACCESS_TOKEN
 from database import MySQL_Database
+from utils import escape_single_quotes
 
 blueprint = Blueprint("single", __name__)
 database = None
@@ -33,9 +34,9 @@ def single_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
 
 
 def create_single(json) -> Response:
-    single_name = json["single_name"]
+    single_name = escape_single_quotes(json["single_name"])
     single_length = json["single_length"]
-    single_cover = json["single_cover"]
+    single_cover = escape_single_quotes(json["single_cover"])
     artist_id = json["artist_id"]
     spotify_uid = json["spotify_uid"]
     
@@ -50,7 +51,7 @@ def create_single(json) -> Response:
 
 
 def get_singles(json) -> Response:
-    single_name = json["single_name"]
+    single_name = escape_single_quotes(json["single_name"])
     
     singles = single_table.get_all("`single_name`", single_name)
     results = []
