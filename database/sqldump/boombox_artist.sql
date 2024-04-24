@@ -27,6 +27,7 @@ CREATE TABLE `artist` (
   `artist_name` varchar(255) NOT NULL,
   `artist_picture` varchar(255) DEFAULT NULL,
   `artist_boomscore` int NOT NULL,
+  `spotify_uid` varchar(22) DEFAULT NULL,
   PRIMARY KEY (`artist_id`,`artist_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -40,4 +41,4 @@ CREATE TABLE `artist` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-15 14:35:52
+-- Dump completed on 2024-04-24 14:29:30

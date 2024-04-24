@@ -25,13 +25,16 @@ DROP TABLE IF EXISTS `review_comment`;
 CREATE TABLE `review_comment` (
   `review_comment_id` int unsigned NOT NULL AUTO_INCREMENT,
   `review_id` int unsigned NOT NULL,
+  `account_id` int unsigned NOT NULL,
   `comment` text NOT NULL,
   `like_count` int NOT NULL,
   `dislike_count` int NOT NULL,
   `creation_date` date NOT NULL,
-  PRIMARY KEY (`review_comment_id`,`review_id`),
+  PRIMARY KEY (`review_comment_id`,`review_id`,`account_id`),
   KEY `review_comment_ibfk_1` (`review_id`),
-  CONSTRAINT `review_comment_ibfk_1` FOREIGN KEY (`review_id`) REFERENCES `review` (`review_id`)
+  KEY `review_comment_ibfk_2` (`account_id`),
+  CONSTRAINT `review_comment_ibfk_1` FOREIGN KEY (`review_id`) REFERENCES `review` (`review_id`) ON DELETE CASCADE,
+  CONSTRAINT `review_comment_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `acct` (`account_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -44,4 +47,4 @@ CREATE TABLE `review_comment` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-15 14:35:52
+-- Dump completed on 2024-04-24 14:29:29
