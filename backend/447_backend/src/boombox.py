@@ -7,6 +7,8 @@ from demo_4_16_24 import demo
 from artist_endpoints.artist_crud import blueprint as artist_blueprint, artist_init_db
 from single_endpoints.single_crud import blueprint as single_blueprint, single_init_db
 from acct_endpoints.acct_crud import blueprint as acct_blueprint, acct_init_db
+from album_endpoints.album_crud import blueprint as album_blueprint
+from search_endpoint.search_endpoint import Blueprint as search_blueprint
 
 
 # init log file
@@ -31,6 +33,8 @@ app = Flask(__name__)
 app.register_blueprint(artist_blueprint)
 app.register_blueprint(single_blueprint)
 app.register_blueprint(acct_blueprint)
+app.register_blueprint(album_blueprint)
+app.register_blueprint(search_blueprint)
 
 app_context = app.app_context()
 app_context.push()
