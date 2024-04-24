@@ -191,6 +191,10 @@ def _delete_album(album_id):
 
 @blueprint.route('/get/')
 def get_album():
+    uid = request.args.get("uid")
+    if uid != None:
+        return _get_album_by_uid(uid)
+
     id = request.args.get("id")
     if id == None:
         return make_api_response({"error": "please provide a valid id"}, 400)
@@ -211,8 +215,25 @@ def get_album():
         }
         return make_api_response(response, 200)
         
-
-
+def _get_album_by_uid(uid):
+    album = album_table.get_by_uid(f'\'{uid}\'')
+    if len(album) == 0:
+        return make_api_response(
+            {"error":f"album by {uid} not found"},
+            404
+        )
+    album = album[0]
+    response = {
+            "album_id": album[0],
+            "album_length": album[1],
+            "album_picture": album[2],
+            "artist_id": album[3],
+            "album_name": album[4],
+            "album_boomscore": album[5], 
+            "spotify_uid": album[6]
+    }
+    return make_api_response(response, 200)
+    
 def escape_single_quotes(data):
   if type(data) != str:
     return data

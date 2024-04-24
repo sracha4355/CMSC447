@@ -89,3 +89,4 @@ class Release_Table:
             f'\'{release_boomscore}\'', f'\'{spotify_uid}\'', f'\'{album_cover_filepath}\''
         ]
         self.table.insert(columns, values)
+
