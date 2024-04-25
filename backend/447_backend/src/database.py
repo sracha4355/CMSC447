@@ -20,6 +20,8 @@ class MySQL_Database:
     def execute(self, source):
         self.cursor.execute(source)
 
+    def get_last_id_inserted(self):
+        return self.cursor.lastrowid
 
     def fetchall(self):
         return self.cursor.fetchall()
