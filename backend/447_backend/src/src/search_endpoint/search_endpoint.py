@@ -20,15 +20,14 @@ from album_entry import Album_Entry_Table
 from artist import Artist_Table
 from database import MySQL_Database
 from album_endpoints.album_crud import _get_album_from_spotify
-from single_endpoints.single_crud import get_tracks_spotify
 
 
 
 search_blueprint = Blueprint('search_crud', __name__,url_prefix="/search")
 
 def _get_valid_access_token():
-    #PATH_TO_TOKEN = f'{str(Path("../access/").absolute())}\\
-    PATH_TO_TOKEN = f'{LIBAPI_FP}\\libapi\\access\\'
+    #PATH_TO_TOKEN = f'{str(Path("../access/").absolute())}\\'
+    PATH_TO_TOKEN = LIBAPI_FP + '/libapi/access/'
     if access_token.check_expiration(path=PATH_TO_TOKEN):
         access_token.load_access_token(path=PATH_TO_TOKEN)
     ACCESS_TOKEN = access_token.extract_access_token(path=PATH_TO_TOKEN)
@@ -44,6 +43,7 @@ def make_api_response(payload, status_code):
 @search_blueprint.route("/search", methods=['GET'])
 def search_endpoint():
     search_type = request.args.get("type")
+    print( search_type not in ('album', 'artist', 'review', 'user'))
 
     query = request.args.get("q")
     limit = 20 if request.args.get("limit") == None else request.args.get("limit") 
@@ -53,19 +53,11 @@ def search_endpoint():
         return make_api_response({"error": "include query in q parameter"}, 400)
 
     if search_type == None or\
-    search_type not in ('album', 'artist', 'review', 'user','track'):
+    search_type not in ('album', 'artist', 'review', 'user'):
         return make_api_response({"error": "include parameter \'type\', types includes album, artist, review, and users"}, 400)
     
-    if (search_type == "album"):
+    if search_type == "album":
         return search_albums(query, search_type, limit, offset)
-    elif (search_type == "track"):
-        data =  {
-            'single_name': query,
-            'limit': limit,
-            'access_token': ACCESS_TOKEN
-        }
-        resp =  search_tracks(data)
-        return resp
     
 def search_albums(query, search_type, limit, offset):
     search_builder = SpotifySearchEndpoint() 
@@ -85,10 +77,6 @@ def search_albums(query, search_type, limit, offset):
  
     return make_api_response(response.json(), 200)
 
-def search_tracks(json):
-    endpoint_response = get_tracks_spotify(json)
-
-    return endpoint_response
 
 
 

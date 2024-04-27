@@ -1,8 +1,5 @@
 import sys
-import requests
-import pprint
 from pathlib import Path
-
 
 LIBAPI_FP = str(Path(__file__).parent.parent.parent.parent.parent)
 sys.path.append(LIBAPI_FP)
@@ -10,15 +7,9 @@ sys.path.append(Path(__file__).parent)
 
 from flask import Blueprint, request, Response, make_response, jsonify
 from libapi.query.query_builder import QueryBuilder
-from libapi.query.spot_track_builder import SpotifyTrackEndpoint
-from libapi.access.access_token import extract_access_token
+from libapi.access.access_token import extract_access_token as SPOTIFY_ACCESS_TOKEN
 from database import MySQL_Database
 from utils import escape_single_quotes
-
-
-
-ACCESS_TOKEN = f'{LIBAPI_FP}\\libapi\\access\\'
-print(ACCESS_TOKEN)
 
 blueprint = Blueprint("single", __name__)
 database = None
@@ -98,17 +89,16 @@ def delete_single(json) -> Response:
 
 
 def get_tracks_spotify(json) -> Response:
-    
-    SPOTIFY_ACCESS_TOKEN = json['access_token']
     single_name = json["single_name"]
     limit = json["limit"]
     
-    URL = f'https://api.spotify.com/v1/search?q={single_name}&type=track&limit={limit}'  
-    headers = {
-        "Authorization": f"Bearer {SPOTIFY_ACCESS_TOKEN}"
-    }
-    get_request_response = requests.get(URL, headers=headers)
-    print(get_request_response)
+    query = QueryBuilder(url='https://api.spotify.com/v1/search')
+    get_request_response = query.add_params("q", single_name)\
+        .add_params("type", "track")\
+        .add_header("Authorization", SPOTIFY_ACCESS_TOKEN)\
+        .add_header("User-Agent", "Boombox\\V1")\
+        .add_params("limit", f"{limit}")\
+        .make_get_request()
     
     if get_request_response.status_code != 200:
         response = make_response(
@@ -120,7 +110,8 @@ def get_tracks_spotify(json) -> Response:
     
     json = get_request_response.json()
     results = []
-    for track in json['tracks']["items"]:
+
+    for track in json["items"]:
         items = {}
         items["artist_name"] = track["album"]["artists"][0]["name"]
         items["artist_spotify_uid"] = track["album"]["artists"][0]["id"]
@@ -129,8 +120,7 @@ def get_tracks_spotify(json) -> Response:
         items["is_album"] = track["album"]["album_type"] != "single"
         items["album_name"] = track["album"]["name"]
         items["album_spotify_uid"] = track["album"]["id"]
-        items['image'] =  track["album"]['images'][0]["url"]
-        results.append(items)
+        results.append[items]
 
     response = make_response(
         jsonify({"result":results}),

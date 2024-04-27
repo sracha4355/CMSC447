@@ -74,7 +74,6 @@ def create_playlist():
     data = request.json
     acct_id = data.get("acct_id")
     uid_list = data.get("uid_list")
-    
     playlist_name = data.get("playlist_name")
     if playlist_name == None:
         return make_api_response({"error": "please pass a playlist_name"}, 400)
@@ -105,7 +104,7 @@ def create_playlist():
     try:
         for uid in uid_list:
             db.execute(
-                f"INSERT INTO acct_playlist_music (account_id, playlist_id, music_id) VALUES ({acct_id}, {playlist_id}, \'{uid}\')"
+                f"INSERT INTO acct_playlist_music (acct_id, playlist_id, spotify_uid) VALUES ({acct_id}, {playlist_id}, \'{uid}\')"
             )
             db.commit()
     except mysql.connector.Error as Error:
@@ -113,8 +112,6 @@ def create_playlist():
         return make_api_response({"error": "error while inserting entries into playlist"}, 500)
 
     return make_api_response({"playlist": uid_list}, 200)
-
-  
 
 
 @playlist_blueprint.route('/delete', methods=['POST','DELETE'])

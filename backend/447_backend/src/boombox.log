@@ -1,0 +1,662 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 12:09:14] "[33mGET /gen_token HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 12:09:17] "[33mGET /gen_token HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 12:09:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 12:09:20] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 12:09:42] "[31m[1mGET /create_artist HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 12:11:57] "[33mGET /gen_token HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 12:12:05] "[31m[1mGET /update_acct HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 13:02:32] "[33mGET /gen_token HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 13:02:35] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 13:02:45] "[33mGET /create_album HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 13:03:08] "[33mGET /create HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 13:04:35] "[31m[1mGET /playlist/create HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:08:35] "[33mPOST /search HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:08:35] "[33mPOST /search HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:08:37] "[33mGET /gen_token HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:08:42] "[33mGET /search HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:08:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:09:02] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:09:33] "[33mGET /search HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:09:37] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:09:49] "[33mGET /search HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:10:08] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:10:08] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:10:35] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:10:35] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:11:19] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:11:19] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:12:29] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:12:46] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:12:46] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:13:39] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:13:57] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:13:57] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:14:01] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:14:01] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:15:05] "[31m[1mGET /search/search?type=track HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:15:11] "[31m[1mGET /search/search?type=track HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:15:11] "[31m[1mGET /search/search?type=track HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:16:07] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 16:17:26] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:06:44] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:06:44] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:08:11] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:08:11] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:09:44] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:09:44] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:10:10] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:10:10] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:13:34] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:13:34] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:14:02] "[31m[1mGET /search/search?type=album&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:14:02] "[31m[1mGET /search/search?type=album&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:15:01] "[31m[1mGET /search/search?type=album&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:15:01] "[31m[1mGET /search/search?type=album&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:15:03] "[31m[1mGET /search/search?type=album&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:15:03] "[31m[1mGET /search/search?type=album&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:15:34] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:15:34] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:18:17] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:18:17] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:18:46] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:18:46] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:19:32] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:19:32] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:19:46] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:19:46] "[31m[1mGET /search/search?type=track&limit=50 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:23:19] "[31m[1mGET /search/search?type=track&limit=50&query=Thriller HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:23:19] "[31m[1mGET /search/search?type=track&limit=50&query=Thriller HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:23:34] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:23:34] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:24:24] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:24:24] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:25:28] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:25:28] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:26:12] "GET /search/search?type=track&limit=50&q=Thriller HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:26:12] "GET /search/search?type=track&limit=50&q=Thriller HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:27:40] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:27:40] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:44:51] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:44:51] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:46:05] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:46:05] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:57:35] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:57:35] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:57:57] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 17:57:57] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:01:42] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:01:42] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:03:40] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:03:40] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:03:46] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:03:46] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:05:31] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:05:32] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:06:17] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:06:17] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:06:47] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:06:48] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:09:11] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:09:11] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:17:27] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:17:28] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:23:06] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:23:07] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:24:24] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:24:24] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:26:06] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:26:06] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:28:40] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:28:40] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:28:47] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:28:47] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:29:34] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:29:34] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:33:37] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:33:37] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:36:26] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:36:27] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:42:32] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:42:32] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:42:37] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:42:38] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:47:17] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:47:18] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:47:49] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:47:49] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:48:16] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:48:16] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:48:56] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:48:56] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:49:15] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:49:15] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:51:01] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:51:01] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:51:56] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:51:56] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:52:20] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:52:20] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:53:56] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:53:56] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:54:50] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:54:50] "[35m[1mGET /search/search?type=track&limit=50&q=Thriller HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:57:32] "GET /search/search?type=track&limit=50&q=Thriller HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 18:57:33] "GET /search/search?type=track&limit=50&q=Thriller HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:02:19] "GET /search/search?type=track&limit=50&q=Thriller HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:02:20] "GET /search/search?type=track&limit=50&q=Thriller HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:04:08] "GET /search/search?type=track&limit=50&q=Thriller HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:04:08] "GET /search/search?type=track&limit=50&q=Thriller HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:04:18] "GET /search/search?type=track&limit=50&q=Thriller HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:04:19] "GET /search/search?type=track&limit=50&q=Thriller HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:05:17] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:05:18] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:05:19] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:05:55] "GET /search/search?type=track&limit=50&q=Im+on+one+drake HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:05:56] "GET /search/search?type=track&limit=50&q=Im+on+one+drake HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:05:57] "GET /search/search?type=track&limit=50&q=Im+on+one+drake HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:06:09] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:09:33] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:09:33] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:10:24] "[33mPOST /get_popular_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:10:24] "[33mPOST /get_recent_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:10:24] "[33mPOST /get_popular_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:10:24] "[33mPOST /get_recent_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:11:12] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:11:13] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:18:45] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:18:46] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:20:16] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:20:17] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:21:11] "GET /search/search?type=track&limit=1&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:21:17] "GET /search/search?type=track&limit=1&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:21:17] "GET /search/search?type=track&limit=1&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:21:30] "GET /search/search?type=track&limit=1&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:21:30] "GET /search/search?type=track&limit=1&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:25:17] "GET /search/search?type=track&limit=1&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:25:18] "GET /search/search?type=track&limit=1&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:25:55] "GET /search/search?type=track&limit=1&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:25:56] "GET /search/search?type=track&limit=1&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:28:21] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:28:23] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:28:24] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:28:49] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:28:54] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:28:55] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:29:06] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:32:04] "[33mPOST /your-backend-endpoint HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:32:20] "[31m[1mPOST /search/search HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:32:26] "[31m[1mPOST /search/search HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:32:26] "[31m[1mPOST /search/search HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:32:34] "[31m[1mPOST /search/search HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:32:34] "[31m[1mPOST /search/search HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:32:36] "[31m[1mGET /search/search HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:32:59] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:33:03] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:33:04] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:33:39] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:33:41] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:33:42] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:33:54] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:34:03] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:34:04] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:49:03] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:49:42] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:49:58] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:50:43] "[33mPOST /get_popular_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:50:43] "[33mPOST /get_recent_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:50:43] "[33mPOST /get_popular_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:50:43] "[33mPOST /get_recent_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:50:44] "[33mPOST /get_artist_by_genre HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:50:44] "[33mPOST /get_artist_by_genre HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:50:47] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:50:47] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:50:47] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:50:47] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:54:13] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:54:14] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:54:35] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:54:35] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:54:35] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:54:35] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:54:41] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:54:42] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:57:16] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:58:43] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 21:58:44] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:22:18] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:22:47] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:22:56] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:23:08] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:23:20] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:23:30] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:23:51] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:25:28] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:26:36] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:32:58] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:33:09] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:33:10] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:33:12] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:33:13] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:33:19] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:33:19] "[35m[1mGET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:35:09] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:35:10] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:35:19] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:35:20] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:44:06] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:44:07] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:44:53] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:46:05] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:46:17] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:46:18] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:48:02] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:48:25] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:48:35] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:48:54] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:49:27] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:50:38] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:50:39] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:50:58] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:51:06] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:51:30] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:53:46] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:57:07] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:57:08] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:58:18] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:58:41] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:58:56] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:59:22] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:59:28] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:59:34] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:59:38] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 22:59:46] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:00:01] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:00:04] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:00:09] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:00:18] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:00:21] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:00:25] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:00:32] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:00:49] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:00:57] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:01:00] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:01:17] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:01:24] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:05:28] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:08:04] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:10:09] "GET /search/search?type=track&limit=50&q=Hello HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:10:28] "GET /search/search?type=track&limit=50&q=Sossboy HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:10:58] "GET /search/search?type=track&limit=50&q=Aston+MArtin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:12:13] "GET /search/search?type=track&limit=50&q=Im+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:12:20] "GET /search/search?type=track&limit=50&q=I'm+on+one HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:21:07] "GET /search/search?type=track&limit=50&q=Land+Of+the+Snakes HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:22:37] "GET /search/search?type=track&limit=50&q=Dior HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:23:58] "GET /search/search?type=track&limit=50&q=Dior+Ruger HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:24:07] "GET /search/search?type=track&limit=50&q=Peru HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:26:15] "GET /search/search?type=track&limit=50&q=Peru HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:31:37] "GET /search/search?type=track&limit=50&q=Peru HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:32:34] "GET /search/search?type=track&limit=50&q=Die+lit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:32:52] "GET /search/search?type=track&limit=50&q=Bullet+from+A+gun HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:33:23] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:33:23] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:33:24] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:33:24] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:33:24] "[33mPOST /get_albums_by_genre HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:33:25] "[33mPOST /get_albums_by_genre HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:33:26] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:33:26] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:33:26] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:33:26] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:35:51] "[35m[1mGET /search/search?type=track&limit=50&q=Peru HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:35:53] "[35m[1mGET /search/search?type=track&limit=50&q=Peru HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:35:53] "[35m[1mGET /search/search?type=track&limit=50&q=Peru HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:35:54] "[35m[1mGET /search/search?type=track&limit=50&q=Peru HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:35:54] "[35m[1mGET /search/search?type=track&limit=50&q=Peru HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:35:55] "[35m[1mGET /search/search?type=track&limit=50&q=Peru HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:35:56] "[35m[1mGET /search/search?type=track&limit=50&q=Peru HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:35:56] "[35m[1mGET /search/search?type=track&limit=50&q=Peru HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:35:57] "[35m[1mGET /search/search?type=track&limit=50&q=Peru HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:36:18] "[35m[1mGET /search/search?type=track&limit=50&q=Peru HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:36:35] "GET /search/search?type=track&limit=50&q=Peru HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:38:31] "GET /search/search?type=track&limit=50&q=Peru HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:42:58] "GET /search/search?type=track&limit=50&q=PEru HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:46:49] "GET /search/search?type=track&limit=50&q=Peru HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:49:14] "GET /search/search?type=track&limit=50&q=Poland HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2024 23:49:50] "GET /search/search?type=track&limit=50&q=Poland HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:01:13] "GET /search/search?type=track&limit=50&q=Pills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:01:36] "GET /search/search?type=track&limit=50&q=Animal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:10:49] "GET /search/search?type=track&limit=50&q=Duck HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:11:55] "GET /search/search?type=track&limit=50&q=Duck HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:12:06] "[35m[1mGET /search/search?type=track&limit=50&q= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:12:08] "[35m[1mGET /search/search?type=track&limit=50&q= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:12:12] "GET /search/search?type=track&limit=50&q=Duck HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:14:40] "GET /search/search?type=track&limit=50&q=Fear HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:14:54] "GET /search/search?type=track&limit=50&q=DuckWorth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:15:26] "GET /search/search?type=track&limit=50&q=Yeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:18:46] "GET /search/search?type=track&limit=50&q=Yeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 00:24:29] "GET /search/search?type=track&limit=50&q=Yeat HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 01:03:05] "GET /search/search?type=track&limit=50&q=E-Sir HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 01:06:42] "GET /search/search?type=track&limit=50&q=Yeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 01:17:51] "GET /search/search?type=track&limit=50&q=YEat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 01:25:04] "GET /search/search?type=track&limit=50&q=Many+Men HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 11:33:41] "GET /search/search?type=track&limit=50&q=Peru HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 11:33:54] "GET /search/search?type=track&limit=50&q=Organize HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 11:34:09] "GET /search/search?type=track&limit=50&q=Amapiano HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 11:34:23] "GET /search/search?type=track&limit=50&q=Primer+GAou HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 11:51:37] "GET /search/search?type=track&limit=50&q=Last+Last HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 11:56:30] "GET /search/search?type=track&limit=50&q=N3on HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 11:56:42] "GET /search/search?type=track&limit=50&q=DEad HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 11:57:37] "GET /search/search?type=track&limit=50&q=Playa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:00:01] "GET /search/search?type=track&limit=50&q=Plush HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:07:23] "GET /search/search?type=track&limit=50&q=YEat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:07:49] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:07:51] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:08:12] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:08:15] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:09:47] "GET /search/search?type=track&limit=50&q=Yeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:10:08] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:10:12] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:11:03] "GET /search/search?type=track&limit=50&q=Yeat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:11:13] "[35m[1mPOST /playlist/create HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:11:23] "[35m[1mPOST /playlist/create HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:15:52] "[33mPOST /get_popular_songs HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:15:52] "[33mPOST /get_recent_songs HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:15:52] "[33mPOST /get_popular_songs HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:15:52] "[33mPOST /get_recent_songs HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:15:57] "[33mPOST /get_popular_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:15:57] "[33mPOST /get_recent_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:15:58] "[33mPOST /get_popular_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:15:58] "[33mPOST /get_recent_artists HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:16:07] "[33mPOST /get_popular_songs HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:16:07] "[33mPOST /get_recent_songs HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:16:08] "[33mPOST /get_popular_songs HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:16:08] "[33mPOST /get_recent_songs HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:16:10] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:16:10] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:16:10] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:16:10] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:17:40] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:17:40] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:17:40] "[33mPOST /get_popular_albums HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:17:41] "[33mPOST /get_recent HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:21:17] "GET /search/search?type=track&limit=50&q=Future HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:21:31] "[35m[1mPOST /playlist/create HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:37:47] "GET /search/search?type=track&limit=50&q=Future HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:37:54] "[35m[1mPOST /playlist/create HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:44:38] "GET /search/search?type=track&limit=50&q=Future HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:44:46] "[35m[1mPOST /playlist/create HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:46:20] "GET /search/search?type=track&limit=50&q=Future HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:46:24] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:46:54] "GET /search/search?type=track&limit=50&q=Future HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:46:58] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:47:00] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:47:00] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:47:00] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:47:00] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:47:02] "POST /playlist/create HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:48:26] "GET /search/search?type=track&limit=50&q=Future HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2024 12:48:32] "[35m[1mPOST /playlist/create HTTP/1.1[0m" 500 -
