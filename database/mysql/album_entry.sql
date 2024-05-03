@@ -1,13 +1,4 @@
 CREATE TABLE IF NOT EXISTS `album_entry` (
-<<<<<<< Updated upstream
-    `entry_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    `entry_length` VARCHAR(8) DEFAULT NULL,
-    `album_id` INT UNSIGNED NOT NULL,
-    `entry_name` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`entry_id`),
-    KEY `album_id` (`album_id`),
-    CONSTRAINT `album_entry_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`)
-=======
   `entry_id` int unsigned NOT NULL AUTO_INCREMENT,
   `entry_length` varchar(8) DEFAULT NULL,
   `album_id` int unsigned NOT NULL,
@@ -17,5 +8,4 @@ CREATE TABLE IF NOT EXISTS `album_entry` (
   UNIQUE KEY `spotify_uid` (`spotify_uid`),
   KEY `album_id` (`album_id`),
   CONSTRAINT `album_entry_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`)
->>>>>>> Stashed changes
 )
