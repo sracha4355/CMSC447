@@ -10,7 +10,6 @@ CREATE TABLE IF NOT EXISTS `album` (
   `likes` int unsigned DEFAULT 0,
   `dislikes` int unsigned DEFAULT 0,
   PRIMARY KEY (`album_id`),
-  UNIQUE KEY `album_cover` (`album_cover`),
   UNIQUE KEY `spotify_uid` (`spotify_uid`),
   FULLTEXT KEY `album_name_index` (`album_name`)
 );
