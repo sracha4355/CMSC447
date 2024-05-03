@@ -10693,3 +10693,7 @@ INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:30:38] "GET /playlist/getAll?acct_id
 INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:30:45] "GET /search/search?type=track&limit=50&q=Deftones HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:31:12] "GET /playlist/getAll?acct_id=1 HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:31:12] "GET /playlist/getAll?acct_id=1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:33:19] "GET /localData/get_popular_artists HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:33:19] "GET /localData/get_recent_artists HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:33:19] "GET /localData/get_popular_artists HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:33:19] "GET /localData/get_recent_artists HTTP/1.1" 200 -
