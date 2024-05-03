@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS`acct` (
   PRIMARY KEY (`account_id`),
   UNIQUE KEY `user_email` (`user_email`),
   UNIQUE KEY `username` (`username`)
-) 
+);
