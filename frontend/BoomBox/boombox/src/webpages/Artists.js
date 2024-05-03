@@ -27,23 +27,43 @@ const Artists = () => {
 
     const [popularArtists, setPopularArtists] = useState([]);
     const [imgPopular, setImgPopular] = useState([]);
+<<<<<<< Updated upstream
 
     const [recentArtists, setRecentArtists] = useState([]);
     const [imgRecent, setImgRecent] = useState([]);
+=======
+    const [popularURI, setPopularURI] = useState([]);
+
+    const [recentArtists, setRecentArtists] = useState([]);
+    const [imgRecent, setImgRecent] = useState([]);
+    const [recentURI, setRecentURI] = useState([]);
+>>>>>>> Stashed changes
 
     const nav = useNavigate();
 
     useEffect(() => {
         const fetchPopularArtists = async () => {
             try {
+<<<<<<< Updated upstream
                 const response = await axios.post('/get_popular_artists', {});
+=======
+                const response = await axios.get('localData/get_popular_artists', {});
+>>>>>>> Stashed changes
                 const data = response.data;
                 
                 const artistNames = data.map(artist => artist.artist_name);
                 const artistImages = data.map(artist => artist.artist_cover);
+<<<<<<< Updated upstream
 
                 setPopularArtists(artistNames);
                 setImgPopular(artistImages);
+=======
+                const artistURIs = data.map(artist => artist.uid);
+
+                setPopularArtists(artistNames);
+                setImgPopular(artistImages);
+                setPopularURI(artistURIs);
+>>>>>>> Stashed changes
             } catch (error) {
                 console.error(error);
             }
@@ -55,14 +75,26 @@ const Artists = () => {
     useEffect(() => {
         const fetchRecentArtists = async () => {
             try {
+<<<<<<< Updated upstream
                 const response = await axios.post('/get_recent_artists', {});
+=======
+                const response = await axios.get('localData/get_recent_artists', {});
+>>>>>>> Stashed changes
                 const data = response.data;
                 
                 const artistNames = data.map(artist => artist.artist_name);
                 const artistImages = data.map(artist => artist.artist_image);
+<<<<<<< Updated upstream
 
                 setRecentArtists(artistNames);
                 setImgRecent(artistImages);
+=======
+                const artistURIs = data.map(artist => artist.uid);
+
+                setRecentArtists(artistNames);
+                setImgRecent(artistImages);
+                setRecentURI(artistURIs);
+>>>>>>> Stashed changes
             } catch (error) {
                 console.error(error);
             }
@@ -106,7 +138,11 @@ const Artists = () => {
                     style={{height:'300px'}}
                 >
                     {popularArtists.map((artist, index) => (
+<<<<<<< Updated upstream
                         <SwiperSlide key={index} onClick={() => nav(`/Artists/${encodeURIComponent(artist)}`)}>
+=======
+                        <SwiperSlide key={index} onClick={() => nav(`/Artists/${encodeURIComponent(popularURI[index])}`)}>
+>>>>>>> Stashed changes
                             <SlideWithImage genre={artist} imageURL={imgPopular[index]} />
                         </SwiperSlide>
                     ))}
@@ -125,7 +161,11 @@ const Artists = () => {
                     style={{height:'300px'}}
                 >
                     {recentArtists.map((artist, index) => (
+<<<<<<< Updated upstream
                         <SwiperSlide key={index} onClick={() => nav(`/Artists/${encodeURIComponent(artist)}`)}>
+=======
+                        <SwiperSlide key={index} onClick={() => nav(`/Artists/${encodeURIComponent(recentURI[index])}`)}>
+>>>>>>> Stashed changes
                             <SlideWithImage genre={artist} imageURL={imgRecent[index]} />
                         </SwiperSlide>
                     ))}

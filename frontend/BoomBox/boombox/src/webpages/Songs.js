@@ -27,23 +27,44 @@ const Songs = () => {
 
     const [popularSongs, setPopularSongs] = useState([]);
     const [imgPopular, setImgPopular] = useState([]);
+<<<<<<< Updated upstream
 
     const [recentSongs, setRecentSongs] = useState([]);
     const [imgRecent, setImgRecent] = useState([]);
+=======
+    const [popularURI, setPopularURI] = useState([]);
+
+    const [recentSongs, setRecentSongs] = useState([]);
+    const [imgRecent, setImgRecent] = useState([]);
+    const [recentURI, setRecentURI] = useState([]);
+
+>>>>>>> Stashed changes
 
     const nav = useNavigate();
 
     useEffect(() => {
         const fetchPopularSongs = async () => {
             try {
+<<<<<<< Updated upstream
                 const response = await axios.post('/get_popular_songs', {});
+=======
+                const response = await axios.get('/localData/get_popular_songs', {});
+>>>>>>> Stashed changes
                 const data = response.data;
                 
                 const SongNames = data.map(Song => Song.song_name);
                 const SongImages = data.map(Song => Song.song_cover);
+<<<<<<< Updated upstream
 
                 setPopularSongs(SongNames);
                 setImgPopular(SongImages);
+=======
+                const SongURIs = data.map(Song => Song.uid)
+
+                setPopularSongs(SongNames);
+                setImgPopular(SongImages);
+                setPopularURI(SongURIs);
+>>>>>>> Stashed changes
             } catch (error) {
                 console.error(error);
             }
@@ -55,6 +76,7 @@ const Songs = () => {
     useEffect(() => {
         const fetchRecentSongs = async () => {
             try {
+<<<<<<< Updated upstream
                 const response = await axios.post('/get_recent_songs', {});
                 const data = response.data;
                 
@@ -63,6 +85,18 @@ const Songs = () => {
 
                 setRecentSongs(SongNames);
                 setImgRecent(SongImages);
+=======
+                const response = await axios.get('/localData/get_recent_songs', {});
+                const data = response.data;
+                
+                const SongNames = data.map(Song => Song.song_name);
+                const SongImages = data.map(Song => Song.image);
+                const SongURIs = data.map(album => album.uid);
+
+                setRecentSongs(SongNames);
+                setImgRecent(SongImages);
+                setRecentURI(SongURIs);
+>>>>>>> Stashed changes
             } catch (error) {
                 console.error(error);
             }
@@ -106,7 +140,11 @@ const Songs = () => {
                     style={{height:'300px'}}
                 >
                     {popularSongs.map((Song, index) => (
+<<<<<<< Updated upstream
                         <SwiperSlide key={index} onClick={() => nav(`/Songs/${encodeURIComponent(Song)}`)}>
+=======
+                        <SwiperSlide key={index} onClick={() => nav(`/Songs/${encodeURIComponent(popularURI[index])}`)}>
+>>>>>>> Stashed changes
                             <SlideWithImage genre={Song} imageURL={imgPopular[index]} />
                         </SwiperSlide>
                     ))}
@@ -125,7 +163,11 @@ const Songs = () => {
                     style={{height:'300px'}}
                 >
                     {recentSongs.map((Song, index) => (
+<<<<<<< Updated upstream
                         <SwiperSlide key={index} onClick={() => nav(`/Songs/${encodeURIComponent(Song)}`)}>
+=======
+                        <SwiperSlide key={index} onClick={() => nav(`/Songs/${encodeURIComponent(recentURI[index])}`)}>
+>>>>>>> Stashed changes
                             <SlideWithImage genre={Song} imageURL={imgRecent[index]} />
                         </SwiperSlide>
                     ))}

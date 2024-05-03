@@ -27,23 +27,43 @@ const Albums = () => {
 
     const [popularAlbums, setPopularAlbums] = useState([]);
     const [imgPopular, setImgPopular] = useState([]);
+<<<<<<< Updated upstream
 
     const [recentAlbums, setRecentAlbums] = useState([]);
     const [imgRecent, setImgRecent] = useState([]);
+=======
+    const [popularURI, setPopularURI] = useState([]);
+
+    const [recentAlbums, setRecentAlbums] = useState([]);
+    const [imgRecent, setImgRecent] = useState([]);
+    const [recentURI, setRecentURI] = useState([]);
+>>>>>>> Stashed changes
 
     const nav = useNavigate();
 
     useEffect(() => {
         const fetchPopularAlbums = async () => {
             try {
+<<<<<<< Updated upstream
                 const response = await axios.post('/get_popular_albums', {});
+=======
+                const response = await axios.get('/localData/get_popular_albums', {});
+>>>>>>> Stashed changes
                 const data = response.data;
                 
                 const albumNames = data.map(album => album.album_name);
                 const albumImages = data.map(album => album.album_cover);
+<<<<<<< Updated upstream
 
                 setPopularAlbums(albumNames);
                 setImgPopular(albumImages);
+=======
+                const albumURIs = data.map(album => album.uid);
+
+                setPopularAlbums(albumNames);
+                setImgPopular(albumImages);
+                setPopularURI(albumURIs);
+>>>>>>> Stashed changes
             } catch (error) {
                 console.error(error);
             }
@@ -55,14 +75,26 @@ const Albums = () => {
     useEffect(() => {
         const fetchRecentAlbums = async () => {
             try {
+<<<<<<< Updated upstream
                 const response = await axios.post('/get_recent', {});
+=======
+                const response = await axios.get('/localData/get_recent_albums', {});
+>>>>>>> Stashed changes
                 const data = response.data;
                 
                 const albumNames = data.map(album => album.album_name);
                 const albumImages = data.map(album => album.album_cover);
+<<<<<<< Updated upstream
 
                 setRecentAlbums(albumNames);
                 setImgRecent(albumImages);
+=======
+                const albumURIs = data.map(album => album.uid);
+
+                setRecentAlbums(albumNames);
+                setImgRecent(albumImages);
+                setRecentURI(albumURIs);
+>>>>>>> Stashed changes
             } catch (error) {
                 console.error(error);
             }
@@ -106,7 +138,11 @@ const Albums = () => {
                     style={{height:'300px'}}
                 >
                     {popularAlbums.map((album, index) => (
+<<<<<<< Updated upstream
                         <SwiperSlide key={index} onClick={() => nav(`/Albums/${encodeURIComponent(album)}`)}>
+=======
+                        <SwiperSlide key={index} onClick={() => nav(`/Albums/${encodeURIComponent(popularURI[index])}`)}>
+>>>>>>> Stashed changes
                             <SlideWithImage genre={album} imageURL={imgPopular[index]} />
                         </SwiperSlide>
                     ))}
@@ -125,7 +161,11 @@ const Albums = () => {
                     style={{height:'300px'}}
                 >
                     {recentAlbums.map((album, index) => (
+<<<<<<< Updated upstream
                         <SwiperSlide key={index} onClick={() => nav(`/Albums/${encodeURIComponent(album)}`)}>
+=======
+                        <SwiperSlide key={index} onClick={() => nav(`/Albums/${encodeURIComponent(recentURI[index])}`)}>
+>>>>>>> Stashed changes
                             <SlideWithImage genre={album} imageURL={imgRecent[index]} />
                         </SwiperSlide>
                     ))}

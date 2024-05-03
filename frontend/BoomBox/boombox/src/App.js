@@ -50,6 +50,21 @@ import ArtistsBlues from "./webpages/artistGenre/Blues"
 import Albums from "./webpages/Albums";
 import Songs from './webpages/Songs'
 import Artists from './webpages/Artists'
+<<<<<<< Updated upstream
+=======
+import Playlists from './webpages/Playlists'
+
+
+import ManagePlaylist from './webpages/ManagePlaylist'
+import BrowsePlaylist from './webpages/BrowsePlaylist'
+import CreatePlaylist from './webpages/CreatePlaylist'
+import DeletePlaylist from './webpages/DeletePlaylist'
+import ModifyPlaylist from './webpages/ModifyPlaylist'
+import PlaylistDetails from './webpages/PlaylistDetails'
+
+
+import Search from './webpages/Search'
+>>>>>>> Stashed changes
 
 import AlbumDetails from './webpages/AlbumDetails';
 import SongDetails from './webpages/songDetails';
@@ -232,19 +247,73 @@ function App() {
               />
                <Route
                   exact
+<<<<<<< Updated upstream
                   path="/Albums/:albumName"
+=======
+                  path="/Albums/:URI"
+>>>>>>> Stashed changes
                   element={<AlbumDetails/>}
               />
               <Route
                   exact
+<<<<<<< Updated upstream
                   path="/Songs/:songName"
+=======
+                  path="/Songs/:URI"
+>>>>>>> Stashed changes
                   element={<SongDetails/>}
               />
               <Route
                   exact
+<<<<<<< Updated upstream
                   path="/Artists/:artistName"
                   element={<ArtistDetails/>}
               />
+=======
+                  path="/Artists/:URI"
+                  element={<ArtistDetails/>}
+              />
+              <Route
+                  exact
+                  path="/Playlists"
+                  element={<Playlists/>}
+              />
+              <Route
+                  exact
+                  path="/Playlists/:playlistID"
+                  element={<PlaylistDetails/>}
+              />
+              <Route
+                  exact
+                  path="/Playlists/Manage"
+                  element={<ManagePlaylist/>}
+              />
+              <Route
+                  exact
+                  path="/Playlists/Browse"
+                  element={<BrowsePlaylist/>}
+              />
+              <Route
+                  exact
+                  path="/Playlists/Manage/Create"
+                  element={<CreatePlaylist/>}
+              />
+              <Route
+                  exact
+                  path="/Playlists/Manage/Modify"
+                  element={<ModifyPlaylist/>}
+              />
+              <Route
+                  exact
+                  path="/Playlists/Manage/Delete"
+                  element={<DeletePlaylist/>}
+              />
+              <Route
+                  exact
+                  path="/Search"
+                  element={<Search/>}
+              />
+>>>>>>> Stashed changes
           </Routes>
       </Router>
     </>

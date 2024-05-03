@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import {React, useState, useEffect} from 'react';
+=======
+import {React, useState, useEffect, useRef} from 'react';
+>>>>>>> Stashed changes
 import { useParams } from 'react-router-dom';
 import Header from './Header';
 import { Container, Row } from 'react-bootstrap';
@@ -11,13 +15,29 @@ import './songDetails.css';
 
 
 const SongDetails = () => {
+<<<<<<< Updated upstream
   const { songName } = useParams();
+=======
+  const { URI } = useParams();
+>>>>>>> Stashed changes
   const [image, setImg] = useState('');
   const [artist, setArtist] = useState('')
   const [release_date, setRelease] = useState('')
   const [loading, setLoading] = useState(true);
   const [boomscore, setBoomScore] = useState(0);
   const [preview, setpreview] =  useState([])
+<<<<<<< Updated upstream
+=======
+  const [name, setName] =  useState('')
+  const [likes,setLikes] =  useState(0)
+  const [dislikes, setDislikes] = useState(0)
+  const [reviews, setReviews] = useState(0)
+
+
+  const effectRan  = useRef(false)
+
+
+>>>>>>> Stashed changes
   const calculateGlowIntensity = (number) => {
     // Example calculation: intensity increases with the number
     const glowSize = number / 4;
@@ -25,6 +45,7 @@ const SongDetails = () => {
   }
 
 
+<<<<<<< Updated upstream
 
   // Fetch song details based on songName from your API/database
   useEffect(() => {
@@ -48,6 +69,45 @@ const SongDetails = () => {
     []);
 
     console.log(preview)
+=======
+  
+
+  // Fetch song details based on songName from your API/database
+  useEffect(() => {
+      if(effectRan.current === false){
+        const checkFunc = async () => {
+          try {
+            const response = await axios.post('/single/get_single_db', {
+                uid:URI
+            });
+            setImg(response.data.result.track_cover)
+            setArtist(response.data.result.artists)
+            setRelease(response.data.result.track_release)
+            setBoomScore(response.data.result.track_boomscore)
+            setpreview(response.data.result.track_preview)
+            setName(response.data.result.track_name)
+            setLikes(response.data.result.likes)
+            setDislikes(response.data.result.dislikes)
+            setReviews(response.data.result.reviews)
+            setLoading(false);
+
+            console.log(response.data.result)
+
+          } catch (error) {
+            console.error(error);
+          }
+        };
+        checkFunc();
+  
+        return () => {
+          effectRan.current = true
+        };
+      }
+    }, 
+    []);
+
+
+>>>>>>> Stashed changes
 
     if (loading) {
       return <div style={{position: 'absolute', right:'50vw', bottom: '50vh'}}>
@@ -60,6 +120,7 @@ const SongDetails = () => {
       <Header />
       <Container>
         <Row>
+<<<<<<< Updated upstream
         <div style={{ position: 'absolute', left: '-35vw', top: '90px', textAlign: 'center' }}>
             <img src= {image} alt="song Cover" style={{ width: '20vw', height: '20vw', marginTop: '10px' }}/>
             <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>{songName}</p>
@@ -75,6 +136,23 @@ const SongDetails = () => {
           <br/>
           <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
             <BiCommentDetail style={{ fontSize: '3rem' }}/>
+=======
+        <div style={{ position: 'absolute', left: '0vw', top: '12vh', textAlign: 'center', width:'30vw' }}>
+            <img src= {image} alt="song Cover" style={{ width: '20vw', height: '20vw', marginTop: '15px' }}/>
+            <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>{name}</p>
+        </div>
+        <div style={{ position: 'absolute', right: '21vw', bottom: '250px', textAlign: 'center', width:'10vw' }}>
+          <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
+            <FcLike style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{likes}</p>
+          </button>
+          <br/>
+          <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
+            <RiDislikeFill style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{dislikes}</p>
+          </button>
+          <br/>
+          <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
+            <BiCommentDetail style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{reviews}</p>
+>>>>>>> Stashed changes
           </button>
         </div>
         <div style={{ position: 'absolute', left: '-35vw', bottom: '150px', textAlign: 'center' }}> 

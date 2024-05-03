@@ -13,20 +13,36 @@ const Country = () => {
   const [genre] = useState('Country');
   const [Songs, setSongName] = useState([]); // Use useState for SongName
   const [img, setImg] = useState([]); // Use useState for img
+<<<<<<< Updated upstream
+=======
+  const [SongUIDs, setSongUIDs] = useState([]); 
+>>>>>>> Stashed changes
 
   useEffect(() => {
     const checkFunc = async () => {
       try {
+<<<<<<< Updated upstream
         const response = await axios.post('/get_songs_by_genre', { genre });
+=======
+        const response = await axios.post('/localData/get_songs_by_genre', { genre });
+>>>>>>> Stashed changes
         const data = response.data;
       
         // Extract Song names and images from the API response
         const SongNames = data.map(Song => Song.song_name);
         const SongImages = data.map(Song => Song.song_cover);
+<<<<<<< Updated upstream
+=======
+        const SongUID = data.map(Song => Song.uid);
+>>>>>>> Stashed changes
 
         // Update the state with the extracted data
         setSongName(SongNames);
         setImg(SongImages);
+<<<<<<< Updated upstream
+=======
+        setSongUIDs(SongUID)
+>>>>>>> Stashed changes
       } catch (error) {
         console.error(error);
       }
@@ -50,7 +66,11 @@ const Country = () => {
             <React.Fragment key={rowIndex}>
               {row.map((Song, colIndex) => (
                 <Col key={colIndex} sm={3} className="d-flex flex-column align-items-center justify-content-end text-center" style={{ backgroundColor: 'rgb(78, 70, 70)', width: '400px', height: '400px', position: 'relative' }}>
+<<<<<<< Updated upstream
                    <Link to={`/Songs/${encodeURIComponent(Song)}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+=======
+                   <Link to={`/Songs/${encodeURIComponent(SongUIDs[colIndex + rowIndex * 4])}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+>>>>>>> Stashed changes
                       <img src= {img[colIndex + rowIndex * 4]} alt={Song} style={{ width: '70%', height: '70%' , marginBottom:'75px'}}/></Link>
                       <p style={{ position: 'absolute', bottom: '0px', fontSize: '13px', fontFamily: 'Bungee, sans-serif'}}>{Song}</p>
                 </Col>

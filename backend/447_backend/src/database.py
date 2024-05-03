@@ -7,7 +7,8 @@ class MySQL_Database:
         self.database = mysql.connector.connect(
             host = host,
             user = user,
-            passwd = password
+            passwd = password,
+            ssl_disabled=True
         )
         self.cursor = self.database.cursor()
         self.database_name = None
@@ -18,8 +19,11 @@ class MySQL_Database:
 
 
     # for right now, use this to create tables or any other misc things
-    def execute(self, source):
-        self.cursor.execute(source)
+    def execute(self, source,vals = None):
+        if vals != None:
+            self.cursor.execute(source, vals)
+        else:
+            self.cursor.execute(source)
 
 
     def fetchall(self):
@@ -62,5 +66,13 @@ class MySQL_Database:
             return MySQL_Table(self, table_name)
         
         return None
+    
+    def close(self):
+        self.close()
+
+    def cursor_close(self):
+        self.cursor.close()
+
+    
         
         
