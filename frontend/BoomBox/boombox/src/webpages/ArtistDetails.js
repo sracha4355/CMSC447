@@ -1,16 +1,13 @@
-<<<<<<< Updated upstream
 import {React, useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import Header from './Header';
 import SlideWithImageArtist from "./SlideWithImageArtist";
 import { Container, Row } from 'react-bootstrap';
-=======
 import {React, useState, useEffect, useRef} from 'react';
 import { useParams } from 'react-router-dom';
 import Header from './Header';
 import SlideWithImageArtist from "./SlideWithImageArtist";
 import { Container, Placeholder, Row } from 'react-bootstrap';
->>>>>>> Stashed changes
 import { FcLike} from "react-icons/fc";
 import { RiDislikeFill } from "react-icons/ri";
 import { BiCommentDetail } from "react-icons/bi";
@@ -18,27 +15,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import axios from 'axios';
 import ReactLoading from "react-loading";
-<<<<<<< Updated upstream
-=======
 import { useNavigate } from "react-router-dom";
->>>>>>> Stashed changes
 import './ArtistDetails.css'
 
 const ArtistDetails = () => {
-
-<<<<<<< Updated upstream
   const { artistName } = useParams();
-=======
   const { URI } = useParams();
   const [name, setName] = useState('')
->>>>>>> Stashed changes
   const [image, setImg] = useState('');
   const [loading, setLoading] = useState(true);
   const [boomscore, setBoomScore] = useState(0);
   const [albumList, setalbumList] =  useState([])
   const [imageList, setImageList] =  useState([])
-<<<<<<< Updated upstream
-=======
   const [uidList, setUIDList] = useState([])
   const [likes, setLikes] = useState(0)
   const [dislikes, setDislikes] = useState(0)
@@ -49,15 +37,12 @@ const ArtistDetails = () => {
   
   const nav = useNavigate();
   
->>>>>>> Stashed changes
   const calculateGlowIntensity = (number) => {
     // Example calculation: intensity increases with the number
     const glowSize = number / 4;
     return `0 0 ${glowSize}px ${glowSize}px #ff00ff`;
   }
 
-<<<<<<< Updated upstream
-  console.log(artistName)
 
   // Fetch Artist details based on ArtistName from your API/database
   useEffect(() => {
@@ -86,12 +71,9 @@ const ArtistDetails = () => {
         <ReactLoading type="cubes" color="#df03fc" height={100} width={50} />
       </div>; // You can replace this with a more elaborate loading screen component
     }
-=======
-  
 
   // Fetch Artist details based on ArtistName from your API/database
   useEffect(() => {
-
       if (effectRan.current === false){
         const checkFunc = async () => {
   
@@ -128,7 +110,6 @@ const ArtistDetails = () => {
         <ReactLoading type="cubes" color="#df03fc" height={100} width={50} />
       </div>; 
   }
->>>>>>> Stashed changes
   
   return (
     <>
@@ -136,7 +117,6 @@ const ArtistDetails = () => {
       <Container>
         <Row>
         <div style={{ position: 'absolute', left: '-35vw', top: '90px', textAlign: 'center' }}>
-<<<<<<< Updated upstream
             <img src= {image} alt="Artist Cover" style={{ width: '20vw', height: '20vw', marginTop: '10px' }}/>
             <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>{artistName}</p>
         </div>
@@ -152,7 +132,6 @@ const ArtistDetails = () => {
           <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
             <BiCommentDetail style={{ fontSize: '5rem' }}/>
           </button>
-=======
             <img src= {image} alt="Artist Cover" style={{ width: '20vw', height: '20vw', marginTop: '15px', borderRadius:'50%' }}/>
             <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>{name}</p>
         </div>
@@ -165,7 +144,6 @@ const ArtistDetails = () => {
             <RiDislikeFill style={{ fontSize: '5rem' }}/><p style={{fontFamily:'bungee'}}>{dislikes}</p>
           </button>
           <br/>
->>>>>>> Stashed changes
         </div>
         </Row>
       </Container>
@@ -188,13 +166,10 @@ const ArtistDetails = () => {
         loop = {true}
       >
         {albumList.map((album, index) => (
-<<<<<<< Updated upstream
           <SwiperSlide key={index} >
                   <SlideWithImageArtist album = {albumList[index]} imageURL={imageList[index]}/>
-=======
           <SwiperSlide key={index} onClick={() => nav(`/Albums/${uidList[index]}`)} >
                   <SlideWithImageArtist album = {album} imageURL={imageList[index]}/>
->>>>>>> Stashed changes
           </SwiperSlide>
         ))
 
