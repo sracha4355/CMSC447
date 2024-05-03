@@ -91,7 +91,7 @@ const ModifyPlaylist = () => {
             })
             const songData = {
                 image_url:imageURL,
-                uid:spotifyUID,
+                spotify_uid:spotifyUID,
                 song_name:song_name
             }
             setSongs([...songs, songData]); // Update songs state by spreading previous songs array

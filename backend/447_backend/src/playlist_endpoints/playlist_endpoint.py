@@ -315,6 +315,7 @@ def remove_from_playlist():
     playlist_id = request.json.get("playlist_id")
 
     if not uid or not acct_id or not playlist_id:
+        print(uid)
         return make_api_response({"error": "provide a vaild uid, acct_id, playlist_name"}, 400)
 
     db.execute(

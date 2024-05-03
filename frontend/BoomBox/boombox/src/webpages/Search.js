@@ -135,9 +135,9 @@ const Search = () =>{
                         </Accordion.Header>
                         <Accordion.Body style={{ backgroundColor: '#c043ba' }}>
                             <Scrollbars autoHide style={{ width: '80vw', height: '70vh', overflowX: 'hidden' }}>
-                                <Row id='songs' style={{ width: '70vw', marginLeft: '10vw' }}>
+                                <Row id='songs' style={{ width: '70vw', marginLeft: '5vw' }}>
                                     {songData.map((item, index) => (
-                                        <Col key={index} onClick={() => nav(`/Songs/${item.track_spotify_uid}`)} sm={4} className="d-flex flex-column align-items-center justify-content-end text-center" style={{ width: '100px', height: '250px', position: 'relative', marginTop: '50px', marginLeft: '7vw' }} id="search-col">
+                                        <Col key={index} onClick={() => nav(`/Songs/${item.track_spotify_uid}`)} sm={4} className="d-flex flex-column align-items-center justify-content-end text-center" style={{ width: '100px', height: '250px', position: 'relative', marginTop: '50px', marginLeft: '10vw' }} id="search-col">
                                             <div>
                                                 <img src={item.image} style={{ width: '220px', height: '220px' }} alt={item.track_name} />
                                             </div>
@@ -162,9 +162,9 @@ const Search = () =>{
                         </Accordion.Header>
                         <Accordion.Body style={{ backgroundColor: '#c043ba' }}>
                             <Scrollbars autoHide style={{ width: '80vw', height: '70vh', overflowX: 'hidden' }}>
-                                <Row id='songs' style={{ width: '70vw', marginLeft: '10vw' }}>
+                                <Row id='songs' style={{ width: '70vw', marginLeft: '5vw' }}>
                                     {albumData.map((item, index) => (
-                                        <Col key={index} onClick={() => nav(`/Albums/${item.album_spotify_uid}`)} sm={4} className="d-flex flex-column align-items-center justify-content-end text-center" style={{ width: '100px', height: '250px', position: 'relative', marginTop: '50px', marginLeft: '7vw' }} id="search-col">
+                                        <Col key={index} onClick={() => nav(`/Albums/${item.album_spotify_uid}`)} sm={4} className="d-flex flex-column align-items-center justify-content-end text-center" style={{ width: '100px', height: '250px', position: 'relative', marginTop: '50px', marginLeft: '10vw' }} id="search-col">
                                             <div>
                                                 <img src={item.image} style={{ width: '220px', height: '220px' }} alt={item.album_name}/>
                                             </div>
@@ -189,9 +189,9 @@ const Search = () =>{
                         </Accordion.Header>
                         <Accordion.Body style={{ backgroundColor: '#c043ba' }}>
                             <Scrollbars autoHide style={{ width: '80vw', height: '70vh', overflowX: 'hidden' }}>
-                                <Row id='songs' style={{ width: '70vw', marginLeft: '10vw' }}>
+                                <Row id='songs' style={{ width: '70vw', marginLeft: '5vw' }}>
                                     {artistData.map((item, index) => (
-                                        <Col key={index} onClick={() => nav(`/Artists/${item.artist_uri}`)} sm={4} className="d-flex flex-column align-items-center justify-content-end text-center" style={{ width: '100px', height: '250px', position: 'relative', marginTop: '50px', marginLeft: '7vw' }} id="search-col">
+                                        <Col key={index} onClick={() => nav(`/Artists/${item.artist_uri}`)} sm={4} className="d-flex flex-column align-items-center justify-content-end text-center" style={{ width: '100px', height: '250px', position: 'relative', marginTop: '50px', marginLeft: '10vw' }} id="search-col">
                                             <div>
                                                 <img src={item.image} style={{ width: '220px', height: '220px' , borderRadius:'50%' }} alt={item.artist_name} />
                                             </div>
@@ -218,7 +218,7 @@ const Search = () =>{
                             <Scrollbars autoHide style={{ width: '80vw', height: '70vh', overflowX: 'hidden' }}>
                                 <Row id='songs' style={{ width: '70vw', marginLeft: '10vw' }}>
                                     {playlistData.map((item, index) => (
-                                        <Col key={index}  onClick={() => nav(`/Playlists/${item.playlist_id}`)} sm={4} className="d-flex flex-column align-items-center justify-content-end text-center" style={{ width: '100px', height: '250px', position: 'relative', marginTop: '50px', marginLeft: '7vw' }} id="search-col">
+                                        <Col key={index}  onClick={() => nav(`/Playlists/${item.playlist_id}`)} sm={4} className="d-flex flex-column align-items-center justify-content-end text-center" style={{ width: '100px', height: '250px', position: 'relative', marginTop: '50px', marginLeft: '10vw' }} id="search-col">
                                             <div>
                                                 <img src={item.image} style={{ width: '220px', height: '220px'}} alt={item.playlist_name} />
                                             </div>
