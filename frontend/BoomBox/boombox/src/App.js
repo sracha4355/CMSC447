@@ -50,8 +50,7 @@ import ArtistsBlues from "./webpages/artistGenre/Blues"
 import Albums from "./webpages/Albums";
 import Songs from './webpages/Songs'
 import Artists from './webpages/Artists'
-<<<<<<< Updated upstream
-=======
+
 import Playlists from './webpages/Playlists'
 
 
@@ -64,7 +63,7 @@ import PlaylistDetails from './webpages/PlaylistDetails'
 
 
 import Search from './webpages/Search'
->>>>>>> Stashed changes
+
 
 import AlbumDetails from './webpages/AlbumDetails';
 import SongDetails from './webpages/songDetails';
@@ -240,36 +239,30 @@ function App() {
                   path="/Latino"
                   element={<Latino/>}
               />
-               <Route
+              <Route
                   exact
                   path="/Blues"
                   element={<Blues/>}
               />
                <Route
                   exact
-<<<<<<< Updated upstream
                   path="/Albums/:albumName"
-=======
                   path="/Albums/:URI"
->>>>>>> Stashed changes
                   element={<AlbumDetails/>}
               />
               <Route
                   exact
-<<<<<<< Updated upstream
                   path="/Songs/:songName"
-=======
                   path="/Songs/:URI"
->>>>>>> Stashed changes
                   element={<SongDetails/>}
               />
               <Route
                   exact
-<<<<<<< Updated upstream
                   path="/Artists/:artistName"
                   element={<ArtistDetails/>}
               />
-=======
+              <Route
+                  exact
                   path="/Artists/:URI"
                   element={<ArtistDetails/>}
               />
@@ -313,7 +306,6 @@ function App() {
                   path="/Search"
                   element={<Search/>}
               />
->>>>>>> Stashed changes
           </Routes>
       </Router>
     </>
