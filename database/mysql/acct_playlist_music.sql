@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `acct_playlist_music` (
-	`entry_id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+    `entry_id` int UNSIGNED NOT NULL AUTO_INCREMENT,
     `account_id` int UNSIGNED NOT NULL,
     `playlist_id` int UNSIGNED NOT NULL,
     `spotify_uid` varchar(22) NOT NULL,
