@@ -7,6 +7,7 @@ import { Row, Col } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import { useNavigate } from "react-router-dom";
 import { FaRegTrashAlt, FaCheck } from "react-icons/fa";
 import SlideWithImage from "./SlideWithImage";
 
@@ -23,6 +24,8 @@ const ModifyPlaylist = () => {
     const [data, setData] = useState([]);
     const [track, setTrack] = useState('');
     const [songs, setSongs] = useState([]);
+
+    const nav = useNavigate()
 
 
     useEffect(() => {
@@ -192,9 +195,8 @@ const ModifyPlaylist = () => {
                           ))}
                       </Swiper>
                       <div id='submit' style={{textAlign:'center'}}>
-            
                             <br></br>
-                            <Button  variant="light" style={{backgroundColor: '#df00d3' , border:'none'}}><FaCheck/></Button>{' '}
+                            <Button onClick={() => nav(`/Playlists/Manage`)} variant="light" style={{backgroundColor: '#df00d3' , border:'none'}}><FaCheck/></Button>{' '}
                       </div>
                   </div>
                     </>

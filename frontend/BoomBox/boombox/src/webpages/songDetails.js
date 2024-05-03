@@ -87,7 +87,7 @@ const SongDetails = () => {
             <img src= {image} alt="song Cover" style={{ width: '20vw', height: '20vw', marginTop: '15px' }}/>
             <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>{name}</p>
         </div>
-        <div style={{ position: 'absolute', right: '21vw', bottom: '250px', textAlign: 'center', width:'10vw' }}>
+        <div style={{ position: 'absolute', right: '19vw', bottom: '5%', textAlign: 'center', width:'10vw' }}>
           <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
             <FcLike style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{likes}</p>
           </button>

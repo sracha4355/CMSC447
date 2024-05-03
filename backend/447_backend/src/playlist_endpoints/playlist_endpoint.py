@@ -142,11 +142,11 @@ def create_playlist():
         for uid in uid_list:
             if('\"' in track_names[i]):
                 db.execute(
-                    f"INSERT INTO acct_playlist_music (acct_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL[i]}\', \'{track_names[i]}\')"
+                    f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL[i]}\', \'{track_names[i]}\')"
                 )
             else:
                 db.execute(
-                    f"INSERT INTO acct_playlist_music (acct_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL[i]}\', \"{track_names[i]}\")"
+                    f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL[i]}\', \"{track_names[i]}\")"
                 )
 
             db.commit()
@@ -196,7 +196,7 @@ def get_playlist_by_id():
         return make_api_response({"error": "provide valid acct_id and playlist_id"}, 404)
     
     db.execute(
-        f' SELECT spotify_uid,image_url,song_name FROM acct_playlist_music WHERE acct_id = {acct_id} AND playlist_id = {playlist_id}'
+        f' SELECT spotify_uid,image_url,song_name FROM acct_playlist_music WHERE account_id = {acct_id} AND playlist_id = {playlist_id}'
     )
     playlist = db.fetchall()
 
@@ -293,9 +293,9 @@ def add_to_playlist():
     try:
         QUERY = ""  
         if('\"' in track_name):
-            QUERY =f"INSERT INTO acct_playlist_music (acct_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL}\', \'{track_name}\')"
+            QUERY =f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL}\', \'{track_name}\')"
         else:    
-            QUERY = f"INSERT INTO acct_playlist_music (acct_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL}\', \"{track_name}\")"
+            QUERY = f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL}\', \"{track_name}\")"
                 
         db.execute(QUERY)
         db.commit()
@@ -318,12 +318,12 @@ def remove_from_playlist():
         return make_api_response({"error": "provide a vaild uid, acct_id, playlist_name"}, 400)
 
     db.execute(
-        f'SELECT * FROM acct_playlist_music where acct_id={acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\''
+        f'SELECT * FROM acct_playlist_music where account_id={acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\''
     )
     playlist = db.fetchall()
     if(len(playlist) > 1):
         try:  
-            QUERY = f'DELETE FROM ACCT_PLAYLIST_MUSIC WHERE acct_id = {acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\' LIMIT 1'
+            QUERY = f'DELETE FROM ACCT_PLAYLIST_MUSIC WHERE account_id = {acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\' LIMIT 1'
             db.execute(QUERY)
             db.commit()
         except mysql.connector.Error as Err:
@@ -331,7 +331,7 @@ def remove_from_playlist():
             return make_api_response({"error": "error while removing uid {uid}"}, 404)
     else:
         try:  
-            QUERY = f'DELETE FROM ACCT_PLAYLIST_MUSIC WHERE acct_id = {acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\''
+            QUERY = f'DELETE FROM ACCT_PLAYLIST_MUSIC WHERE account_id = {acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\''
             db.execute(QUERY)
             db.commit()
         except mysql.connector.Error as Err:

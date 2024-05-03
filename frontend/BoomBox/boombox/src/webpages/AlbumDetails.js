@@ -87,7 +87,7 @@ const AlbumDetails = () => {
             <img src= {image} alt="Album Cover" style={{ width: '20vw', height: '20vw', marginTop: '15px', borderRadius:'25%' }}/>
             <div style={{width:'30vw'}}><p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>{albumName}</p></div>
         </div>
-        <div style={{ position: 'absolute', left: '-5vw', bottom: '5vh', textAlign: 'center' }}>
+        <div style={{ position: 'absolute', left: '-5vw', bottom: '3%', textAlign: 'center' }}>
           <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
             <FcLike style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{likes}</p>
           </button>
@@ -106,7 +106,7 @@ const AlbumDetails = () => {
         </div>
         </Row>
       </Container>
-      <div style={{ position: 'absolute', right: '50vw', top: '250px',textAlign:'center'}}>
+      <div style={{ position: 'absolute', right: '48.5vw', top: '20%',textAlign:'center'}}>
         <div style = {{backgroundColor:'rgb(189, 46, 232)', height:'200px', width:'200px', borderRadius:'50%',display: 'flex', justifyContent: 'center', alignItems: 'center',fontSize: '46px', fontFamily: 'Bungee, sans-serif', boxShadow: calculateGlowIntensity(boomscore)}}>{boomscore}</div>
         <h2 style={{ fontSize: '26px', fontFamily: 'Bungee, sans-serif', marginTop: '45px' }}>BOOMSCORE</h2>
       </div>

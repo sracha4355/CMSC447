@@ -156,7 +156,7 @@ const CreatePlaylist = () => {
                   </div>
               )}
               {err !== '' && (
-                <p style={{position:'absolute', left:'77vw', top:'100vh', fontFamily:'bungee'}}>{err}</p>
+                <p style={{position:'absolute', left:'65%', top:'100%', fontFamily:'bungee'}}>{err}</p>
               )}
             </div>
         </>
