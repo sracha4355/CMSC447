@@ -11,5 +11,5 @@ CREATE TABLE IF NOT EXISTS `single` (
   `dislikes` int unsigned DEFAULT '0',
    PRIMARY KEY (`single_id`),
    UNIQUE KEY `spotify_uid` (`spotify_uid`)
-)
+);
 
