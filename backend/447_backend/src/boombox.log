@@ -10697,3 +10697,6 @@ INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:33:19] "GET /localData/get_popular_a
 INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:33:19] "GET /localData/get_recent_artists HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:33:19] "GET /localData/get_popular_artists HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [03/May/2024 10:33:19] "GET /localData/get_recent_artists HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m

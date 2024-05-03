@@ -47,7 +47,7 @@ def generate_access_token():
     response = requests.post(ACCESS_TOKEN_URL, data=DATA, headers=HEADERS)
     return response.json() if response else None
 
-def load_access_token():
+def load_access_token(path='.\\'):
     DIR  = str(Path(__file__).parent)
     with open(f'{DIR}\\access_token.json', 'w') as json_file:
         pass
