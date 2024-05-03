@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `album_entry` (
   UNIQUE KEY `spotify_uid` (`spotify_uid`),
   KEY `album_id` (`album_id`),
   CONSTRAINT `album_entry_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`)
-)
+);
