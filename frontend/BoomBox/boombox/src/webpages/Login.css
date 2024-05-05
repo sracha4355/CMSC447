@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&display=swap');
+
+.login-container {
+    font-family: "Bungee", sans-serif;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.login-input {
+    padding-top: 10px;
+}
+
+.register-text {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+button {
+    display: flex;
+    border-radius: 20%;
+    margin: auto;
+    transition: border-radius 0.3s ease;
+    width: fit-content;
+}
+
+button:hover{   
+    border-radius: 20%;
+    background-color: #e900dd;
+    color: #ffffff; /* Set the text color for better visibility */
+    animation: pulse 1s infinite alternate, glow 1s infinite alternate; /* Apply pulse and glow animations */
+}
+
+@keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+}
+
+@keyframes glow {
+    from {
+      box-shadow: 0 0 10px 5px #e900dd;
+    }   
+    to {
+      box-shadow: 0 0 20px 10px #e900dd; /* Increase the glow effect */
+    }
+}

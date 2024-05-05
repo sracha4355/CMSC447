@@ -12,11 +12,17 @@ const Header = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
+  const loggedIn = window.localStorage.getItem("loggedIn")
+  const user = window.localStorage.getItem("user")
+  
+  const getLoginString = () => {
+    if (loggedIn.localeCompare("true") === 0) return user
+    return "Login"
+  }
 
   const search = async () =>{
       navigate(`/Search?q=${encodeURIComponent(searchQuery)}`)
   }
-
   
   const handleKeyDown = (event) => {
     if (event.key === 'Enter' && searchQuery) {
@@ -38,7 +44,13 @@ const Header = () => {
         <a href="http://localhost:3000" style={{textDecoration:'none', color:'inherit'}}>Boombox</a>
       </div>
       <div id = 'login'>
-        <a> login </a>
+        <a onClick={ () => {
+          if (loggedIn.localeCompare("true") === 0) {
+              navigate(`/Acct/${encodeURIComponent(user)}`)
+          } else {
+              navigate("/Login")
+          }
+        }}>{getLoginString()}</a>
       </div>
     </div>
       <Navbar bg="dark" data-bs-theme="dark">

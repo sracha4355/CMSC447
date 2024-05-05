@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&display=swap');
+
+.register-container {
+    font-family: "Bungee", sans-serif;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.register-input {
+    padding-top: 10px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.valid-text {
+    padding-top: 20px;
+    color: red;
+    text-align: center;
+    font-family: "Bungee", sans-serif;
+}

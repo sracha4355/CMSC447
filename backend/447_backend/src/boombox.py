@@ -23,7 +23,7 @@ logging.basicConfig(filename="boombox.log", format="%(levelname)s:%(name)s:%(mes
 
 MYSQL_HOST = "localhost"
 MYSQL_USER = "root"
-MYSQL_PASSWORD = "Mancity2003*"
+MYSQL_PASSWORD = "root"
 MYSQL_DATABASE = "boombox"
 
 # grab directory for mysql source files

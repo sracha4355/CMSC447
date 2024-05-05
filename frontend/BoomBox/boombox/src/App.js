@@ -7,6 +7,7 @@ import {
   Routes,
   Route,
   Navigate,
+  useSearchParams,
 } from "react-router-dom";
 
 
@@ -51,6 +52,10 @@ import Albums from "./webpages/Albums";
 import Songs from './webpages/Songs'
 import Artists from './webpages/Artists'
 import Playlists from './webpages/Playlists'
+import Reviews from './webpages/Reviews'
+
+import Login from './webpages/Login'
+import Register from './webpages/Register'
 
 
 import ManagePlaylist from './webpages/ManagePlaylist'
@@ -66,8 +71,14 @@ import Search from './webpages/Search'
 import AlbumDetails from './webpages/AlbumDetails';
 import SongDetails from './webpages/songDetails';
 import ArtistDetails from './webpages/ArtistDetails'
+import AcctDetails from './webpages/AcctDetails';
 
 function App() {
+  if (window.localStorage.getItem("loggedIn") === null) {
+    window.localStorage.setItem("loggedIn", false)
+    window.localStorage.setItem("user", "")
+  }
+  
   return (
     <>
       <Router>
@@ -91,6 +102,21 @@ function App() {
                   exact
                   path="/Artists"
                   element={<Artists/>}
+              />
+              <Route
+                exact
+                path="/Reviews"
+                element={<Reviews/>}
+              />
+              <Route
+                exact
+                path="/Login"
+                element={<Login/>}
+              />
+              <Route
+                exact
+                path="/Register"
+                element={<Register/>}
               />
                <Route
                   exact
@@ -297,7 +323,12 @@ function App() {
                   path="/Search"
                   element={<Search/>}
               />
-          </Routes>
+              <Route
+                  exact
+                  path="/Acct/:user"
+                  element={<AcctDetails/>}
+              />
+            </Routes>
       </Router>
     </>
   );

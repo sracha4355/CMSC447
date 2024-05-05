@@ -9,7 +9,7 @@ from flask import Blueprint, request, Response, make_response, jsonify
 from database import MySQL_Database
 from utils import escape_single_quotes
 
-blueprint = Blueprint("acct", __name__)
+blueprint = Blueprint("acct", __name__, url_prefix="/acct")
 database = None
 acct_table = None
 
@@ -35,6 +35,16 @@ def create_acct(json) -> Response:
     acct_email = escape_single_quotes(json["user_email"])
     acct_username = escape_single_quotes(json["username"])
     acct_password = escape_single_quotes(json["user_password"])
+
+    if len(acct_table.get("`user_email`", "`user_email`", f"\'{acct_email}\'")) > 0:
+        response = make_response(jsonify({"error":"email already exists", "type": 1}), 400)
+        response.headers["Content-Type"] = "application/json"
+        return response
+
+    if len(acct_table.get("`username`", "`username`", f"\'{acct_username}\'")) > 0:
+        response = make_response(jsonify({"error":"acct already exists", "type": 2}), 400)
+        response.headers["Content-Type"] = "application/json"
+        return response
     
     columns = ["`user_email`", "`username`", "`password_hash`"]
     values = [f"\'{acct_email}\'", f"\'{acct_username}\'", f"\'{acct_password}\'"]
