@@ -255,6 +255,7 @@ def _delete_album(album_id):
 
 @blueprint.route('/get/',methods = ["POST"])
 def get_album():
+    db.commit()
 
     
     uid = request.get_json()['uri']
@@ -300,6 +301,10 @@ def _get_album_by_uid(uid):
         
         name = album['name']
         release_date = album['release_date']
+
+        if len(release_date) == 4:
+            release_date = f"{release_date}-01-01"
+
         boomscore = album['popularity']
         image = album['images'][0]['url']
         artists  = ""

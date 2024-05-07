@@ -96,6 +96,8 @@ def get_singles(json) -> Response:
 
 
 def get_single(json) -> Response:
+    database.commit()
+
     uid = json['uid']
     QUERY  = f'SELECT single_id FROM single WHERE spotify_uid = \'{uid}\''
     database.execute(QUERY)
@@ -119,6 +121,10 @@ def get_single(json) -> Response:
                 artists+= f"{tracks['artists'][i]['name']}"
         preview = tracks['preview_url']
         release_date = tracks['album']['release_date']
+
+        if len(release_date) == 4:
+            release_date = f"{release_date}-01-01"
+
         boomscore = tracks['popularity']
 
         QUERY = '''INSERT INTO single(single_name, single_cover,single_boomscore,spotify_uid,artists,preview_url, release_date) VALUES(%s,%s,%s,%s,%s,%s,%s)'''
@@ -145,6 +151,7 @@ def get_single(json) -> Response:
     QUERY = f'SELECT music_id FROM music WHERE single_id = {single_id}'
 
     database.execute(QUERY)
+
     music_id = database.fetchall()[0][0]
 
     QUERY = f'SELECT * FROM review WHERE music_id = {music_id}'
@@ -152,7 +159,7 @@ def get_single(json) -> Response:
     database.execute(QUERY)
     review = database.fetchall()
 
-    (music_id,) = music_table.get("`music_id`", "`single_id`", single_id)
+    #(music_id,) = music_table.get("`music_id`", "`single_id`", single_id)
 
     data  ={
         'music_id': music_id,
