@@ -30,9 +30,10 @@ ACCESS_TOKEN = _get_valid_access_token()
 blueprint = Blueprint("single", __name__, url_prefix='/single')
 database = None
 single_table = None
+music_table = None
 
 def single_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
-    global database, single_table
+    global database, single_table, music_table
 
     database = MySQL_Database(
         host = mysql_host,
@@ -44,6 +45,7 @@ def single_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
         raise RuntimeError(f"Could not find database {mysql_database}")
     
     single_table = database.get_table("single")
+    music_table = database.get_table("music")
 
     if single_table == None:
         raise RuntimeError(f"Could not find single table in database")
@@ -150,8 +152,10 @@ def get_single(json) -> Response:
     database.execute(QUERY)
     review = database.fetchall()
 
+    (music_id,) = music_table.get("`music_id`", "`single_id`", single_id)
 
     data  ={
+        'music_id': music_id,
         'track_name':response[0][0],
         'track_cover':response[0][1],
         'track_boomscore':response[0][2],

@@ -72,11 +72,13 @@ import AlbumDetails from './webpages/AlbumDetails';
 import SongDetails from './webpages/songDetails';
 import ArtistDetails from './webpages/ArtistDetails'
 import AcctDetails from './webpages/AcctDetails';
+import ReviewDetails from './webpages/ReviewDetails';
 
 function App() {
   if (window.localStorage.getItem("loggedIn") === null) {
     window.localStorage.setItem("loggedIn", false)
     window.localStorage.setItem("user", "")
+    window.localStorage.setItem("userID", 0)
   }
   
   return (
@@ -322,6 +324,11 @@ function App() {
                   exact
                   path="/Search"
                   element={<Search/>}
+              />
+              <Route
+                  exact
+                  path="/Reviews/:musicID"
+                  element={<ReviewDetails/>}
               />
               <Route
                   exact

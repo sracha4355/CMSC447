@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS `review` (
   `music_id` int unsigned NOT NULL,
   `like_count` int NOT NULL,
   `dislike_count` int NOT NULL,
-  `creation_date` date NOT NULL,
+  `creation_date` date NOT NULL DEFAULT (CURRENT_DATE()),
   `review` text NOT NULL,
   PRIMARY KEY (`review_id`),
   KEY `account_id` (`account_id`),

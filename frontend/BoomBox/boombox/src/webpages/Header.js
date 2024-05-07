@@ -60,7 +60,7 @@ const Header = () => {
             <Nav.Link href="/Songs" >Songs</Nav.Link>
             <Nav.Link href="/Albums" >Albums</Nav.Link>
             <Nav.Link href="/Playlists" >Playlists</Nav.Link>
-            <Nav.Link href="/Reviews" >Reviews</Nav.Link>
+            {/*<Nav.Link href="/Reviews" >Reviews</Nav.Link>*/}
           </Nav>
         </Container>
       </Navbar>

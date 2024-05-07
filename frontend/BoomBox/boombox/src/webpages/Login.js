@@ -35,6 +35,7 @@ const Login = () => {
             if (response.data.result.length != 1 || passwordInput.localeCompare(response.data.result[0].password_hash)) return
             window.localStorage.setItem("loggedIn", true)
             window.localStorage.setItem("user", response.data.result[0].username)
+            window.localStorage.setItem("userID", response.data.result[0].account_id)
             navigate("/")
         }).catch(error => console.log(error))
     }

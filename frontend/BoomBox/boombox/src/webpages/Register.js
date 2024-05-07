@@ -54,6 +54,7 @@ const Register = () => {
             console.log(response)
             window.localStorage.setItem("loggedIn", true)
             window.localStorage.setItem("user", usernameInput)
+            window.localStorage.setItem("userID", response.data.result.account_id)
             navigate("/")
         }).catch(error => {
             if (error.response.status === 400) {

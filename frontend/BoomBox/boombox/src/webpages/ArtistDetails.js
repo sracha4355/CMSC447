@@ -89,7 +89,7 @@ const ArtistDetails = () => {
             <img src= {image} alt="Artist Cover" style={{ width: '20vw', height: '20vw', marginTop: '15px', borderRadius:'50%' }}/>
             <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>{name}</p>
         </div>
-        <div style={{ position: 'absolute', right: '15vw', top: '25vh', textAlign: 'center', width:'200px' }}>
+        {/*<div style={{ position: 'absolute', right: '15vw', top: '25vh', textAlign: 'center', width:'200px' }}>
           <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
             <FcLike style={{ fontSize: '5rem' }}/><p style={{fontFamily:'bungee'}}>{likes}</p>
           </button>
@@ -98,7 +98,7 @@ const ArtistDetails = () => {
             <RiDislikeFill style={{ fontSize: '5rem' }}/><p style={{fontFamily:'bungee'}}>{dislikes}</p>
           </button>
           <br/>
-        </div>
+        </div>*/}
         </Row>
       </Container>
       <div style={{ position: 'absolute', right: '45vw', top: '20vh',textAlign:'center'}}>

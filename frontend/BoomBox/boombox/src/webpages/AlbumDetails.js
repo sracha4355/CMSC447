@@ -24,6 +24,7 @@ const AlbumDetails = () => {
   const [likes, setLikes] = useState(0)
   const [dislikes, setDisikes] = useState(0)
   const [reviews, setReviews] = useState(0)
+  const [musicID, setMusicID] = useState(0)
 
 
   const effectRan  = useRef(false)
@@ -56,6 +57,7 @@ const AlbumDetails = () => {
             setLikes(response.data.likes)
             setDisikes(response.data.dislikes)
             setReviews(response.data.reviews)
+            setMusicID(response.data.music_id)
             setLoading(false);      
           } catch (error) {
             console.error(error);
@@ -88,15 +90,15 @@ const AlbumDetails = () => {
             <div style={{width:'30vw'}}><p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>{albumName}</p></div>
         </div>
         <div style={{ position: 'absolute', left: '-5vw', bottom: '3%', textAlign: 'center' }}>
-          <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
+          {/*<button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
             <FcLike style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{likes}</p>
           </button>
           <br/>
           <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
             <RiDislikeFill style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{dislikes}</p>
           </button>
-          <br/>
-          <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
+          <br/>*/}
+          <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }} onClick={() => nav(`/reviews/${musicID}`)}>
             <BiCommentDetail style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{reviews}</p>
           </button>
         </div>

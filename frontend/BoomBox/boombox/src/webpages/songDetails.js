@@ -1,5 +1,5 @@
 import {React, useState, useEffect, useRef} from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Header from './Header';
 import { Container, Row } from 'react-bootstrap';
 import { FcLike} from "react-icons/fc";
@@ -22,9 +22,12 @@ const SongDetails = () => {
   const [likes,setLikes] =  useState(0)
   const [dislikes, setDislikes] = useState(0)
   const [reviews, setReviews] = useState(0)
+  const [musicID, setMusicID] = useState(0)
 
 
   const effectRan  = useRef(false)
+
+  const nav = useNavigate()
 
 
   const calculateGlowIntensity = (number) => {
@@ -53,6 +56,7 @@ const SongDetails = () => {
             setLikes(response.data.result.likes)
             setDislikes(response.data.result.dislikes)
             setReviews(response.data.result.reviews)
+            setMusicID(response.data.result.music_id)
             setLoading(false);
 
             console.log(response.data.result)
@@ -88,15 +92,15 @@ const SongDetails = () => {
             <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>{name}</p>
         </div>
         <div style={{ position: 'absolute', right: '19vw', bottom: '5%', textAlign: 'center', width:'10vw' }}>
-          <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
+          {/*<button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
             <FcLike style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{likes}</p>
           </button>
           <br/>
           <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
             <RiDislikeFill style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{dislikes}</p>
           </button>
-          <br/>
-          <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
+          <br/>*/}
+          <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }} onClick={() => nav(`/reviews/${musicID}`)}>
             <BiCommentDetail style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}>{reviews}</p>
           </button>
         </div>

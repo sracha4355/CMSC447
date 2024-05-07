@@ -34,10 +34,9 @@
 
 .nav-link{
     border-radius: 20%;
-    margin-right: 49%;
+    margin-right: 80%;
     font-family: "Bungee", sans-serif;
     transition: border-radius 0.3s ease;
-    width: 100%;
   }
 
 .nav-link:hover{

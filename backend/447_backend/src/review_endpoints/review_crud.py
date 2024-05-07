@@ -8,13 +8,15 @@ sys.path.append(Path(__file__).parent)
 from flask import Blueprint, request, Response, make_response, jsonify
 from database import MySQL_Database
 from utils import escape_single_quotes
+from datetime import date
 
-blueprint = Blueprint("review", __name__)
+blueprint = Blueprint("review", __name__, url_prefix="/review")
 database = None
 review_table = None
+acct_table = None
 
 def review_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
-    global database, review_table
+    global database, review_table, acct_table
 
     database = MySQL_Database(
         host = mysql_host,
@@ -26,6 +28,7 @@ def review_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
         raise RuntimeError(f"Could not find database {mysql_database}")
     
     review_table = database.get_table("review")
+    acct_table = database.get_table("acct")
 
     if review_table == None:
         raise RuntimeError(f"Could not find review table in database")
@@ -36,12 +39,13 @@ def create_review(json) -> Response:
     music_id = json["music_id"]
     review = escape_single_quotes(json["review"])
 
-    columns = ["`account_id`", "`music_id`", "`review`"]
-    values = [account_id, music_id, f"\'{review}\'"]
+    columns = ["`account_id`", "`music_id`", "`like_count`", "`dislike_count`", "`creation_date`", "`review`"]
+    values = [account_id, music_id, 0, 0, "\'2024-5-6\'", f"\'{review}\'"]
     review_table.insert(columns, values)
 
     response = make_response(jsonify({"success":""}), 200)
     response.headers["Content-Type"] = "application/json"
+
 
     return response
 
@@ -67,9 +71,13 @@ def get_reviews(json) -> Response:
     
     for review in reviews:
         (review_id, account_id, music_id, like_count, dislike_count, creation_date, review_text) = review
+
+        (account_username,) = acct_table.get("`username`", "`account_id`", account_id)[0]
+
         results.append({
             "review_id" : review_id,
             "account_id" : account_id,
+            "account_username" : account_username,
             "music_id" : music_id,
             "like_count" : like_count,
             "dislike_count" : dislike_count,
@@ -173,7 +181,7 @@ def delete_review(json) -> Response:
 @blueprint.route("/create_review", methods=["POST"])
 def app_create_review() -> Response:
     if request.method == "POST":
-        return create_review(request.get_json)
+        return create_review(request.get_json())
     
     response = make_response(
         jsonify({"error":"only post method is allowed"}),
@@ -187,7 +195,7 @@ def app_create_review() -> Response:
 @blueprint.route("/get_reviews", methods=["POST"])
 def app_get_reviews() -> Response:
     if request.method == "POST":
-        return get_reviews(request.get_json)
+        return get_reviews(request.get_json())
     
     response = make_response(
         jsonify({"error":"only post method is allowed"}),
@@ -201,7 +209,7 @@ def app_get_reviews() -> Response:
 @blueprint.route("/delete_review", methods=["POST"])
 def app_delete_review() -> Response:
     if request.method == "POST":
-        return delete_review(request.get_json)
+        return delete_review(request.get_json())
     
     response = make_response(
         jsonify({"error":"only post method is allowed"}),

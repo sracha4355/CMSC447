@@ -50,7 +50,12 @@ def create_acct(json) -> Response:
     values = [f"\'{acct_email}\'", f"\'{acct_username}\'", f"\'{acct_password}\'"]
     acct_table.insert(columns, values)
 
-    response = make_response(jsonify({"success":""}), 200)
+    account_id = acct_table.get("`account_id`", "`username`", f"\'{acct_username}\'")
+
+    result = {}
+    result["account_id"] = account_id
+
+    response = make_response(jsonify({"result":result}), 200)
     response.headers["Content-Type"] = "application/json"
 
     return response

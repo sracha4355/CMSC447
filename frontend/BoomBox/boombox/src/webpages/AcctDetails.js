@@ -2,8 +2,6 @@ import {React, useState, useEffect, useRef} from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Header from './Header';
 import { Container, Row } from 'react-bootstrap';
-import { FcLike} from "react-icons/fc";
-import { RiDislikeFill } from "react-icons/ri";
 import { BiCommentDetail } from "react-icons/bi";
 import axios from 'axios';
 import ReactLoading from "react-loading";
@@ -13,9 +11,6 @@ import acct_picture from "./../profile_pic_default.png"
 const AcctDetails = () => {
     const { user } = useParams()
     const [username, setUsername] = useState("")
-    const [followers, setFollowers] = useState(0)
-    const [following, setFollowing] = useState(0)
-    const [creationDate, setCreationDate] = useState("")
     const [loading, setLoading] = useState(true);
 
     const effectRan = useRef(false)
@@ -31,9 +26,6 @@ const AcctDetails = () => {
                 console.log(response)
                 if (response.data.result.length != 1) return
                 setUsername(response.data.result[0].username)
-                /*setFollowers(response.data.result[0].follower_count)
-                setFollowing(response.data.result[0].following_count)*/
-                setCreationDate(response.data.result[0].creationDate)
                 setLoading(false)
             }).catch(error => console.error(error))
         }
@@ -56,11 +48,23 @@ const AcctDetails = () => {
         const localUser = window.localStorage.getItem("user")
         if (loggedIn.localeCompare("true") === 0 && localUser.localeCompare(user) === 0) {
             return (
+                <>
                 <button onClick={() => {
                     window.localStorage.setItem("loggedIn", false)
                     window.localStorage.setItem("user", "")
                     navigate("/")
                 }}>Logout</button>
+                <button style={{ marginTop: "25px" }}onClick={() => {
+                    axios.post("/acct/delete_acct", {
+                        account_id: window.localStorage.getItem("userID")
+                    }).then(_ => {
+                        window.localStorage.setItem("loggedIn", false)
+                        window.localStorage.setItem("user", "")
+                        window.localStorage.setItem("userID", "0")
+                        navigate("/")
+                    }).catch(error => console.error(error))
+                }}>Delete Account</button>
+                </>
             )
         } 
         return (<></>)
@@ -76,9 +80,9 @@ const AcctDetails = () => {
             <p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>{username}</p>
         </div>
         <div style={{ position: 'absolute', right: '19vw', bottom: '5%', textAlign: 'center', width:'10vw' }}>
-          <button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
+          {/*<button style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}>
             <BiCommentDetail style={{ fontSize: '3rem' }}/><p style={{fontFamily:'bungee'}}></p>
-        </button>
+        </button>*/}
         </div>
         <div style={{ position: 'absolute', left: '-35vw', bottom: '150px', textAlign: 'center' }}> 
             {/*<p style={{ fontSize: '16px', fontFamily: 'Bungee, sans-serif', marginTop: '5px' }}>Creation Date: {creationDate} </p>*/}

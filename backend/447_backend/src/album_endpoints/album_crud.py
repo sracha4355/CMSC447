@@ -29,10 +29,11 @@ db = None
 album_table = None    
 album_entry_table = None
 artist_table = None
+music_table = None
 
 
 def album_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
-    global db, album_table, artist_table, album_entry_table
+    global db, album_table, artist_table, album_entry_table, music_table
     db = MySQL_Database(
         host = mysql_host,
         user = mysql_user,
@@ -44,6 +45,7 @@ def album_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
     album_table = Release_Table(db, is_single=False)    
     album_entry_table = Album_Entry_Table(db)
     artist_table = Artist_Table(db)
+    music_table = db.get_table("music")
 
 
 
@@ -269,8 +271,10 @@ def get_album():
         return make_api_response({"error": f"please provide a valid id, album with {id} not found"}, 400)
     else:
         album = album[0]
+        (music_id,) = music_table.get("`music_id`", "`album_id`", id)[0]
         print(album) # id, length, cover link, artist id, album name, boomscore spotify uid
         response = {
+            "music_id": music_id,
             "album_id": album[0],
             "album_length": album[1],
             "album_picture": album[2],
@@ -355,13 +359,10 @@ def _get_album_by_uid(uid):
         track_names.append(track['track_name'])
         track_uids.append(track['track_uid'])
 
-    
-
-    
-    
-
+    (music_id,) = music_table.get("`music_id`", "`album_id`", album_id)[0]
 
     response = {
+            "music_id": music_id,
             "album_cover": album[0][1],
             "artists": album[0][6],
             "album_name": album[0][2],
