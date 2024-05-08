@@ -38,7 +38,12 @@ def create_acct(json) -> Response:
     
     columns = ["`user_email`", "`username`", "`password_hash`"]
     values = [f"\'{acct_email}\'", f"\'{acct_username}\'", f"\'{acct_password}\'"]
-    acct_table.insert(columns, values)
+    
+    QUERY = f"INSERT INTO acct(user_email, username, password_hash) VALUES(\'{acct_email}\',\'{acct_username}\',\'{acct_password}\')"
+    database.execute(QUERY)
+    database.commit()
+    
+    #acct_table.insert(columns, values)
 
     response = make_response(jsonify({"success":""}), 200)
     response.headers["Content-Type"] = "application/json"

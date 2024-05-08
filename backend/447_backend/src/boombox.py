@@ -12,8 +12,14 @@ from album_endpoints.album_crud import blueprint as album_blueprint, album_init_
 from search_endpoint.search_endpoint import search_blueprint
 from review_endpoints.review_crud import blueprint as review_blueprint, review_init_db
 from review_endpoints.review_comment_crud import blueprint as review_comment_blueprint, review_comment_init_db
+<<<<<<< Updated upstream
 from playlist_endpoints.playlist_endpoint import playlist_blueprint as playlist_blueprint, playlist_init_db 
 
+=======
+from playlist_endpoints.playlist_endpoint import playlist_blueprint as playlist_blueprint
+from localData.localDataEndpoints import blueprint as localdata_blueprint
+from music_endpoints.music_endpoint import blueprint as music_blueprint, music_init_db
+>>>>>>> Stashed changes
 
 # init log file
 # print() will not work, so if you want to "print" anything...
@@ -90,7 +96,11 @@ acct_init_db(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
 album_init_db(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
 review_init_db(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
 review_comment_init_db(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
+<<<<<<< Updated upstream
 playlist_init_db(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
+=======
+music_init_db(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
+>>>>>>> Stashed changes
 
 
 
