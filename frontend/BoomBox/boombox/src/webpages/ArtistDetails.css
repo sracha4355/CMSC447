@@ -1,0 +1,13 @@
+.swiper-slide{
+    text-align: center;
+    margin-top: 10px;
+    height: 15vh;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(198, 0, 248); /* Change to blue for the selected bullet */
+}
+
+.swiper{
+    height: 30vh;
+}

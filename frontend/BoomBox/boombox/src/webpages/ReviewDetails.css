@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&display=swap');
+
+.review-container {
+    font-family: "Bungee", sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.reviews-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 10%;
+}
+
+.review-list {
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.review-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #ad00b9;
+    padding-top: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.review-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.review-item-user {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 110px;
+    width: 175px;
+    align-items: center;
+    color: rgb(72, 69, 69);
+    border-style: dotted;
+}
+
+.review-item-user-picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.review-item-text {
+    padding-left: 10px;
+    padding-right: 10px;
+    word-wrap: break-word;
+}
+
+a {
+    color: #fa89f5;
+}
+  
+  a:visited {
+    color: #fa89f5;
+}
+
+.music-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 75px;
+    width: 20vw;
+    font-family: "Bungee", sans-serif;
+    text-align: center;
+}
+
+.music-cover-single {
+    height: 20vw;
+    width: 20vw;
+    margin-bottom: 5px;
+}
+
+.music-cover-album {
+    height: 20vw;
+    width: 20vw;
+    margin-bottom: 5px;
+    border-radius: 25%;
+}
+
+.music-artists-release {
+    margin-top: 50px;
+}
+
+.review-box {
+    width: 100%;
+}
+
+.review-box-submit {
+    margin-top: 10px;
+}
