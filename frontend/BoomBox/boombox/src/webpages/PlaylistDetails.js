@@ -20,7 +20,7 @@ const PlaylistDetails = () => {
           try {
             const response = await axios.get('/playlist/get_by_id', {
                 params:{
-                    acct_id : 1,
+                    acct_id : window.localStorage.getItem("userID"),
                     playlist_id: playlistID
                 },
             });

@@ -54,7 +54,7 @@ const CreatePlaylist = () => {
             setErr('')
             try{
                 const response = await axios.post('/playlist/create',{
-                    acct_id:'1',
+                    acct_id: window.localStorage.getItem("userID"),
                     uid_list: songUIDs,
                     playlist_name: playlistName,
                     image_url: images,

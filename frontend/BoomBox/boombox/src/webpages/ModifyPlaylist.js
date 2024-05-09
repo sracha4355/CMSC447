@@ -33,7 +33,7 @@ const ModifyPlaylist = () => {
           try {
             const response = await axios.get('/playlist/getAll', {
                 params: {
-                    acct_id: 1
+                    acct_id: window.localStorage.getItem("userID")
                 }
             });
             setPlaylists(response.data)
