@@ -5,34 +5,12 @@ from libapi.query.query_builder import QueryBuilder
 from libapi.query.spot_endpoint_builder import SpotifyEndpoint
 
 class SpotifyArtistEndpoint(SpotifyEndpoint):
-    """
-    SpotifyArtistEndpoint provides methods to interact with Spotify's artist endpoints.
-
-    Attributes:
-        url (str): The base URL for Spotify's artist API.
-        builder (QueryBuilder): An instance of QueryBuilder for building HTTP requests.
-    """
     def __init__(self, access_token=None):
-        """
-        Initialize a SpotifyArtistEndpoint instance.
-
-        Args:
-            access_token (str): The access token for authentication.
-        """
         self.url = 'https://api.spotify.com/v1/artists'
         super().__init__(access_token=access_token)
         self.builder.add_to_url(self.url)
 
     def get_artist(self, uid:str=""):
-        """
-        Get details of a single artist.
-
-        Args:
-            uid (str): The ID of the artist.
-
-        Returns:
-            Response: The response from the GET request.
-        """
         if not self._checks():
             return None
         if type(uid) != str:
@@ -45,15 +23,6 @@ class SpotifyArtistEndpoint(SpotifyEndpoint):
         return res
     
     def get_multiple_artists(self, uids: list[str]=[]):
-        """
-        Get details of multiple artists.
-
-        Args:
-            uids (list[str]): A list of artist IDs.
-
-        Returns:
-            Response: The response from the GET request.
-        """
         if not self._checks():
             return None
         if len(uids) == 0:
@@ -70,18 +39,7 @@ class SpotifyArtistEndpoint(SpotifyEndpoint):
         return res
 
     def get_artist_albums(self, uid:str="", limit=None, market=None, offset=None):
-        """
-        Get albums of an artist.
-
-        Args:
-            uid (str): The ID of the artist.
-            limit (int): The maximum number of albums to return.
-            market (str): The market to retrieve albums from.
-            offset (int): The index of the first album to return.
-
-        Returns:
-            Response: The response from the GET request.
-        """
+        ### _checks sets the self.error variable 
         if not self._checks():
             return None
         if type(uid) != str:
@@ -105,7 +63,5 @@ class SpotifyArtistEndpoint(SpotifyEndpoint):
         return response
 
     def reset_url(self):
-        """
-        Reset the URL to the base URL.
-        """
         self.builder.clear().add_to_url(self.url)
+        

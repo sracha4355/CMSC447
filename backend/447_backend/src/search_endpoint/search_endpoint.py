@@ -1,10 +1,11 @@
 import sys
+import requests
 from pathlib import Path
 ### Add folder with libapi to sys path. This is so when we import from libapi, python knows where to look
 
 LIBAPI_FP = str(Path(__file__).parent.parent.parent.parent.parent)
 sys.path.append(LIBAPI_FP)
-print('LIBAPI_FP', LIBAPI_FP)
+
 
 sys.path.append(str(Path(__file__).parent.parent))
 
@@ -19,15 +20,19 @@ from release import Release_Table
 from album_entry import Album_Entry_Table
 from artist import Artist_Table
 from database import MySQL_Database
-from album_endpoints.album_crud import _get_album_from_spotify
+from album_endpoints.album_crud import get_albums_spotify, _get_album_from_spotify
+from single_endpoints.single_crud import get_tracks_spotify
+from artist_endpoints.artist_crud import get_artists_spotify
+from playlist_endpoints.playlist_endpoint import get_playlist_by_name
+from review_endpoints.review_crud import get_reviews_by_name
 
 
 
 search_blueprint = Blueprint('search_crud', __name__,url_prefix="/search")
 
 def _get_valid_access_token():
-    #PATH_TO_TOKEN = f'{str(Path("../access/").absolute())}\\'
-    PATH_TO_TOKEN = LIBAPI_FP + '/libapi/access/'
+    #PATH_TO_TOKEN = f'{str(Path("../access/").absolute())}\\
+    PATH_TO_TOKEN = f'{LIBAPI_FP}\\libapi\\access\\'
     if access_token.check_expiration(path=PATH_TO_TOKEN):
         access_token.load_access_token(path=PATH_TO_TOKEN)
     ACCESS_TOKEN = access_token.extract_access_token(path=PATH_TO_TOKEN)
@@ -43,21 +48,58 @@ def make_api_response(payload, status_code):
 @search_blueprint.route("/search", methods=['GET'])
 def search_endpoint():
     search_type = request.args.get("type")
-    print( search_type not in ('album', 'artist', 'review', 'user'))
 
     query = request.args.get("q")
     limit = 20 if request.args.get("limit") == None else request.args.get("limit") 
+    acct_id = request.args.get('acct_id') if request.args.get('acct_id') else None
     offset = 0 if request.args.get("offset") == None else request.args.get("offset")
 
     if query == None:
         return make_api_response({"error": "include query in q parameter"}, 400)
 
     if search_type == None or\
-    search_type not in ('album', 'artist', 'review', 'user'):
+    search_type not in ('album', 'artist', 'review', 'user','track','playlist'):
         return make_api_response({"error": "include parameter \'type\', types includes album, artist, review, and users"}, 400)
     
-    if search_type == "album":
-        return search_albums(query, search_type, limit, offset)
+    if (search_type == "album"):
+        data =  {
+            'album_name': query,
+            'limit': 50,
+            'access_token': ACCESS_TOKEN
+        }
+         
+        return get_albums_spotify(data)
+    elif (search_type == "track"):
+        data =  {
+            'single_name': query,
+            'limit': limit,
+            'access_token': ACCESS_TOKEN
+        }
+        resp =  get_tracks_spotify(data)
+        return resp
+    elif (search_type == "artist"):
+        data =  {
+            'artist_name': query,
+            'limit': 50,
+            'access_token': ACCESS_TOKEN
+        }
+        resp =  get_artists_spotify(data)
+        return resp
+    elif(search_type == 'playlist'):
+        data = {
+            'playlist_name': query,
+            'access_token': ACCESS_TOKEN
+        }
+        resp = get_playlist_by_name(data)
+        return resp
+    elif(search_type == 'review'):
+        data = {
+            'query': query
+        }
+
+        resp =get_reviews_by_name(data)
+        return resp
+
     
 def search_albums(query, search_type, limit, offset):
     search_builder = SpotifySearchEndpoint() 
@@ -73,9 +115,10 @@ def search_albums(query, search_type, limit, offset):
         if endpoint_response.status_code != 200:
             print('error in album creation or it already exists in db')
         else:
-            print(f'UID: {album['id']} created in db')
+            print(f"UID: {album['id']} created in db")
  
     return make_api_response(response.json(), 200)
+
 
 
 

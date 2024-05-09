@@ -1,10 +1,15 @@
 import sys
+import requests
+import pprint
+import json
 from pathlib import Path
+from flask import request
+
 ### Add folder with libapi to sys path. This is so when we import from libapi, python knows where to look
 
 LIBAPI_FP = str(Path(__file__).parent.parent.parent.parent.parent)
 sys.path.append(LIBAPI_FP)
-print('LIBAPI_FP', LIBAPI_FP)
+
 
 sys.path.append(str(Path(__file__).parent.parent))
 
@@ -19,17 +24,32 @@ from album_entry import Album_Entry_Table
 from artist import Artist_Table
 from database import MySQL_Database
 
-db = MySQL_Database(
-    host = 'localhost',
-    user = 'root',
-    password = '@mysql@fGwYU146'
-)
-db.use('boombox')
-
 blueprint = Blueprint('album_crud', __name__,url_prefix="/album")
-album_table = Release_Table(db, is_single=False)    
-album_entry_table = Album_Entry_Table(db)
-artist_table = Artist_Table(db)
+db = None
+album_table = None    
+album_entry_table = None
+artist_table = None
+music_table = None
+
+
+def album_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
+    global db, album_table, artist_table, album_entry_table, music_table
+    db = MySQL_Database(
+        host = mysql_host,
+        user = mysql_user,
+        password = mysql_password
+    )
+    if not db.use(mysql_database):
+        raise RuntimeError(f"Could not find database {mysql_database}")
+    
+    album_table = Release_Table(db, is_single=False)    
+    album_entry_table = Album_Entry_Table(db)
+    artist_table = Artist_Table(db)
+    music_table = db.get_table("music")
+
+
+
+
 
 def _get_valid_access_token():
     #PATH_TO_TOKEN = f'{str(Path("../access/").absolute())}\\'
@@ -146,6 +166,50 @@ def _get_album_from_spotify(uid):
     print('res', create_album_entrys(response.json()["tracks"], album_response["album_id"]))
     return make_api_response(album_response, 200)
 
+def get_albums_spotify(json) -> Response:
+    
+    SPOTIFY_ACCESS_TOKEN = json['access_token']
+    album_name = json["album_name"]
+    limit = json["limit"]
+    
+    URL = f'https://api.spotify.com/v1/search?q={album_name}&type=album&limit={limit}'  
+    headers = {
+        "Authorization": f"Bearer {SPOTIFY_ACCESS_TOKEN}"
+    }
+    get_request_response = requests.get(URL, headers=headers)
+    print(get_request_response)
+    
+    if get_request_response.status_code != 200:
+        response = make_response(
+            jsonify({"error":"spotify web api error"}),
+            500
+        )
+        response.headers["Content-Type"] = "application/json"
+        return response
+    
+    json = get_request_response.json()
+    
+
+    
+    results = []
+    for album in json['albums']["items"]:
+        items = {}
+        items["album_name"] = album["name"]
+        items["album_spotify_uid"] = album["id"]
+        items["image"] = album['images'][0]['url']
+        results.append(items)
+    
+
+   
+    response = make_response(
+        jsonify({"result":results}),
+        200
+    )
+    response.headers["Content-Type"] = "application/json"
+    
+    return response
+   
+
 # helper methods
 def make_api_response(payload, status_code):
     response = make_response(jsonify(payload), status_code)
@@ -189,12 +253,17 @@ def _delete_album(album_id):
     album_table.delete_release_id(album_id)
     return make_api_response({"message": f"deletion of album with id:{album_id} is successfull"}, 200)
 
-@blueprint.route('/get/')
+@blueprint.route('/get/',methods = ["POST"])
 def get_album():
-    uid = request.args.get("uid")
+    db.commit()
+
+    
+    uid = request.get_json()['uri']
+    
+    
     if uid != None:
         return _get_album_by_uid(uid)
-
+    
     id = request.args.get("id")
     if id == None:
         return make_api_response({"error": "please provide a valid id"}, 400)
@@ -203,8 +272,10 @@ def get_album():
         return make_api_response({"error": f"please provide a valid id, album with {id} not found"}, 400)
     else:
         album = album[0]
+        (music_id,) = music_table.get("`music_id`", "`album_id`", id)[0]
         print(album) # id, length, cover link, artist id, album name, boomscore spotify uid
         response = {
+            "music_id": music_id,
             "album_id": album[0],
             "album_length": album[1],
             "album_picture": album[2],
@@ -215,24 +286,106 @@ def get_album():
         }
         return make_api_response(response, 200)
         
+   
+        
 def _get_album_by_uid(uid):
-    album = album_table.get_by_uid(f'\'{uid}\'')
+    QUERY = f'SELECT album_id FROM album WHERE spotify_uid = \'{uid}\''
+    db.execute(QUERY)
+    album = db.fetchall()
     if len(album) == 0:
-        return make_api_response(
-            {"error":f"album by {uid} not found"},
-            404
-        )
-    album = album[0]
+        URL = f'https://api.spotify.com/v1/albums/{uid}'  
+        headers = {
+            "Authorization": f"Bearer {ACCESS_TOKEN}"
+        }
+        album = requests.get(URL, headers=headers).json()
+        
+        name = album['name']
+        release_date = album['release_date']
+
+        if len(release_date) == 4:
+            release_date = f"{release_date}-01-01"
+
+        boomscore = album['popularity']
+        image = album['images'][0]['url']
+        artists  = ""
+        for i in range(len(album['artists'])):
+            if(i < len(album['artists']) - 1):
+                artists+= f"{album['artists'][i]['name']},"
+            else:
+                artists+= f"{album['artists'][i]['name']}"
+
+        tracks = []
+        for track in album['tracks']['items']:
+            data = {
+                'track_name':track['name'],
+                'track_uid':track['id']
+            }
+            tracks.append(data)
+
+        QUERY = '''INSERT INTO album(album_cover,album_name,album_boomscore,spotify_uid,tracks,artists,release_date) VALUES(%s,%s,%s,%s,%s,%s, %s)'''
+        db.execute(QUERY,(image,name,boomscore,uid,json.dumps(tracks),json.dumps(artists), release_date))
+        db.commit()
+
+        QUERY = f'SELECT album_id FROM album where spotify_uid = \'{uid}\''
+        db.execute(QUERY)
+        album_id = db.fetchall()[0][0]
+
+        QUERY = f'INSERT INTO music(release_date,is_album,album_id) VALUES(\'{release_date}\',1,{album_id})'
+        db.execute(QUERY)
+        db.commit()
+            
+    
+
+    QUERY = f'SELECT * FROM album WHERE spotify_uid = \'{uid}\''
+
+    db.execute(QUERY)
+    album = db.fetchall()
+
+    album_id = album[0][0]
+
+    QUERY = f'SELECT music_id FROM music WHERE album_id = {album_id}'
+
+    db.execute(QUERY)
+    music_id = db.fetchall()[0][0]
+
+    QUERY = f'SELECT * FROM review WHERE music_id = {music_id}'
+
+    db.execute(QUERY)
+    review = db.fetchall()
+
+
+
+    tracks = json.loads(album[0][5])
+
+    track_names = []
+    track_uids = []
+
+    for track in tracks:
+        track_names.append(track['track_name'])
+        track_uids.append(track['track_uid'])
+
+    (music_id,) = music_table.get("`music_id`", "`album_id`", album_id)[0]
+
     response = {
-            "album_id": album[0],
-            "album_length": album[1],
-            "album_picture": album[2],
-            "artist_id": album[3],
-            "album_name": album[4],
-            "album_boomscore": album[5], 
-            "spotify_uid": album[6]
-    }
+            "music_id": music_id,
+            "album_cover": album[0][1],
+            "artists": album[0][6],
+            "album_name": album[0][2],
+            "album_boomscore": album[0][3], 
+            "track_names": track_names,
+            'track_uids': track_uids,
+            'release_date': album[0][7],
+            'likes':album[0][8],
+            'dislikes':album[0][9],
+            'reviews':len(review)
+        }
+    
+
     return make_api_response(response, 200)
+
+
+    
+ 
     
 def escape_single_quotes(data):
   if type(data) != str:

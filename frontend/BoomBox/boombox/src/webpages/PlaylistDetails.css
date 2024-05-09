@@ -1,0 +1,13 @@
+#songs-rows{
+    width: 75vw;
+}
+
+#songs-div{
+    width: 65vw;
+    margin-top: 5vh;
+    margin-left: 10vw;
+}
+
+#playlist-col:hover{
+    cursor: pointer;
+}
