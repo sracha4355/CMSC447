@@ -16,24 +16,22 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `single`
+-- Table structure for table `acct_playlist_music`
 --
 
-DROP TABLE IF EXISTS `single`;
+DROP TABLE IF EXISTS `acct_playlist_music`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `single` (
-  `single_id` int unsigned NOT NULL AUTO_INCREMENT,
-  `single_name` varchar(255) NOT NULL,
-  `single_length` varchar(8) DEFAULT NULL,
-  `single_cover` varchar(255) DEFAULT NULL,
-  `artist_id` int unsigned DEFAULT NULL,
-  `single_boomscore` int NOT NULL,
-  `spotify_uid` varchar(22) DEFAULT NULL,
-  PRIMARY KEY (`single_id`),
-  UNIQUE KEY `single_cover` (`single_cover`),
-  KEY `artist_id` (`artist_id`),
-  CONSTRAINT `artist_id` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE CASCADE
+CREATE TABLE `acct_playlist_music` (
+  `account_id` int unsigned NOT NULL,
+  `playlist_id` int unsigned NOT NULL,
+  `music_id` int unsigned NOT NULL,
+  PRIMARY KEY (`account_id`,`playlist_id`,`music_id`),
+  KEY `acct_playlist_music_ibfk_2` (`playlist_id`),
+  KEY `acct_playlist_music_ibfk_3` (`music_id`),
+  CONSTRAINT `acct_playlist_music_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `acct` (`account_id`) ON DELETE CASCADE,
+  CONSTRAINT `acct_playlist_music_ibfk_2` FOREIGN KEY (`playlist_id`) REFERENCES `playlist` (`playlist_id`) ON DELETE CASCADE,
+  CONSTRAINT `acct_playlist_music_ibfk_3` FOREIGN KEY (`music_id`) REFERENCES `music` (`music_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -46,4 +44,4 @@ CREATE TABLE `single` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-24 14:29:29
+-- Dump completed on 2024-04-24 14:29:30

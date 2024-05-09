@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: boombox
 -- ------------------------------------------------------
--- Server version	8.0.36
+-- Server version	8.3.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -23,29 +23,18 @@ DROP TABLE IF EXISTS `acct`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `acct` (
-  `ACCOUNT_ID` int unsigned NOT NULL AUTO_INCREMENT,
-  `USER_EMAIL` varchar(20) NOT NULL,
-  `USERNAME` varchar(50) NOT NULL,
-  `PasswordHash` varchar(255) NOT NULL,
-  `FOLLOWER_COUNT` int unsigned DEFAULT NULL,
-  `FOLLOWING_COUNT` int unsigned DEFAULT NULL,
-  `CREATION_DATE` date DEFAULT NULL,
-  `follower_list` json NOT NULL,
-  `following_list` json NOT NULL,
-  PRIMARY KEY (`ACCOUNT_ID`),
-  UNIQUE KEY `USER_EMAIL` (`USER_EMAIL`),
-  UNIQUE KEY `USERNAME` (`USERNAME`)
+  `account_id` int unsigned NOT NULL AUTO_INCREMENT,
+  `user_email` varchar(255) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password_hash` varchar(255) NOT NULL,
+  `follower_count` int unsigned DEFAULT NULL,
+  `following_count` int unsigned DEFAULT NULL,
+  `creation_date` date DEFAULT NULL,
+  PRIMARY KEY (`account_id`),
+  UNIQUE KEY `user_email` (`user_email`),
+  UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `acct`
---
-
-LOCK TABLES `acct` WRITE;
-/*!40000 ALTER TABLE `acct` DISABLE KEYS */;
-/*!40000 ALTER TABLE `acct` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -56,4 +45,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-14 14:12:48
+-- Dump completed on 2024-04-24 14:29:30

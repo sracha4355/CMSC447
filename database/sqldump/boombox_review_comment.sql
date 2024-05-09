@@ -16,24 +16,25 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `single`
+-- Table structure for table `review_comment`
 --
 
-DROP TABLE IF EXISTS `single`;
+DROP TABLE IF EXISTS `review_comment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `single` (
-  `single_id` int unsigned NOT NULL AUTO_INCREMENT,
-  `single_name` varchar(255) NOT NULL,
-  `single_length` varchar(8) DEFAULT NULL,
-  `single_cover` varchar(255) DEFAULT NULL,
-  `artist_id` int unsigned DEFAULT NULL,
-  `single_boomscore` int NOT NULL,
-  `spotify_uid` varchar(22) DEFAULT NULL,
-  PRIMARY KEY (`single_id`),
-  UNIQUE KEY `single_cover` (`single_cover`),
-  KEY `artist_id` (`artist_id`),
-  CONSTRAINT `artist_id` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE CASCADE
+CREATE TABLE `review_comment` (
+  `review_comment_id` int unsigned NOT NULL AUTO_INCREMENT,
+  `review_id` int unsigned NOT NULL,
+  `account_id` int unsigned NOT NULL,
+  `comment` text NOT NULL,
+  `like_count` int NOT NULL,
+  `dislike_count` int NOT NULL,
+  `creation_date` date NOT NULL,
+  PRIMARY KEY (`review_comment_id`,`review_id`,`account_id`),
+  KEY `review_comment_ibfk_1` (`review_id`),
+  KEY `review_comment_ibfk_2` (`account_id`),
+  CONSTRAINT `review_comment_ibfk_1` FOREIGN KEY (`review_id`) REFERENCES `review` (`review_id`) ON DELETE CASCADE,
+  CONSTRAINT `review_comment_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `acct` (`account_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: boombox
 -- ------------------------------------------------------
--- Server version	8.0.36
+-- Server version	8.3.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,30 +24,20 @@ DROP TABLE IF EXISTS `music`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `music` (
   `music_id` int unsigned NOT NULL AUTO_INCREMENT,
-  `artist_id` int unsigned DEFAULT NULL,
+  `artist_id` int unsigned NOT NULL,
   `release_date` date DEFAULT NULL,
   `is_album` tinyint(1) NOT NULL,
   `single_id` int unsigned DEFAULT NULL,
   `album_id` int unsigned DEFAULT NULL,
   PRIMARY KEY (`music_id`),
-  UNIQUE KEY `single_id_album_id` (`single_id`,`album_id`),
   KEY `artist_id` (`artist_id`),
   KEY `single_id` (`single_id`),
   KEY `album_id` (`album_id`),
-  CONSTRAINT `music_ibfk_1` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE SET NULL,
-  CONSTRAINT `music_ibfk_2` FOREIGN KEY (`single_id`) REFERENCES `single` (`single_id`) ON DELETE SET NULL,
-  CONSTRAINT `music_ibfk_3` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `music_ibfk_1` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE CASCADE,
+  CONSTRAINT `music_ibfk_2` FOREIGN KEY (`single_id`) REFERENCES `single` (`single_id`) ON DELETE CASCADE,
+  CONSTRAINT `music_ibfk_3` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `music`
---
-
-LOCK TABLES `music` WRITE;
-/*!40000 ALTER TABLE `music` DISABLE KEYS */;
-/*!40000 ALTER TABLE `music` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -58,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-14 14:12:49
+-- Dump completed on 2024-04-24 14:29:30

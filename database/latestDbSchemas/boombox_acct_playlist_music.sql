@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: boombox
 -- ------------------------------------------------------
--- Server version	8.3.0
+-- Server version	8.0.36
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,26 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `single`
+-- Table structure for table `acct_playlist_music`
 --
 
-DROP TABLE IF EXISTS `single`;
+DROP TABLE IF EXISTS `acct_playlist_music`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `single` (
-  `single_id` int unsigned NOT NULL AUTO_INCREMENT,
-  `single_name` varchar(255) NOT NULL,
-  `single_length` varchar(8) DEFAULT NULL,
-  `single_cover` varchar(255) DEFAULT NULL,
-  `artist_id` int unsigned DEFAULT NULL,
-  `single_boomscore` int NOT NULL,
-  `spotify_uid` varchar(22) DEFAULT NULL,
-  PRIMARY KEY (`single_id`),
-  UNIQUE KEY `single_cover` (`single_cover`),
-  KEY `artist_id` (`artist_id`),
-  CONSTRAINT `artist_id` FOREIGN KEY (`artist_id`) REFERENCES `artist` (`artist_id`) ON DELETE CASCADE
+CREATE TABLE `acct_playlist_music` (
+  `acct_id` int NOT NULL,
+  `playlist_id` int NOT NULL,
+  `spotify_uid` varchar(22) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `acct_playlist_music`
+--
+
+LOCK TABLES `acct_playlist_music` WRITE;
+/*!40000 ALTER TABLE `acct_playlist_music` DISABLE KEYS */;
+INSERT INTO `acct_playlist_music` VALUES (1,3,'6d5fHqbMbjczDAMf4I5O2g'),(1,3,'1aI9lv1cCosxWoIQgD4Ogd'),(1,3,'4OVWK80dmsTvhsrtMuSXOa'),(1,3,'4NP1rhnsPdYpnyJP0p0k0L'),(1,3,'2w9YOf843DuZKDSxukUuPJ'),(1,3,'4U9tk0sbiMp8PuHY7rsfCI'),(1,3,'3054btJWaN0I8lNK0EupTI'),(1,3,'7ybHj4IkUqoN3NOCsFBO4i'),(1,3,'7zfg4CNG4L3rvEf3WzrK2p'),(1,3,'30zwjSQEodaUXCn11nmiVF');
+/*!40000 ALTER TABLE `acct_playlist_music` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -46,4 +48,4 @@ CREATE TABLE `single` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-24 14:29:29
+-- Dump completed on 2024-04-25 15:22:47
