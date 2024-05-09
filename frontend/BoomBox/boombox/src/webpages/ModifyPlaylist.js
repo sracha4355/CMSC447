@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import Header from './Header'
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import Button from 'react-bootstrap/Button';
@@ -27,6 +27,8 @@ const ModifyPlaylist = () => {
 
     const nav = useNavigate()
 
+    const effectRan = useRef(false)
+
 
     useEffect(() => {
         const loadPlaylists = async () => {
@@ -41,7 +43,10 @@ const ModifyPlaylist = () => {
             console.error(error);
           }
         };
-        loadPlaylists();
+        if (effectRan.current === false) {
+            loadPlaylists();
+            return () => effectRan.current = true;
+        }
       }, 
       []);
 
@@ -51,7 +56,7 @@ const ModifyPlaylist = () => {
         try{
             const response = await axios.get('/playlist/get_by_id', {
                 params:{
-                    acct_id : 1,
+                    acct_id : window.localStorage.getItem("userID"),
                     playlist_id: playlistID
                 },
         
@@ -83,7 +88,7 @@ const ModifyPlaylist = () => {
     const addSong = async (playlistID, imageURL, spotifyUID, song_name ) => {
         try{
             const response = await axios.post('/playlist/add',{
-                acct_id : 1,
+                acct_id : window.localStorage.getItem("userID"),
                 playlist_id:playlistID,
                 image_url:imageURL,
                 uid:spotifyUID,
@@ -106,7 +111,7 @@ const ModifyPlaylist = () => {
     const removeSong = async (playlistID, spotifyUID, index) => {
         try{
             const response = await axios.post('/playlist/remove',{
-                acct_id : 1,
+                acct_id : window.localStorage.getItem("userID"),
                 playlist_id:playlistID,
                 uid:spotifyUID,
             })

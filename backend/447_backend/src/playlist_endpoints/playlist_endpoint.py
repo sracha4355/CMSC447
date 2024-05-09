@@ -8,46 +8,33 @@ sys.path.append(LIBAPI_FP)
 
 sys.path.append(str(Path(__file__).parent.parent))
 
-import traceback
-from flask import Blueprint, Flask, request, jsonify, make_response, Response
-from libapi.query.spot_album_builder import SpotifyAlbumEndpoint # type: ignore
-from libapi.query.spot_artist_builder import SpotifyArtistEndpoint # type: ignore
+from flask import Blueprint, request, jsonify, make_response
 from libapi.access import access_token # type: ignore
-from libapi.utils.utils import pretty_print # type: ignore
-from release import Release_Table # type: ignore
-from album_entry import Album_Entry_Table # type: ignore
-from artist import Artist_Table # type: ignore
 from database import MySQL_Database # type: ignore
-from table import MySQL_Table # type: ignore
 import mysql.connector
 
 playlist_blueprint = Blueprint('playlist_crud', __name__,url_prefix="/playlist")
 db = None
-album_table = None
-album_entry_table = None
-artist_table = None
 playlist_table = None
-acct_playlist_music_table = None
-
 
 
 
 def playlist_init_db(mysql_host, mysql_user, mysql_password, mysql_database):
-    global db, album_table, artist_table, album_entry_table,acct_table,playlist_table,acct_playlist_music_table
+    global db, playlist_table
+
     db = MySQL_Database(
         host = mysql_host,
         user = mysql_user,
         password = mysql_password
     )
+
     if not db.use(mysql_database):
         raise RuntimeError(f"Could not find database {mysql_database}")
     
-    album_table = Release_Table(db, is_single=False)    
-    album_entry_table = Album_Entry_Table(db)
-    artist_table = Artist_Table(db)
-    acct_table = MySQL_Table(db, "acct")
-    playlist_table = MySQL_Table(db, "playlist")
-    acct_playlist_music_table = MySQL_Table(db, "acct_playlist_music")
+    playlist_table = db.get_table("playlist")
+
+    if playlist_table == None:
+        raise RuntimeError(f"Could not find review_comment table in database")
 
 
 
@@ -74,7 +61,7 @@ def get_playlist_by_name(json):
         return make_api_response({"error": "provide valid playlist_name"}, 404)
     
     db.execute(
-        f'SELECT * FROM playlist where playlist_name=\'{escape_single_quotes(playlist_name)}\''
+        f'SELECT * FROM playlist where playlist_name=\'{escape_single_quotes(playlist_name)}\';'
     )
     response = db.fetchall()
 
@@ -95,13 +82,15 @@ def get_playlist_by_name(json):
         200
     )
     response.headers["Content-Type"] = "application/json"
-    
+
     return response
    
     
 
 @playlist_blueprint.route("/create", methods=['POST'])
 def create_playlist():
+    db.commit()
+
     data = request.json
     acct_id = data.get("acct_id")
     uid_list = data.get("uid_list")
@@ -119,7 +108,12 @@ def create_playlist():
         return make_api_response({"error": "please pass a valid list of spotify uid's into uid_list"}, 400)
 
     # check if account exists
-    results = acct_table.get("*", "account_id", acct_id)
+    QUERY = f'SELECT * FROM  acct WHERE account_id = {acct_id};'
+
+    db.execute(QUERY)
+
+    results = db.fetchall()
+
     if not len(results): 
         return make_api_response({"error": f"acct_id of {acct_id} does not exist"}, 400)
     
@@ -129,7 +123,7 @@ def create_playlist():
     playlist_id = None
     try:
         PLAYLIST_INSERT_QUERY = f"INSERT INTO PLAYLIST (creation_date, account_id, playlist_name, image_url) \
-            VALUES (CURDATE(), {acct_id}, '{escape_single_quotes(playlist_name)}', '{imageURL[0]}')" 
+            VALUES (CURDATE(), {acct_id}, '{escape_single_quotes(playlist_name)}', '{imageURL[0]}');" 
         db.execute(PLAYLIST_INSERT_QUERY)
         db.commit()
         playlist_id = db.get_last_id_inserted()
@@ -142,11 +136,11 @@ def create_playlist():
         for uid in uid_list:
             if('\"' in track_names[i]):
                 db.execute(
-                    f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL[i]}\', \'{track_names[i]}\')"
+                    f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL[i]}\', \'{track_names[i]}\');"
                 )
             else:
                 db.execute(
-                    f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL[i]}\', \"{track_names[i]}\")"
+                    f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL[i]}\', \"{track_names[i]}\");"
                 )
 
             db.commit()
@@ -155,14 +149,16 @@ def create_playlist():
         print(f"Error during insert: {Error}")
         return make_api_response({"error": "error while inserting entries into playlist"}, 500)
 
+    
+
     return make_api_response({"playlist": uid_list}, 200)
 
-
-  
 
 
 @playlist_blueprint.route('/delete', methods=['POST','DELETE'])
 def delete_playlist():
+    db.commit()
+
     data = request.json
     acct_id = data.get("acct_id")
     playlist_id = data.get("playlist_id")
@@ -173,30 +169,29 @@ def delete_playlist():
         return make_api_response({"error": "please pass a acct_id"}, 400)
 
     try:
-        DELETE_PLAYLIST_ENTRY = f'DELETE FROM playlist WHERE playlist_id={playlist_id} AND account_id = {acct_id}'
+        DELETE_PLAYLIST_ENTRY = f'DELETE FROM playlist WHERE playlist_id={playlist_id} AND account_id = {acct_id};'
         db.execute(DELETE_PLAYLIST_ENTRY)
         db.commit()
     except mysql.connector.Error as Error:
         print(f"Error during playlist entry deletion: {Error}")
         return make_api_response({"error": "error while deleting entries from  playlist"}, 500)
+
     
     return make_api_response({"success": f"{playlist_id} deleted"}, 200)
 
 
 
-    
-
-
 @playlist_blueprint.route('/get_by_id', methods=['GET'])
 def get_playlist_by_id():
-    acct_id = request.args.get("acct_id")
+    db.commit()
+
     playlist_id = request.args.get("playlist_id")
 
-    if not acct_id or not playlist_id:
-        return make_api_response({"error": "provide valid acct_id and playlist_id"}, 404)
+    if not playlist_id:
+        return make_api_response({"error": "provide valid playlist_id"}, 404)
     
     db.execute(
-        f' SELECT spotify_uid,image_url,song_name FROM acct_playlist_music WHERE account_id = {acct_id} AND playlist_id = {playlist_id}'
+        f' SELECT spotify_uid,image_url,song_name FROM acct_playlist_music WHERE playlist_id = {playlist_id};'
     )
     playlist = db.fetchall()
 
@@ -215,15 +210,16 @@ def get_playlist_by_id():
 
 
 
-
 @playlist_blueprint.route('/getAll', methods=['GET'])
 def get_all_playlists():
+    db.commit()
+
     acct_id = request.args.get("acct_id")
 
     if not acct_id :
         return make_api_response({"error": "provide valid acct_id and playlist_name"}, 404)
     
-    QUERY = f'SELECT playlist_id , image_url, playlist_name FROM playlist where account_id={acct_id}'
+    QUERY = f'SELECT playlist_id , image_url, playlist_name FROM playlist where account_id={acct_id};'
     
     db.execute(QUERY)
     playlists = db.fetchall()
@@ -240,14 +236,17 @@ def get_all_playlists():
     return make_api_response(playlist_list, 200)
 
 
+
 @playlist_blueprint.route('/get_playlist_table', methods=['GET'])
 def get_playlist_table():
+    #db.commit()
 
-
-    QUERY = f'SELECT * FROM playlist '
+    
+    QUERY = f'SELECT * FROM playlist'
     
     db.execute(QUERY)
     playlists = db.fetchall()
+    
 
   
 
@@ -265,12 +264,11 @@ def get_playlist_table():
     return make_api_response(playlist_list, 200)
   
     
-    
-    
-
-        
+     
 @playlist_blueprint.route("/add", methods=['POST'])
 def add_to_playlist():
+    db.commit()
+
     uid = request.json.get("uid")
     acct_id = request.json.get("acct_id")
     playlist_id = request.json.get("playlist_id")
@@ -282,7 +280,7 @@ def add_to_playlist():
         return make_api_response({"error": "provide a vaild uid, acct_id, playlist_id"}, 400)
     
     db.execute(
-        f'SELECT playlist_id FROM playlist where account_id={acct_id} and playlist_id={playlist_id}'
+        f'SELECT playlist_id FROM playlist where account_id={acct_id} and playlist_id={playlist_id};'
     )
     
     playlist = db.fetchall()
@@ -293,9 +291,9 @@ def add_to_playlist():
     try:
         QUERY = ""  
         if('\"' in track_name):
-            QUERY =f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL}\', \'{track_name}\')"
+            QUERY =f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL}\', \'{track_name}\');"
         else:    
-            QUERY = f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL}\', \"{track_name}\")"
+            QUERY = f"INSERT INTO acct_playlist_music (account_id, playlist_id, spotify_uid, image_url, song_name) VALUES ({acct_id}, {playlist_id}, \'{uid}\',\'{imageURL}\', \"{track_name}\");"
                 
         db.execute(QUERY)
         db.commit()
@@ -310,6 +308,8 @@ def add_to_playlist():
 
 @playlist_blueprint.route('/remove', methods=['POST'])
 def remove_from_playlist():
+    db.commit()
+
     uid = request.json.get("uid")
     acct_id = request.json.get("acct_id")
     playlist_id = request.json.get("playlist_id")
@@ -319,12 +319,12 @@ def remove_from_playlist():
         return make_api_response({"error": "provide a vaild uid, acct_id, playlist_name"}, 400)
 
     db.execute(
-        f'SELECT * FROM acct_playlist_music where account_id={acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\''
+        f'SELECT * FROM acct_playlist_music where account_id={acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\';'
     )
     playlist = db.fetchall()
     if(len(playlist) > 1):
         try:  
-            QUERY = f'DELETE FROM ACCT_PLAYLIST_MUSIC WHERE account_id = {acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\' LIMIT 1'
+            QUERY = f'DELETE FROM ACCT_PLAYLIST_MUSIC WHERE account_id = {acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\' LIMIT 1;'
             db.execute(QUERY)
             db.commit()
         except mysql.connector.Error as Err:
@@ -332,20 +332,18 @@ def remove_from_playlist():
             return make_api_response({"error": "error while removing uid {uid}"}, 404)
     else:
         try:  
-            QUERY = f'DELETE FROM ACCT_PLAYLIST_MUSIC WHERE account_id = {acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\''
+            QUERY = f'DELETE FROM ACCT_PLAYLIST_MUSIC WHERE account_id = {acct_id} and playlist_id = {playlist_id} and spotify_uid = \'{uid}\';'
             db.execute(QUERY)
             db.commit()
         except mysql.connector.Error as Err:
             print(f'Error while deleting: {Err}')
             return make_api_response({"error": "error while removing uid {uid}"}, 404)
-        
+
     return make_api_response({"success": f"{uid} removed from {playlist_id}"}, 200)
     
     
-
 
 def escape_single_quotes(data):
   if type(data) != str:
     return data
   return data.replace("'", r"\'")
-

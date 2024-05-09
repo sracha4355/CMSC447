@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import { Row, Col } from "react-bootstrap";
 import Scrollbars from "react-custom-scrollbars-2";
 import Button from 'react-bootstrap/Button';
@@ -12,6 +12,8 @@ const DeletePlaylist = () => {
 
     const [playlists, setPlaylists] =  useState([])
     const [deletedPlaylists, setDeleted] = useState([])
+
+    const effectRan = useRef(false)
     
     useEffect(() => {
         const loadPlaylists = async () => {
@@ -26,7 +28,10 @@ const DeletePlaylist = () => {
             console.error(error);
           }
         };
-        loadPlaylists();
+        if (effectRan.current === false) {
+            loadPlaylists();
+            return () => effectRan.current = true;
+        }
       }, 
       []);
 
@@ -36,7 +41,7 @@ const DeletePlaylist = () => {
     const deletePlaylist = async (playlistId) => {
         try {
             await axios.post('/playlist/delete', {
-                acct_id: 1,
+                acct_id: window.localStorage.getItem("userID"),
                 playlist_id: playlistId
             });
     

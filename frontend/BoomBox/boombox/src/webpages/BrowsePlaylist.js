@@ -1,4 +1,4 @@
-import React , {useEffect, useState} from "react";
+import React , {useEffect, useState, useRef} from "react";
 import Header from './Header'
 import {Row, Col} from "react-bootstrap"
 import './BrowsePlaylist.css'
@@ -9,6 +9,8 @@ import axios from 'axios'
 const BrowsePlaylist = () => {
     const [playlists, setPlaylists] =  useState([])
 
+    const effectRan = useRef(false)
+
     useEffect(() => {
         const loadPlaylists = async () => {
           try {
@@ -18,7 +20,13 @@ const BrowsePlaylist = () => {
             console.error(error);
           }
         };
-        loadPlaylists();
+
+        if (effectRan.current === false) {
+          loadPlaylists();
+          return () => effectRan.current = true;
+        }
+
+        //loadPlaylists();
       }, 
       []);
 

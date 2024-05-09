@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import { Link } from "react-router-dom";
 import Header from './Header'
 import './ManagePlaylist.css'
@@ -12,6 +12,8 @@ import axios from 'axios'
 const ManagePlaylist = () => {
 
     const [playlists, setPlaylists] =  useState([])
+
+    const effectRan = useRef(false)
     
     useEffect(() => {
         const loadPlaylists = async () => {
@@ -26,7 +28,10 @@ const ManagePlaylist = () => {
             console.error(error);
           }
         };
-        loadPlaylists();
+        if (effectRan.current === false) {
+            loadPlaylists();
+            return () => effectRan.current = true;
+        }
       }, 
       []);
 

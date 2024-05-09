@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import Header from "./Header";
 import { useParams } from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars-2';
@@ -14,6 +14,7 @@ const PlaylistDetails = () => {
 
     const nav = useNavigate()
 
+    const effectRan = useRef(false)
 
     useEffect(() => {
         const getSongs = async () => {
@@ -29,7 +30,10 @@ const PlaylistDetails = () => {
             console.error(error);
           }
         };
-        getSongs();
+        if (effectRan.current === false) {
+            getSongs()
+            return () => effectRan.current = true;
+        }
       }, 
       []);
 
