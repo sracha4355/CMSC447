@@ -6,6 +6,8 @@ The app uses Python/Flask for the backend, React (Javascript) for the frontend, 
 
 ### How to run
 
+This webapp uses MySQL for the database. If you do not have MySQL installed, please download and install it from https://dev.mysql.com/downloads/installer/. When you create a user and password, set both to `root` so that you won't have to modify boombox.py.
+
 The backend runs under a python virtual environment. To create the virtual environment:
 
 ```
