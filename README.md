@@ -32,7 +32,7 @@ python boombox.py
 To install packages for the frontend:
 
 ```
-cd /../../../frontend/Boombox/boombox/src
+cd ../../../frontend/Boombox/boombox/src
 npm install
 ```
 
